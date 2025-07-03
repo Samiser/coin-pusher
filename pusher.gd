@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends AnimatableBody3D
 
 var start_position: Vector3
 var frequency := 0.3
