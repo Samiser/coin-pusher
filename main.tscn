@@ -1,3 +1,17 @@
-[gd_scene format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=3 format=3 uid="uid://dhljcf5oo4jun"]
+
+[ext_resource type="PackedScene" uid="uid://b5hauakq4adel" path="res://machine.tscn" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://coin.tscn" id="2_h2yge"]
 
 [node name="Main" type="Node3D"]
+
+[node name="Machine" parent="." instance=ExtResource("1_0xm2m")]
+
+[node name="Coin" parent="." instance=ExtResource("2_h2yge")]
+transform = Transform3D(0.584177, 0.761535, 0.280717, -0.793438, 0.608651, 0, -0.170859, -0.222732, 0.959791, 0, 0.473689, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.611292, -0.458052, 0.645376, 0, 0.815482, 0.578783, -0.791405, -0.353806, 0.498498, 0, 0, 8.02525)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.932261, 0.361787, 0, -0.361787, 0.932261, 0, 0.555517, 1.00239)
