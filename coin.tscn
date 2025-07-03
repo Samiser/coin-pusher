@@ -9,6 +9,7 @@ radius = 0.100098
 [node name="Coin" type="Node3D"]
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+mass = 0.01
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.52588e-05, 0)

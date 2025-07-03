@@ -1,14 +1,32 @@
-[gd_scene format=3 uid="uid://b5hauakq4adel"]
+[gd_scene load_steps=4 format=3 uid="uid://b5hauakq4adel"]
+
+[ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://pusher.gd" id="2_13m1l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_q015e"]
+data = PackedVector3Array(-0.5, 0.1, 0.5, 0.5, 0.1, 0.5, -0.5, -0.1, 0.5, 0.5, 0.1, 0.5, 0.5, -0.1, 0.5, -0.5, -0.1, 0.5, 0.5, 0.1, -0.5, -0.5, 0.1, -0.5, 0.5, -0.1, -0.5, -0.5, 0.1, -0.5, -0.5, -0.1, -0.5, 0.5, -0.1, -0.5, 0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, -0.5, 0.5, -0.1, 0.5, -0.5, 0.1, -0.5, -0.5, 0.1, 0.5, -0.5, -0.1, -0.5, -0.5, 0.1, 0.5, -0.5, -0.1, 0.5, -0.5, -0.1, -0.5, 0.5, 0.1, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, -0.5, 0.1, 0.5, -0.5, 0.1, -0.5, 0.5, 0.1, -0.5, -0.5, -0.1, 0.5, 0.5, -0.1, 0.5, -0.5, -0.1, -0.5, 0.5, -0.1, 0.5, 0.5, -0.1, -0.5, -0.5, -0.1, -0.5)
 
 [node name="Machine" type="Node3D"]
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.118032, 0)
-size = Vector3(1, 0.2, 1)
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
+size = Vector3(1, 0.2, 1.03658)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.282512, -0.529717)
 size = Vector3(1, 1, 0.2)
+
+[node name="Pusher" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
+script = ExtResource("2_13m1l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pusher"]
+mesh = SubResource("BoxMesh_13m1l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pusher"]
+shape = SubResource("ConcavePolygonShape3D_q015e")

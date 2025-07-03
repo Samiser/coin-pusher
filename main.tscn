@@ -8,7 +8,7 @@
 [node name="Machine" parent="." instance=ExtResource("1_0xm2m")]
 
 [node name="Coin" parent="." instance=ExtResource("2_h2yge")]
-transform = Transform3D(0.584177, 0.761535, 0.280717, -0.793438, 0.608651, 0, -0.170859, -0.222732, 0.959791, 0, 0.473689, 0)
+transform = Transform3D(0.584177, 0.761535, 0.280717, -0.793438, 0.608651, 0, -0.170859, -0.222732, 0.959791, 0, 0.473689, -0.0969982)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.611292, -0.458052, 0.645376, 0, 0.815482, 0.578783, -0.791405, -0.353806, 0.498498, 0, 0, 8.02525)
