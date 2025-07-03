@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5hauakq4adel"]
+[gd_scene load_steps=8 format=3 uid="uid://b5hauakq4adel"]
 
+[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://machine.gd" id="1_13m1l"]
 [ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://pusher.gd" id="2_13m1l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
@@ -25,6 +26,7 @@ size = Vector3(1, 1, 0.04)
 points = PackedVector3Array(0.5, 0.5, 0.02, 0.5, 0.5, -0.02, -0.5, 0.5, 0.02, 0.5, -0.5, 0.02, 0.5, -0.5, -0.02, -0.5, 0.5, -0.02, -0.5, -0.5, 0.02, -0.5, -0.5, -0.02)
 
 [node name="Machine" type="Node3D"]
+script = ExtResource("1_13m1l")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
@@ -149,3 +151,17 @@ mesh = SubResource("BoxMesh_q015e")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
 shape = SubResource("ConvexPolygonShape3D_13m1l")
+
+[node name="DropLocations" type="Node3D" parent="."]
+
+[node name="Left" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.2, -0.41)
+gizmo_extents = 0.1
+
+[node name="Middle" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.41)
+gizmo_extents = 0.1
+
+[node name="Right" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.2, -0.41)
+gizmo_extents = 0.1
