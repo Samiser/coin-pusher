@@ -11,9 +11,8 @@ coin_scene = ExtResource("2_h2yge")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="coin_label" type="RichTextLabel" parent="CanvasLayer"]
-offset_right = 222.0
-offset_bottom = 102.0
-theme_override_font_sizes/normal_font_size = 32
+offset_right = 147.0
+offset_bottom = 40.0
 text = "Coins: 0000"
 
 [node name="Machine" parent="." instance=ExtResource("1_0xm2m")]

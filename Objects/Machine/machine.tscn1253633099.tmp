@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5hauakq4adel"]
 
-[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://machine.gd" id="1_13m1l"]
-[ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://pusher.gd" id="2_13m1l"]
+[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machine/machine.gd" id="1_13m1l"]
+[ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://Objects/Machine/pusher.gd" id="2_13m1l"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
 size = Vector3(1, 0.2, 1)
@@ -34,11 +34,6 @@ use_collision = true
 [node name="Pegs" type="CSGCombiner3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574642, -0.529717)
 
-[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.0180183, -0.0627999, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
 transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, -0.0627999, 0.064288)
 radius = 0.0112305
@@ -46,16 +41,6 @@ height = 0.145218
 
 [node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
 transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.263536, -0.0627999, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.49941, -0.0627999, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.491744, -0.0627999, 0.064288)
 radius = 0.0112305
 height = 0.145218
 
@@ -74,16 +59,6 @@ transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029
 radius = 0.0112305
 height = 0.145218
 
-[node name="CSGCylinder3D17" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.49941, 0.34202, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D18" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.491744, 0.34202, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
 [node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
 transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.128957, 0.146045, 0.064288)
 radius = 0.0112305
@@ -91,16 +66,6 @@ height = 0.145218
 
 [node name="CSGCylinder3D7" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
 transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.128059, 0.146045, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D8" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.374475, 0.146045, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D10" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.380805, 0.146045, 0.064288)
 radius = 0.0112305
 height = 0.145218
 
@@ -114,22 +79,20 @@ transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029
 radius = 0.0112305
 height = 0.145218
 
-[node name="CSGCylinder3D13" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.374475, -0.272216, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D15" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.380805, -0.272216, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
 size = Vector3(1, 0.2, 1.03658)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430797, -0.529717)
+size = Vector3(1, 1.29657, 0.2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.600413, 0.430797, -0.561554)
+size = Vector3(1, 1.29657, 0.2)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.597836, 0.430797, -0.561554)
 size = Vector3(1, 1.29657, 0.2)
 
 [node name="Pusher" type="AnimatableBody3D" parent="."]
@@ -143,6 +106,7 @@ mesh = SubResource("BoxMesh_13m1l")
 shape = SubResource("ConvexPolygonShape3D_6a4ke")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
@@ -155,13 +119,13 @@ shape = SubResource("ConvexPolygonShape3D_13m1l")
 [node name="DropLocations" type="Node3D" parent="."]
 
 [node name="Left" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.2, -0.41)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.2, -0.414995)
 gizmo_extents = 0.1
 
 [node name="Middle" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.41)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.414995)
 gizmo_extents = 0.1
 
 [node name="Right" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.2, -0.41)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.2, -0.414995)
 gizmo_extents = 0.1

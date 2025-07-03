@@ -1,0 +1,140 @@
+[gd_scene load_steps=9 format=3 uid="uid://b5hauakq4adel"]
+
+[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machine/machine.gd" id="1_13m1l"]
+[ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://Objects/Machine/pusher.gd" id="2_13m1l"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
+size = Vector3(1, 0.2, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6a4ke"]
+points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, 0.1, -0.5, 0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, 0.5, 0.5, 0.1, 0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a4ke"]
+transparency = 1
+blend_mode = 1
+albedo_color = Color(0.8, 1, 1, 0.431373)
+metallic = 0.9
+roughness = 0.3
+emission_energy_multiplier = 8.03
+normal_scale = -16.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_q015e"]
+material = SubResource("StandardMaterial3D_6a4ke")
+size = Vector3(1, 1, 0.04)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_13m1l"]
+points = PackedVector3Array(0.5, 0.5, 0.02, 0.5, 0.5, -0.02, -0.5, 0.5, 0.02, 0.5, -0.5, 0.02, 0.5, -0.5, -0.02, -0.5, 0.5, -0.02, -0.5, -0.5, 0.02, -0.5, -0.5, -0.02)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dkuib"]
+size = Vector3(1, 0.333496, 1.10004)
+
+[node name="Machine" type="Node3D"]
+script = ExtResource("1_13m1l")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="Pegs" type="CSGCombiner3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574642, -0.529717)
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, -0.0627999, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.263536, -0.0627999, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.0180183, 0.34202, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, 0.34202, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.263536, 0.34202, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.128957, 0.146045, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.128059, 0.146045, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.128957, -0.272216, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
+transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.128059, -0.272216, 0.064288)
+radius = 0.0112305
+height = 0.145218
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
+size = Vector3(1, 0.2, 1.03658)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430797, -0.529717)
+size = Vector3(1, 1.29657, 0.2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.600413, 0.430797, -0.561554)
+size = Vector3(1, 1.29657, 0.2)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.597836, 0.430797, -0.561554)
+size = Vector3(1, 1.29657, 0.2)
+
+[node name="Pusher" type="AnimatableBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
+script = ExtResource("2_13m1l")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pusher"]
+mesh = SubResource("BoxMesh_13m1l")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pusher"]
+shape = SubResource("ConvexPolygonShape3D_6a4ke")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
+mesh = SubResource("BoxMesh_q015e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
+shape = SubResource("ConvexPolygonShape3D_13m1l")
+
+[node name="DropLocations" type="Node3D" parent="."]
+
+[node name="Left" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.2, -0.414995)
+gizmo_extents = 0.1
+
+[node name="Middle" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.414995)
+gizmo_extents = 0.1
+
+[node name="Right" type="Marker3D" parent="DropLocations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.2, -0.414995)
+gizmo_extents = 0.1
+
+[node name="CoinDetector" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.522115, 0.894833)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CoinDetector"]
+shape = SubResource("BoxShape3D_dkuib")
