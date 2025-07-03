@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bakxetqs5by1a"
-path.s3tc="res://.godot/imported/mesh_coin_1.png-cf7250a6e6cb2b5c14787d001ab9452f.s3tc.ctex"
+uid="uid://betdnf8a3vu08"
+path.s3tc="res://.godot/imported/coin_proj_1.png-3883aaa2f4c503e8401b2add158de192.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "ab0b2d4302f691199ab052eeb9de155b"
+"md5": "b61d9a113281baf0cef4bd0b08663d85"
 }
 
 [deps]
 
-source_file="res://Meshes/Coin/mesh_coin_1.png"
-dest_files=["res://.godot/imported/mesh_coin_1.png-cf7250a6e6cb2b5c14787d001ab9452f.s3tc.ctex"]
+source_file="res://Meshes/Coin/coin_proj_1.png"
+dest_files=["res://.godot/imported/coin_proj_1.png-3883aaa2f4c503e8401b2add158de192.s3tc.ctex"]
 
 [params]
 
@@ -27,8 +27,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=8
+roughness/src_normal="res://Meshes/Coin/new_new_coin/coin_proj_2.png"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false
