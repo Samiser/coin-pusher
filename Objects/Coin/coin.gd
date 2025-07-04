@@ -19,5 +19,4 @@ func _get_random_color() -> Color:
 
 func _ready() -> void:
 	var color := _get_random_color()
-	print(color)
 	_set_color(color)
