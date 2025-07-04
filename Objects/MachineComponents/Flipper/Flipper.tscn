@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://i72rao7q5t74"]
 
-[ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Flipper/flipper.gd" id="1_m8m2f"]
+[ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/MachineComponents/Flipper/flipper.gd" id="1_m8m2f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]
 friction = 0.5

@@ -1,14 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b5hauakq4adel"]
+[gd_scene load_steps=9 format=3 uid="uid://b5hauakq4adel"]
 
-[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/machine.gd" id="1_13m1l"]
-[ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://Objects/Machines/FirstMachine/pusher.gd" id="2_13m1l"]
+[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/first_machine.gd" id="1_13m1l"]
+[ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_81isx"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_26eu2"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
-size = Vector3(1, 0.2, 1)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6a4ke"]
-points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, 0.1, -0.5, 0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, 0.5, 0.5, 0.1, 0.5)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
 friction = 0.0
@@ -32,7 +26,7 @@ points = PackedVector3Array(0.5, 0.5, 0.02, 0.5, 0.5, -0.02, -0.5, 0.5, 0.02, 0.
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkuib"]
 size = Vector3(1, 0.333496, 1.10004)
 
-[node name="Machine" type="Node3D"]
+[node name="FirstMachine" type="Node3D"]
 script = ExtResource("1_13m1l")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
@@ -102,15 +96,8 @@ size = Vector3(1, 1.29657, 0.2)
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.597836, 0.430797, -0.561554)
 size = Vector3(1, 1.29657, 0.2)
 
-[node name="Pusher" type="AnimatableBody3D" parent="."]
+[node name="Pusher" parent="." instance=ExtResource("2_81isx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
-script = ExtResource("2_13m1l")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pusher"]
-mesh = SubResource("BoxMesh_13m1l")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pusher"]
-shape = SubResource("ConvexPolygonShape3D_6a4ke")
 
 [node name="Glass" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)

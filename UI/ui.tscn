@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://b028rg20gl7fs"]
+
+[ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_2fwl4")
+
+[node name="CoinBalanceLabel" type="RichTextLabel" parent="."]
+offset_right = 231.0
+offset_bottom = 102.0
+theme_override_font_sizes/normal_font_size = 33
+text = "Coins: 0000"
+
+[node name="DropButton" type="Button" parent="."]
+offset_left = 277.0
+offset_top = 449.0
+offset_right = 432.0
+offset_bottom = 499.0
+theme_override_font_sizes/font_size = 33
+text = "Drop"
+
+[node name="MachineButtons" type="VBoxContainer" parent="."]
+offset_left = 1536.0
+offset_top = 405.0
+offset_right = 1691.0
+offset_bottom = 563.0
+
+[node name="First" type="Button" parent="MachineButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "First"
+
+[node name="Pinball" type="Button" parent="MachineButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Pinball"
+
+[node name="Bowling" type="Button" parent="MachineButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Bowling"
