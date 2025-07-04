@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://coe0tehdfyiny"]
+
+[ext_resource type="Script" uid="uid://ciekyja42rhik" path="res://Objects/MachineComponents/Bumper/bumper.gd" id="1_4r7mt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pg04f"]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4r7mt"]
+height = 0.0683594
+radius = 0.0864258
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_vxtij"]
+
+[node name="Bumper" type="Node3D"]
+script = ExtResource("1_4r7mt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_pg04f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("CylinderShape3D_4r7mt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D"]
+transform = Transform3D(0.156839, 0, 0, 0, 0.0276153, 0, 0, 0, 0.156839, 0, 0, 0)
+mesh = SubResource("CylinderMesh_vxtij")
+skeleton = NodePath("../..")

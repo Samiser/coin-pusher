@@ -3,10 +3,9 @@
 [ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Machines/PinballMachine/Flipper/flipper.gd" id="1_m8m2f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]
-friction = 0.5
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ls7b3"]
-size = Vector3(0.213501, 0.0812989, 0.0955201)
+size = Vector3(0.198242, 0.0535889, 0.0800781)
 
 [sub_resource type="BoxMesh" id="BoxMesh_lbvxh"]
 
@@ -14,13 +13,13 @@ size = Vector3(0.213501, 0.0812989, 0.0955201)
 script = ExtResource("1_m8m2f")
 
 [node name="AnimatedRigidBody3D" type="AnimatableBody3D" parent="."]
-transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(0.913546, -0.406737, 0, 0.406737, 0.913546, 0, 0, 0, 1, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_m8m2f")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatedRigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0832242, -0.00136422, 0)
+transform = Transform3D(1, -1.78814e-07, 0, 1.78814e-07, 1, 0, 0, 0, 1, -0.0832242, 0.0117583, 0)
 shape = SubResource("BoxShape3D_ls7b3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatedRigidBody3D/CollisionShape3D"]
-transform = Transform3D(0.2, 0, 0, 0, 0.069, 0, 0, 0, 0.079, 0, 0, 0)
+transform = Transform3D(0.185, 0, 0, 0, 0.046, 0, 0, 0, 0.0708655, 0, 0, 0)
 mesh = SubResource("BoxMesh_lbvxh")

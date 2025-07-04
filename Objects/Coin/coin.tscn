@@ -76,6 +76,7 @@ ao_texture = ExtResource("3_drevj")
 [node name="Coin" type="RigidBody3D" groups=["coin"]]
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_d5gmh")
+continuous_cd = true
 script = ExtResource("1_6bv11")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

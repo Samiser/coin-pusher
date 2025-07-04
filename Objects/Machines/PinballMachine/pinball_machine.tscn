@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://kwcahwmh7157"]
+[gd_scene load_steps=11 format=3 uid="uid://kwcahwmh7157"]
 
 [ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/first_machine.gd" id="1_maapw"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_4h3ch"]
+[ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/MachineComponents/Bumper/Bumper.tscn" id="3_273o6"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_g65rm"]
 [ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Machines/PinballMachine/Flipper/Flipper.tscn" id="4_ptllu"]
 
@@ -19,10 +20,10 @@ normal_scale = -16.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_q015e"]
 material = SubResource("StandardMaterial3D_6a4ke")
-size = Vector3(1, 1, 0.04)
+size = Vector3(1, 1.305, 0.04)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_13m1l"]
-points = PackedVector3Array(0.5, 0.5, 0.02, 0.5, 0.5, -0.02, -0.5, 0.5, 0.02, 0.5, -0.5, 0.02, 0.5, -0.5, -0.02, -0.5, 0.5, -0.02, -0.5, -0.5, 0.02, -0.5, -0.5, -0.02)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_273o6"]
+points = PackedVector3Array(-0.5, -0.6525, -0.02, -0.5, -0.6525, 0.02, -0.5, 0.6525, -0.02, 0.5, -0.6525, -0.02, 0.5, -0.6525, 0.02, -0.5, 0.6525, 0.02, 0.5, 0.6525, -0.02, 0.5, 0.6525, 0.02)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkuib"]
 size = Vector3(1, 0.333496, 1.10004)
@@ -30,100 +31,63 @@ size = Vector3(1, 0.333496, 1.10004)
 [node name="PinballMachine" type="Node3D"]
 script = ExtResource("1_maapw")
 
+[node name="Bumper" parent="." instance=ExtResource("3_273o6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05183, -0.405884)
+
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
-
-[node name="Pegs" type="CSGCombiner3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574642, -0.529717)
-
-[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, -0.0627999, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.263536, -0.0627999, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D9" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.0180183, 0.34202, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D14" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, 0.34202, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D16" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.263536, 0.34202, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D6" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.128957, 0.146045, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D7" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.128059, 0.146045, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D11" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, -0.128957, -0.272216, 0.064288)
-radius = 0.0112305
-height = 0.145218
-
-[node name="CSGCylinder3D12" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
-transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.128059, -0.272216, 0.064288)
-radius = 0.0112305
-height = 0.145218
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
 size = Vector3(1, 0.2, 1.03658)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430797, -0.529717)
-size = Vector3(1, 1.29657, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.626613, -0.529717)
+size = Vector3(1, 1.6882, 0.2)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.600413, 0.430797, -0.561554)
-size = Vector3(1, 1.29657, 0.2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.600413, 0.611118, -0.561554)
+size = Vector3(1, 1.65721, 0.2)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.91069e-15, 1.20299, -4.37114e-08, 4.37114e-08, -5.25843e-08, -1, -1, 0, -4.37114e-08, 0.00232756, 1.49662, -0.442392)
+size = Vector3(1.23975, 1.29657, 0.2)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.49136e-08, 0.293227, -0.5, -5.45876e-09, -0.169294, -0.866025, -0.124882, 4.24177e-08, -2.18557e-08, -0.425347, 0.553941, -0.388925)
+size = Vector3(1.23975, 1.29657, 0.2)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1.49136e-08, -0.293226, -0.5, 5.45876e-09, -0.169294, 0.866025, -0.124882, -4.24177e-08, -2.18557e-08, 0.425, 0.553568, -0.389335)
+size = Vector3(1.23975, 1.29657, 0.2)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.597836, 0.430797, -0.561554)
-size = Vector3(1, 1.29657, 0.2)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.6, 0.604172, -0.562)
+size = Vector3(1, 1.64291, 0.2)
 
 [node name="Pusher" parent="." instance=ExtResource("2_4h3ch")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
 
 [node name="Glass" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0.180219, -3.1352e-05)
 physics_material_override = SubResource("PhysicsMaterial_dkuib")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56453, -0.370608)
 mesh = SubResource("BoxMesh_q015e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
-shape = SubResource("ConvexPolygonShape3D_13m1l")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.56453, -0.370608)
+shape = SubResource("ConvexPolygonShape3D_273o6")
 
 [node name="DropLocations" type="Node3D" parent="."]
 
 [node name="Left" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.2, -0.414995)
-gizmo_extents = 0.1
-
-[node name="Middle" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, -0.414995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265654, 1.35987, -0.414995)
 gizmo_extents = 0.1
 
 [node name="Right" type="Marker3D" parent="DropLocations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.2, -0.414995)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.240022, 1.35987, -0.414995)
 gizmo_extents = 0.1
 
 [node name="CoinDetector" type="Area3D" parent="."]
@@ -744,7 +708,13 @@ light_color = Color(0.690196, 0, 1, 1)
 [node name="Flippers" type="Node3D" parent="."]
 
 [node name="Flipper" parent="Flippers" instance=ExtResource("4_ptllu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.471755, 0.471846, -0.402899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.258, -0.398)
 
 [node name="Flipper2" parent="Flippers" instance=ExtResource("4_ptllu")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.446702, 0.471846, -0.402899)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.26, 0.258, -0.398)
+
+[node name="Flipper3" parent="Flippers" instance=ExtResource("4_ptllu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.502847, 0.754408, -0.398)
+
+[node name="Flipper4" parent="Flippers" instance=ExtResource("4_ptllu")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.503, 0.754, -0.398)
