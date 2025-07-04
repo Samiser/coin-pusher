@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/first_machine.gd" id="1_maapw"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_4h3ch"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_g65rm"]
-[ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/MachineComponents/Flipper/Flipper.tscn" id="4_ptllu"]
+[ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Machines/PinballMachine/Flipper/Flipper.tscn" id="4_ptllu"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
 friction = 0.0

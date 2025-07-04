@@ -4,6 +4,7 @@ extends Node3D
 var flip_speed := 24
 var flipping := false
 
+# might want to use a tween for this https://docs.godotengine.org/en/stable/classes/class_tween.html
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("flip") && !flipping:
 		flipping = true;

@@ -1,8 +1,7 @@
 extends Node3D
 
 @export var coin_scene: PackedScene
-@onready var machine := $Machine
-@onready var coin_label := $CanvasLayer/CoinBalanceLabel
+@onready var machine := $FirstMachine
 @onready var ui := $UI
 
 var machine_scenes := {
