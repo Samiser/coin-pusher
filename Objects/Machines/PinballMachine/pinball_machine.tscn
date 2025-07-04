@@ -32,7 +32,13 @@ size = Vector3(1, 0.333496, 1.10004)
 script = ExtResource("1_maapw")
 
 [node name="Bumper" parent="." instance=ExtResource("3_273o6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05183, -0.405884)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33381, -0.405884)
+
+[node name="Bumper2" parent="." instance=ExtResource("3_273o6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167, 0.969121, -0.406)
+
+[node name="Bumper3" parent="." instance=ExtResource("3_273o6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166535, 0.969121, -0.406)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true

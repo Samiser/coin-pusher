@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ch8etvnkccn32" path="res://Meshes/Coin/mesh_coin_2.png" id="4_1bl43"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5gmh"]
-absorbent = true
+friction = 0.4
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6qpsl"]
 height = 0.0202394
@@ -74,7 +74,7 @@ ao_enabled = true
 ao_texture = ExtResource("3_drevj")
 
 [node name="Coin" type="RigidBody3D" groups=["coin"]]
-mass = 0.01
+mass = 0.02
 physics_material_override = SubResource("PhysicsMaterial_d5gmh")
 continuous_cd = true
 script = ExtResource("1_6bv11")
