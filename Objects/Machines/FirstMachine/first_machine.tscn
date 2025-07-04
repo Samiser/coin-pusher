@@ -409,7 +409,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.03728
 [node name="Coin93" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.170665)
 
-[node name="Coin94" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin94" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.30533)
 
 [node name="Coin95" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -418,7 +418,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.03728
 [node name="Coin96" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.170665)
 
-[node name="Coin97" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin97" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.30533)
 
 [node name="Coin98" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -427,7 +427,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.0372
 [node name="Coin99" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.170665)
 
-[node name="Coin100" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin100" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.30533)
 
 [node name="Coin101" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -436,7 +436,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.037285
 [node name="Coin102" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.170665)
 
-[node name="Coin103" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin103" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.30533)
 
 [node name="Coin104" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -445,7 +445,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.037285
 [node name="Coin105" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.170665)
 
-[node name="Coin106" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin106" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.30533)
 
 [node name="Coin107" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -454,7 +454,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.037285
 [node name="Coin108" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.170665)
 
-[node name="Coin109" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin109" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.30533)
 
 [node name="Coin110" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -463,7 +463,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.037285
 [node name="Coin111" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.170665)
 
-[node name="Coin112" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin112" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.30533)
 
 [node name="Coin113" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -472,7 +472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.037285
 [node name="Coin114" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.170665)
 
-[node name="Coin115" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin115" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.30533)
 
 [node name="Coin116" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -481,7 +481,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.03728
 [node name="Coin117" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.170665)
 
-[node name="Coin118" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin118" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.30533)
 
 [node name="Coin119" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -490,7 +490,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.037285
 [node name="Coin120" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.170665)
 
-[node name="Coin121" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin121" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.30533)
 
 [node name="Coin122" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -508,7 +508,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.0372853
 [node name="Coin126" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.170665)
 
-[node name="Coin127" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin127" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.30533)
 
 [node name="Coin128" parent="Coins" instance=ExtResource("3_26eu2")]

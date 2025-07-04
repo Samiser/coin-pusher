@@ -34,8 +34,14 @@ func drop_coin() -> void:
 	machine.spawn_coin()
 	coins -= 1
 
+func purchase(item_name: String, cost: int) -> void:
+	print("purchasing ", item_name, " for ", cost)
+	coins -= cost
+	machine.coin_rain()
+
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	ui.connect("machine_selected", switch_machine)
 	ui.connect("drop_triggered", drop_coin)
+	ui.connect("purchase", purchase)
 	ui.set_balance(coins)

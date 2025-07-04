@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=3 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
+[ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_2fwl4")
@@ -39,3 +40,21 @@ text = "Pinball"
 layout_mode = 2
 theme_override_font_sizes/font_size = 33
 text = "Bowling"
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 55.0
+offset_top = 897.0
+offset_right = 438.0
+offset_bottom = 1022.0
+
+[node name="Shop" parent="Panel" instance=ExtResource("2_dajm1")]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -37.5
+offset_right = 0.0
+offset_bottom = 37.5
+grow_horizontal = 2
+grow_vertical = 2

@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3ft8lskylgiy"]
+
+[ext_resource type="Script" uid="uid://x05haqdvc1hl" path="res://UI/Shop/shop.gd" id="1_kyj5a"]
+
+[node name="Shop" type="VBoxContainer"]
+offset_right = 381.0
+offset_bottom = 219.0
+size_flags_horizontal = 3
+size_flags_vertical = 6
+script = ExtResource("1_kyj5a")
+
+[node name="ShopLabel" type="RichTextLabel" parent="."]
+layout_mode = 2
+theme_override_font_sizes/bold_font_size = 33
+bbcode_enabled = true
+text = "[b]Shop[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="RainCoin" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="RainCoin"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rain Coin"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="RainCoin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.39
+text = "10g"

@@ -16,10 +16,12 @@ func spawn_coin() -> void:
 	push_error("spawn_coin() not implemented in %s" % name)
 
 func coin_rain() -> void:
-	for i in range(50):
+	for i in range(10):
 		var coin := coin_scene.instantiate()
 		add_child(coin)
 		coin.global_position = coin_rain_marker.global_position
+		coin.linear_velocity = Vector3(randf_range(-0.7, 0.7), 0., randf_range(-0.7, 0.7))
+		coin.rotation = Vector3(randf_range(-0.3, 0.3), randf_range(-0.3, 0.3), randf_range(-0.3, 0.3))
 		await get_tree().create_timer(0.05).timeout
 
 func _coin_detected(coin: Coin) -> void:
