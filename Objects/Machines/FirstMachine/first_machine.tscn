@@ -496,10 +496,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.30533)
 [node name="Coin122" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.0372853)
 
-[node name="Coin123" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin123" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.170665)
 
-[node name="Coin124" parent="Coins" instance=ExtResource("3_26eu2")]
+[node name="Coin124" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.30533)
 
 [node name="Coin125" parent="Coins" instance=ExtResource("3_26eu2")]
@@ -739,3 +739,6 @@ light_color = Color(0, 0.580392, 1, 1)
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.307, -0.375)
 light_color = Color(0.690196, 0, 1, 1)
+
+[node name="CoinRainMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5928, 0)

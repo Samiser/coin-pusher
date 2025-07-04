@@ -724,3 +724,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.502847, 0.754408, -0.398)
 
 [node name="Flipper4" parent="Flippers" instance=ExtResource("4_ptllu")]
 transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.503, 0.754, -0.398)
+
+[node name="CoinRainMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)

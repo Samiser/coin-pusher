@@ -21,5 +21,8 @@ func _get_random_color() -> Color:
 	return Color.from_hsv(hue, saturation, val)
 
 func _ready() -> void:
-	var color := _get_random_color()
+	#var color := _get_random_color()
+	var color := Color.PALE_GOLDENROD
+	if is_in_group("rain"):
+		color = Color.AQUA
 	_set_color(color)

@@ -821,3 +821,6 @@ mesh = SubResource("ArrayMesh_wtywe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dropper"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0808489, 0)
 shape = SubResource("ConcavePolygonShape3D_spnkw")
+
+[node name="CoinRainMarker" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5928, 0)
