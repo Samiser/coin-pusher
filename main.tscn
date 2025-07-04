@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b5hauakq4adel" path="res://Objects/Machine/machine.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/coin.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_h2yge")
@@ -23,6 +23,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.0048
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.999981, 0.0010102, -0.00606637, 0, 0.986417, 0.164263, 0.0061499, -0.16426, 0.986398, -0.00582998, 0.688291, 1.65123)
+current = true
 fov = 61.1
 
 [node name="Lights" type="Node3D" parent="."]
