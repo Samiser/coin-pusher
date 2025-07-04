@@ -2,6 +2,7 @@ extends CoinMachine
 
 @onready var drop_locations := $DropLocations
 @onready var pins := $Pins
+@onready var bowling_ball := $BowlingBall
 
 func _get_random_drop_location() -> Vector3:
 	return drop_locations.get_children().pick_random().global_position
@@ -20,6 +21,7 @@ func _on_pin_hit(_pin: Pin) -> void:
 	var all_pins_hit := pins.get_children().all(func(pin: Pin) -> bool: return pin.is_hit)
 	if all_pins_hit:
 		print("all pins hit!!!")
+		bowling_ball.freeze = false
 		_flash_and_reset_all_pins()
 
 func _ready() -> void:
