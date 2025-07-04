@@ -73,7 +73,7 @@ normal_texture = ExtResource("4_1bl43")
 ao_enabled = true
 ao_texture = ExtResource("3_drevj")
 
-[node name="Coin" type="RigidBody3D"]
+[node name="Coin" type="RigidBody3D" groups=["coin"]]
 mass = 0.01
 physics_material_override = SubResource("PhysicsMaterial_d5gmh")
 script = ExtResource("1_6bv11")

@@ -3,10 +3,10 @@
 [ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://Objects/MachineComponents/Pusher/pusher.gd" id="1_th7h0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_13m1l"]
-size = Vector3(1, 0.2, 1)
+size = Vector3(1.4, 0.2, 1)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6a4ke"]
-points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, 0.1, -0.5, 0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, 0.5, 0.5, 0.1, 0.5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ciwhd"]
+points = PackedVector3Array(-0.7, -0.1, -0.5, -0.7, 0.1, -0.5, 0.699863, -0.1, -0.5, -0.7, -0.1, 0.5, -0.7, 0.1, 0.5, 0.699863, 0.1, -0.5, 0.699863, -0.1, 0.5, 0.699863, 0.1, 0.5)
 
 [node name="Pusher" type="AnimatableBody3D"]
 script = ExtResource("1_th7h0")
@@ -15,4 +15,4 @@ script = ExtResource("1_th7h0")
 mesh = SubResource("BoxMesh_13m1l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_6a4ke")
+shape = SubResource("ConvexPolygonShape3D_ciwhd")

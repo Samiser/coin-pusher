@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://uhqbolurjrrj"]
+[gd_scene load_steps=10 format=3 uid="uid://uhqbolurjrrj"]
 
-[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/first_machine.gd" id="1_qlpv5"]
+[ext_resource type="Script" uid="uid://mluikoycsgij" path="res://Objects/Machines/BowlingMachine/bowling_machine.gd" id="1_wtywe"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_4b7hc"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_jyr2k"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/Machines/BowlingMachine/Pin/pin.tscn" id="5_spnkw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
 friction = 0.0
@@ -18,22 +19,23 @@ normal_scale = -16.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_q015e"]
 material = SubResource("StandardMaterial3D_6a4ke")
-size = Vector3(1, 1, 0.04)
+size = Vector3(1.35, 1, 0.04)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_13m1l"]
-points = PackedVector3Array(0.5, 0.5, 0.02, 0.5, 0.5, -0.02, -0.5, 0.5, 0.02, 0.5, -0.5, 0.02, 0.5, -0.5, -0.02, -0.5, 0.5, -0.02, -0.5, -0.5, 0.02, -0.5, -0.5, -0.02)
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cl3lm"]
+data = PackedVector3Array(-0.675, 0.5, 0.02, 0.675, 0.5, 0.02, -0.675, -0.5, 0.02, 0.675, 0.5, 0.02, 0.675, -0.5, 0.02, -0.675, -0.5, 0.02, 0.675, 0.5, -0.02, -0.675, 0.5, -0.02, 0.675, -0.5, -0.02, -0.675, 0.5, -0.02, -0.675, -0.5, -0.02, 0.675, -0.5, -0.02, 0.675, 0.5, 0.02, 0.675, 0.5, -0.02, 0.675, -0.5, 0.02, 0.675, 0.5, -0.02, 0.675, -0.5, -0.02, 0.675, -0.5, 0.02, -0.675, 0.5, -0.02, -0.675, 0.5, 0.02, -0.675, -0.5, -0.02, -0.675, 0.5, 0.02, -0.675, -0.5, 0.02, -0.675, -0.5, -0.02, 0.675, 0.5, 0.02, -0.675, 0.5, 0.02, 0.675, 0.5, -0.02, -0.675, 0.5, 0.02, -0.675, 0.5, -0.02, 0.675, 0.5, -0.02, -0.675, -0.5, 0.02, 0.675, -0.5, 0.02, -0.675, -0.5, -0.02, 0.675, -0.5, 0.02, 0.675, -0.5, -0.02, -0.675, -0.5, -0.02)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dkuib"]
 size = Vector3(1, 0.333496, 1.10004)
 
 [node name="BowlingMachine" type="Node3D"]
-script = ExtResource("1_qlpv5")
+script = ExtResource("1_wtywe")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 use_collision = true
 
 [node name="Pegs" type="CSGCombiner3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.574642, -0.529717)
+visible = false
 
 [node name="CSGCylinder3D2" type="CSGCylinder3D" parent="CSGCombiner3D/Pegs"]
 transform = Transform3D(1.38912, 0, 0, 0, -4.37114e-08, -1.42532, 0, 1, -6.23029e-08, 0.238997, -0.0627999, 0.064288)
@@ -81,19 +83,19 @@ radius = 0.0112305
 height = 0.145218
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
-size = Vector3(1, 0.2, 1.03658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00169754, -0.261201, -0.111351)
+size = Vector3(1.75634, 0.2, 1.03658)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.430797, -0.529717)
-size = Vector3(1, 1.29657, 0.2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00360107, 0.430797, -0.529717)
+size = Vector3(1.3844, 1.29657, 0.2)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.600413, 0.430797, -0.561554)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.779354, 0.430797, -0.561554)
 size = Vector3(1, 1.29657, 0.2)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.597836, 0.430797, -0.561554)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.776362, 0.430797, -0.561554)
 size = Vector3(1, 1.29657, 0.2)
 
 [node name="Pusher" parent="." instance=ExtResource("2_4b7hc")]
@@ -109,7 +111,7 @@ mesh = SubResource("BoxMesh_q015e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
-shape = SubResource("ConvexPolygonShape3D_13m1l")
+shape = SubResource("ConcavePolygonShape3D_cl3lm")
 
 [node name="DropLocations" type="Node3D" parent="."]
 
@@ -739,3 +741,36 @@ light_color = Color(0, 0.580392, 1, 1)
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.307, -0.375)
 light_color = Color(0.690196, 0, 1, 1)
+
+[node name="Pins" type="Node3D" parent="."]
+transform = Transform3D(1.59106, 0, 0, 0, 1.3158, 0, 0, 0, 1, -0.00784388, -0.164475, 0)
+
+[node name="Pin" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00248622, 0.757444, -0.429253)
+
+[node name="Pin2" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053155, 0.654155, -0.429253)
+
+[node name="Pin3" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0567528, 0.654155, -0.429253)
+
+[node name="Pin4" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106369, 0.543752, -0.429253)
+
+[node name="Pin5" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000424586, 0.543752, -0.429253)
+
+[node name="Pin6" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108753, 0.543752, -0.429253)
+
+[node name="Pin7" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166255, 0.433743, -0.429253)
+
+[node name="Pin8" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0535172, 0.433743, -0.429253)
+
+[node name="Pin9" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0539423, 0.433743, -0.429253)
+
+[node name="Pin10" parent="Pins" instance=ExtResource("5_spnkw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16192, 0.433743, -0.429253)

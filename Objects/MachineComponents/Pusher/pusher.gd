@@ -8,6 +8,7 @@ var time_passed := 0.0
 
 func _ready() -> void:
 	start_position = global_position
+	
 
 func _physics_process(delta: float) -> void:
 	time_passed += delta
