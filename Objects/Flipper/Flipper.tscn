@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://i72rao7q5t74"]
+
+[ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Flipper/flipper.gd" id="1_m8m2f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]
+friction = 0.5
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ls7b3"]
+size = Vector3(0.213501, 0.0812989, 0.0955201)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lbvxh"]
+
+[node name="Flipper" type="Node3D"]
+script = ExtResource("1_m8m2f")
+
+[node name="AnimatedRigidBody3D" type="AnimatableBody3D" parent="."]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_m8m2f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatedRigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0832242, -0.00136422, 0)
+shape = SubResource("BoxShape3D_ls7b3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatedRigidBody3D/CollisionShape3D"]
+transform = Transform3D(0.2, 0, 0, 0, 0.069, 0, 0, 0, 0.079, 0, 0, 0)
+mesh = SubResource("BoxMesh_lbvxh")

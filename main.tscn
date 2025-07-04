@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=5 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="PackedScene" uid="uid://b5hauakq4adel" path="res://Objects/Machines/FirstMachine/machine.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Flipper/Flipper.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_h2yge")
@@ -22,3 +23,9 @@ text = "Coins: 0000"
 transform = Transform3D(0.999981, 0.0010102, -0.00606637, 0, 0.986417, 0.164263, 0.0061499, -0.16426, 0.986398, -0.00582998, 0.688291, 1.65123)
 current = true
 fov = 61.1
+
+[node name="Flipper" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.471755, 0.471846, -0.402899)
+
+[node name="Flipper2" parent="." instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.446702, 0.471846, -0.402899)
