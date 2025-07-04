@@ -20,9 +20,10 @@ func _flash_and_reset_all_pins() -> void:
 func _on_pin_hit(_pin: Pin) -> void:
 	var all_pins_hit := pins.get_children().all(func(pin: Pin) -> bool: return pin.is_hit)
 	if all_pins_hit:
-		print("all pins hit!!!")
+		await _flash_and_reset_all_pins()
 		bowling_ball.freeze = false
-		_flash_and_reset_all_pins()
+		bowling_ball.position = Vector3(-0.6, 2, 0.1)
+		bowling_ball.linear_velocity = Vector3(3, -10, 0)
 
 func _ready() -> void:
 	for pin in pins.get_children():

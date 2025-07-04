@@ -25,7 +25,6 @@ func flash_and_reset() -> void:
 	is_hit = false
 
 func _on_body_entered(body: Node3D) -> void:
-	print("entered")
 	if body.is_in_group("coin"):
 		_hit()
 
