@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Machines/PinballMachine/Flipper/flipper.gd" id="1_m8m2f"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]
+friction = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ls7b3"]
 size = Vector3(0.198242, 0.0535889, 0.0800781)
