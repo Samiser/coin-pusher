@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://kwcahwmh7157"]
+[gd_scene load_steps=12 format=3 uid="uid://kwcahwmh7157"]
 
-[ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machines/FirstMachine/first_machine.gd" id="1_maapw"]
+[ext_resource type="Script" uid="uid://ljmydv4cvyox" path="res://Objects/Machines/PinballMachine/pinball_machine.gd" id="1_r4em8"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_4h3ch"]
 [ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/MachineComponents/Bumper/Bumper.tscn" id="3_273o6"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_g65rm"]
 [ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Machines/PinballMachine/Flipper/Flipper.tscn" id="4_ptllu"]
+[ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/MachineComponents/LED/LED.tscn" id="6_r4em8"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
 friction = 0.0
@@ -29,15 +30,17 @@ points = PackedVector3Array(-0.5, -0.6525, -0.02, -0.5, -0.6525, 0.02, -0.5, 0.6
 size = Vector3(1, 0.333496, 1.10004)
 
 [node name="PinballMachine" type="Node3D"]
-script = ExtResource("1_maapw")
+script = ExtResource("1_r4em8")
 
-[node name="Bumper" parent="." instance=ExtResource("3_273o6")]
+[node name="Bumpers" type="Node3D" parent="."]
+
+[node name="Bumper" parent="Bumpers" instance=ExtResource("3_273o6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33381, -0.405884)
 
-[node name="Bumper2" parent="." instance=ExtResource("3_273o6")]
+[node name="Bumper2" parent="Bumpers" instance=ExtResource("3_273o6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167, 0.969121, -0.406)
 
-[node name="Bumper3" parent="." instance=ExtResource("3_273o6")]
+[node name="Bumper3" parent="Bumpers" instance=ExtResource("3_273o6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166535, 0.969121, -0.406)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
@@ -727,3 +730,17 @@ transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.503
 
 [node name="CoinRainMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)
+
+[node name="ChargeLeds" type="Node3D" parent="."]
+
+[node name="Led" parent="ChargeLeds" instance=ExtResource("6_r4em8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.58902, -0.448964)
+
+[node name="Led2" parent="ChargeLeds" instance=ExtResource("6_r4em8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.781146, -0.448964)
+
+[node name="Led3" parent="ChargeLeds" instance=ExtResource("6_r4em8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.966739, -0.448964)
+
+[node name="Led4" parent="ChargeLeds" instance=ExtResource("6_r4em8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 1.13016, -0.448964)
