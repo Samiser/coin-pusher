@@ -111,15 +111,15 @@ mesh = SubResource("BoxMesh_13m1l")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Pusher"]
 shape = SubResource("ConvexPolygonShape3D_6a4ke")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="Glass" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
 physics_material_override = SubResource("PhysicsMaterial_dkuib")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
 mesh = SubResource("BoxMesh_q015e")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
 shape = SubResource("ConvexPolygonShape3D_13m1l")
 
