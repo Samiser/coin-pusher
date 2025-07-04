@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5hauakq4adel"]
+[gd_scene load_steps=10 format=3 uid="uid://b5hauakq4adel"]
 
 [ext_resource type="Script" uid="uid://c46ot4njlyqe7" path="res://Objects/Machine/machine.gd" id="1_13m1l"]
 [ext_resource type="Script" uid="uid://b00u4lnmc5vm3" path="res://Objects/Machine/pusher.gd" id="2_13m1l"]
@@ -8,6 +8,9 @@ size = Vector3(1, 0.2, 1)
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6a4ke"]
 points = PackedVector3Array(-0.5, -0.1, -0.5, -0.5, 0.1, -0.5, 0.5, -0.1, -0.5, -0.5, -0.1, 0.5, -0.5, 0.1, 0.5, 0.5, 0.1, -0.5, 0.5, -0.1, 0.5, 0.5, 0.1, 0.5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
+friction = 0.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a4ke"]
 transparency = 1
@@ -110,6 +113,7 @@ shape = SubResource("ConvexPolygonShape3D_6a4ke")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
+physics_material_override = SubResource("PhysicsMaterial_dkuib")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)

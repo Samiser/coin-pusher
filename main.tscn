@@ -93,7 +93,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408663, -0.132247, 0.037285
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408663, -0.132247, 0.170665)
 
 [node name="Coin19" parent="Coins" instance=ExtResource("2_h2yge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408663, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410017, -0.131058, 0.3054)
 
 [node name="Coin20" parent="Coins" instance=ExtResource("2_h2yge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40573, -0.0718907, 0.0372853)
