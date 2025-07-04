@@ -14,7 +14,7 @@ func _flip(release:bool) -> void:
 		flip_range *= -1
 	
 	tween = get_tree().create_tween()
-	tween.tween_property(flipper_body, "rotation_degrees:z", flip_range, 0.2).set_trans(Tween.TRANS_ELASTIC)
+	tween.tween_property(flipper_body, "rotation_degrees:z", flip_range, 0.08).set_trans(Tween.TRANS_BOUNCE)
 
 # might want to use a tween for this https://docs.godotengine.org/en/stable/classes/class_tween.html
 func _process(delta: float) -> void:
