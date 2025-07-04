@@ -30,4 +30,4 @@ func bumper_charge() -> void:
 		coin_rain()
 		charge_value = 0
 		for led in led_parent.get_children():
-			led.toggle_light(0)
+			led.toggle_light(0.2)

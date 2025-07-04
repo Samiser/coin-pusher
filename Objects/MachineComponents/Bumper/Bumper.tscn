@@ -8,7 +8,7 @@ radius = 0.0810547
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_pg04f"]
 friction = 0.0
-bounce = 0.8
+bounce = 1.0
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_vxtij"]
 

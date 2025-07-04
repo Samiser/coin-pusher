@@ -3,6 +3,14 @@ extends Node3D
 @onready var flipper_body := $AnimatedRigidBody3D
 var flip_speed := 24
 var tween : Tween
+@export var invert := false
+
+func _ready() -> void:
+	var flip_range := 32
+	if invert: 
+		flip_range *= -1
+		
+	flipper_body.rotation_degrees.z = flip_range
 
 func _flip(release:bool) -> void:
 	
@@ -11,6 +19,9 @@ func _flip(release:bool) -> void:
 		
 	var flip_range := -32
 	if(release):
+		flip_range *= -1
+	
+	if(invert):
 		flip_range *= -1
 	
 	tween = get_tree().create_tween()
