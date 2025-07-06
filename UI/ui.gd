@@ -5,6 +5,7 @@ extends CanvasLayer
 @onready var machine_buttons := $MachineButtons
 @onready var drop_button := $DropButton
 @onready var shop := $Panel/Shop
+@onready var multi_particles := $multi_particles
 
 signal machine_selected(machine: String)
 signal drop_triggered
@@ -15,6 +16,7 @@ func set_balance(value: int) -> void:
 
 func set_multi(value: int) -> void:
 	coin_multi_label.set_text(str("Coins Mult\nx", value))
+	multi_particles.emitting = true
 
 func _ready() -> void:
 	for button in machine_buttons.get_children():
