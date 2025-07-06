@@ -153,3 +153,4 @@ shape = SubResource("ConcavePolygonShape3D_spnkw")
 
 [node name="StrikeAudio" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("4_sta64")
+volume_db = -10.0
