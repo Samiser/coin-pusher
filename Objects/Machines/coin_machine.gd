@@ -1,10 +1,6 @@
 extends Node3D
 class_name CoinMachine
 ## Base class for all other coin machines
-##
-## To enable the shared functionality of this script each coin machine should have:
-## - A coin_detector Area3D
-## - A spawn_coin function
 
 @onready var coin_detector: Area3D = $CoinDetector
 @onready var coin_rain_marker := $CoinRainMarker
@@ -13,8 +9,9 @@ var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
 signal coin_collected(value: int)
 
-func spawn_coin() -> void:
-	push_error("spawn_coin() not implemented in %s" % name)
+func _get_drop_location() -> Vector3:
+	push_error("_get_drop_location() not implemented in %s" % name)
+	return Vector3.ZERO
 
 func coin_rain() -> void:
 	for i in range(10):
@@ -30,7 +27,13 @@ func coin_explode() -> void:
 	for coin in coins:
 		if coin is RigidBody3D:
 			coin.apply_impulse(Vector3.UP * randf_range(0.01, 0.1), Vector3.ZERO)
-		
+
+func spawn_coin() -> void:
+	var coin := coin_scene.instantiate()
+	coin_parent.add_child(coin)
+	coin.rotation_degrees = Vector3(90, 0, 0)
+	coin.position = _get_drop_location()
+
 func _coin_detected(coin: Coin) -> void:
 	emit_signal("coin_collected", coin.value)
 	if coin.is_in_group("rain"):
