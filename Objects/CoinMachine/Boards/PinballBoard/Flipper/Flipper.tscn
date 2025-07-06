@@ -7,7 +7,7 @@
 friction = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_3iefw"]
-size = Vector3(0.20771, 0.156708, 0.0908203)
+size = Vector3(0.20771, 0.156708, 0.132813)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ls7b3"]
 size = Vector3(0.198242, 0.0535889, 0.0800781)
@@ -24,7 +24,7 @@ physics_material_override = SubResource("PhysicsMaterial_m8m2f")
 [node name="Area3D" type="Area3D" parent="AnimatedRigidBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatedRigidBody3D/Area3D"]
-transform = Transform3D(1, -1.78814e-07, 0, 1.78814e-07, 1, 0, 0, 0, 1, -0.0879937, 0.0628205, 0)
+transform = Transform3D(1, -1.49012e-07, 0, 1.49012e-07, 1, 0, 0, 0, 1, -0.0879937, 0.0628205, 0)
 shape = SubResource("BoxShape3D_3iefw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="AnimatedRigidBody3D"]
@@ -32,7 +32,7 @@ transform = Transform3D(1, -1.49012e-07, 0, 1.49012e-07, 1, 0, 0, 0, 1, -0.08322
 shape = SubResource("BoxShape3D_ls7b3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatedRigidBody3D/CollisionShape3D"]
-transform = Transform3D(0.185, 0, 0, 0, 0.046, 0, 0, 0, 0.0708655, 0, 0, 0)
+transform = Transform3D(0.185, 0, 0, 0, 0.046, 0, 0, 0, 0.121, 0, 0, 0)
 mesh = SubResource("BoxMesh_lbvxh")
 
 [node name="flipper_stream" type="AudioStreamPlayer3D" parent="."]

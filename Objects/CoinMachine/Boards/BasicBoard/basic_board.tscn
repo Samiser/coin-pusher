@@ -42,11 +42,11 @@ size = Vector3(1, 2, 0.2)
 physics_material_override = SubResource("PhysicsMaterial_dkuib")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 mesh = SubResource("BoxMesh_q015e")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 shape = SubResource("ConvexPolygonShape3D_vc08w")
 
 [node name="Lights" type="Node3D" parent="."]

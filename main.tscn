@@ -22,7 +22,7 @@ coin_scene = ExtResource("2_h2yge")
 [node name="UI" parent="." instance=ExtResource("3_lquwl")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.998629, 0.052336, 0, -0.052336, 0.99863, -0.010263, 1.57508, 3.52805)
+transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -0.010263, 1.80102, 3.52805)
 current = true
 
 [node name="vine_stream" type="AudioStreamPlayer3D" parent="."]

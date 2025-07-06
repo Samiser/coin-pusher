@@ -4,10 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Boards/BowlingBoard/Pin/pin.tscn" id="4_7jrdl"]
 [ext_resource type="AudioStream" uid="uid://c8uf4e030gnmt" path="res://Audio/strike.mp3" id="4_sta64"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_txre8"]
 friction = 0.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a4ke"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vc08w"]
 transparency = 1
 blend_mode = 1
 albedo_color = Color(0.8, 1, 1, 0.431373)
@@ -16,12 +16,12 @@ roughness = 0.3
 emission_energy_multiplier = 8.03
 normal_scale = -16.0
 
-[sub_resource type="BoxMesh" id="BoxMesh_q015e"]
-material = SubResource("StandardMaterial3D_6a4ke")
-size = Vector3(2.19, 1.9, 0.04)
+[sub_resource type="BoxMesh" id="BoxMesh_bqv3n"]
+material = SubResource("StandardMaterial3D_vc08w")
+size = Vector3(2.4, 2, 0.04)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sta64"]
-points = PackedVector3Array(1.095, 0.949814, 0.02, 1.095, 0.949814, -0.02, -1.095, 0.949814, 0.02, 1.095, -0.95, 0.02, 1.095, -0.95, -0.02, -1.095, 0.949814, -0.02, -1.095, -0.95, 0.02, -1.095, -0.95, -0.02)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1s1id"]
+points = PackedVector3Array(1.2, 1, 0.02, 1.2, 1, -0.02, -1.2, 1, 0.02, 1.2, -1, 0.02, 1.2, -1, -0.02, -1.2, 1, -0.02, -1.2, -1, 0.02, -1.2, -1, -0.02)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wtywe"]
 albedo_color = Color(0.819608, 0.345098, 1, 1)
@@ -72,45 +72,43 @@ data = PackedVector3Array(-0.0865, -0.4853, -0.0347, 0.0863, -0.4853, -0.0347, 0
 [node name="BowlingBoard" type="Node3D"]
 script = ExtResource("1_7p1pe")
 
-[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="."]
+[node name="Body" type="CSGCombiner3D" parent="."]
 use_collision = true
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.772495, -0.529717)
-size = Vector3(2.40039, 1.97996, 0.2)
+[node name="CSGBox3D2" type="CSGBox3D" parent="Body"]
+size = Vector3(2.4, 2, 0.2)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.18698, 0.812294, -0.561554)
-size = Vector3(1, 2.05956, 0.2)
+[node name="CSGBox3D4" type="CSGBox3D" parent="Body"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.3, 0, 0)
+size = Vector3(1, 2, 0.2)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D2"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.19695, 0.777429, -0.562)
-size = Vector3(1, 1.98942, 0.2)
+[node name="CSGBox3D5" type="CSGBox3D" parent="Body"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.3, 0, 0)
+size = Vector3(1, 2, 0.2)
 
 [node name="Glass" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00143635, 0, -3.1352e-05)
-physics_material_override = SubResource("PhysicsMaterial_dkuib")
+physics_material_override = SubResource("PhysicsMaterial_txre8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
-mesh = SubResource("BoxMesh_q015e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+mesh = SubResource("BoxMesh_bqv3n")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.736411, -0.370608)
-shape = SubResource("ConvexPolygonShape3D_sta64")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
+shape = SubResource("ConvexPolygonShape3D_1s1id")
 
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0.307, -0.375)
-light_color = Color(0, 0.580392, 1, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0.3)
+light_color = Color(0.95563, 0.479048, 0.0475388, 1)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.307, -0.375)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.3)
 light_color = Color(0.690196, 0, 1, 1)
 
 [node name="Pins" type="Node3D" parent="."]
-transform = Transform3D(3.65944, 0, 0, 0, 2.76318, 0, 0, 0, 1, -0.00784388, -1.25603, 0)
+transform = Transform3D(3.65944, 0, 0, 0, 2.76318, 0, 0, 0, 1, -0.00784388, -1.59976, 0.541093)
 
 [node name="Pin" parent="Pins" instance=ExtResource("4_7jrdl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00248622, 0.757444, -0.429253)
@@ -143,7 +141,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0539423, 0.433743, -0.4292
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16192, 0.433743, -0.429253)
 
 [node name="BowlingBall" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.718, 0.0431059)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 1.718, 0.738201)
 mass = 3.0
 freeze = true
 
@@ -154,7 +152,7 @@ mesh = SubResource("SphereMesh_spnkw")
 shape = SubResource("ConvexPolygonShape3D_nrx74")
 
 [node name="Dropper" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.44499, -0.39481)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.445, 0.16)
 script = SubResource("GDScript_7p1pe")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Dropper"]

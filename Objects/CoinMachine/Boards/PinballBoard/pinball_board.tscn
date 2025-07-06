@@ -55,36 +55,36 @@ transform = Transform3D(1.07024, 0, 0, 0, 1, 0, 0, 0, 1, -2.02358e-05, -0.764, 0
 use_collision = true
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-0.000145419, -0.19758, -0.812083, -0.000353513, -0.27496, 0.583541, -0.124881, 0.00100843, -0.000706249, 0.862813, 0.341471, -0.431563)
-size = Vector3(1.23975, 3.59579, 0.2)
+transform = Transform3D(-0.000145419, -0.19758, -0.812083, -0.000353513, -0.27496, 0.583541, -0.124881, 0.00100843, -0.000706249, 0.862848, 0.341555, -0.401822)
+size = Vector3(1.71607, 3.59579, 0.2)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-0.000353992, -0.27496, -0.583541, -0.000254373, -0.197579, 0.812083, -0.124881, 0.00118186, -2.55074e-08, 0.405964, 0.353806, -0.422872)
-size = Vector3(1.23975, 0.997559, 0.0944885)
+transform = Transform3D(-0.000353992, -0.27496, -0.583541, -0.000254373, -0.197579, 0.812083, -0.124881, 0.00118186, -2.55074e-08, 0.40604, 0.35386, -0.396149)
+size = Vector3(1.66773, 0.997559, 0.0944885)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(0.000354002, 0.27496, 0.583541, -0.000254373, -0.197579, 0.812083, 0.124881, -0.00118188, -2.55074e-08, -0.406, 0.354, -0.423)
-size = Vector3(1.23975, 0.997559, 0.0944885)
+transform = Transform3D(0.000354002, 0.27496, 0.583541, -0.000254373, -0.197579, 0.812083, 0.124881, -0.00118188, -2.55074e-08, -0.405932, 0.353951, -0.398838)
+size = Vector3(1.62671, 0.997559, 0.0944885)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-3.99607e-09, 0.293226, 0.5, 5.45876e-09, -0.169294, 0.866025, 0.124882, 1.67831e-08, -2.18557e-08, -0.539667, 0.79429, -0.432)
-size = Vector3(1.23975, 1.19077, 0.134668)
+transform = Transform3D(-3.99607e-09, 0.293226, 0.5, 5.45876e-09, -0.169294, 0.866025, 0.124882, 1.67831e-08, -2.18557e-08, -0.539667, 0.79429, -0.404667)
+size = Vector3(1.67749, 1.19077, 0.134668)
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-5.20554e-09, -0.325634, -0.273959, -4.32079e-09, -0.0927593, 0.961741, -0.124882, 1.6783e-08, -2.18557e-08, 0.587623, 0.816144, -0.430582)
-size = Vector3(1.26245, 0.880539, 0.134668)
+transform = Transform3D(-5.20554e-09, -0.325634, -0.273959, -4.32079e-09, -0.0927593, 0.961741, -0.124882, 1.6783e-08, -2.18557e-08, 0.587623, 0.816144, -0.399415)
+size = Vector3(1.7616, 0.880539, 0.134668)
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(3.6005e-09, -0.0576309, -0.985407, -1.07582e-08, -0.333647, 0.170209, -0.124882, 2.70812e-08, -4.30735e-08, 0.742452, 1.11719, -0.430613)
-size = Vector3(1.26196, 1.93523, 0.105115)
+transform = Transform3D(3.6005e-09, -0.0576309, -0.985407, -1.07582e-08, -0.333647, 0.170209, -0.124882, 2.70812e-08, -4.30735e-08, 0.742452, 1.11719, -0.402022)
+size = Vector3(1.71985, 1.93523, 0.105115)
 
 [node name="CSGBox3D13" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(0.00014543, 0.19758, 0.812083, -0.000353513, -0.27496, 0.583541, 0.124881, -0.00100845, 0.000706178, -0.863, 0.34153, -0.431)
-size = Vector3(1.23975, 3.59579, 0.2)
+transform = Transform3D(0.00014543, 0.19758, 0.812083, -0.000353513, -0.27496, 0.583541, 0.124881, -0.00100845, 0.000706178, -0.862966, 0.341448, -0.402135)
+size = Vector3(1.70203, 3.59579, 0.2)
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-0.00276863, -0.781711, 0.623635, -0.00130541, -0.623634, -0.781715, 0.999995, -0.00297838, 0.000706158, -0.884307, 1.67533, -0.410187)
-size = Vector3(0.03932, 1.01177, 0.415478)
+transform = Transform3D(-0.00276863, -0.781711, 0.623635, -0.00130541, -0.623634, -0.781715, 0.999995, -0.00297838, 0.000706158, -0.884446, 1.67526, -0.360203)
+size = Vector3(0.139289, 1.01177, 0.415478)
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(-0.00276863, -0.964963, -0.26237, -0.00130541, 0.262374, -0.964965, 0.999995, -0.00232913, -0.00198609, -0.819902, 1.89482, -0.405636)
@@ -105,17 +105,17 @@ size = Vector3(0.155151, 0.474487, 1.21143)
 transform = Transform3D(1.08897, 0, 0, 0, 1, 0, 0, 0, 1, -0.00573634, -0.674032, 0.537765)
 
 [node name="Flipper" parent="Flippers" instance=ExtResource("5_lljcn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.258, -0.398)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.258, -0.377)
 
 [node name="Flipper2" parent="Flippers" instance=ExtResource("5_lljcn")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.26, 0.258, -0.398)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -0.26, 0.258, -0.377)
 
 [node name="Flipper3" parent="Flippers" instance=ExtResource("5_lljcn")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.35, 0.711904, -0.399248)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.35, 0.711904, -0.378248)
 invert = true
 
 [node name="Flipper4" parent="Flippers" instance=ExtResource("5_lljcn")]
-transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -1.01603, 0.701341, -0.398)
+transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -1.01603, 0.701341, -0.377)
 
 [node name="ChargeLeds" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.63597, 0.515557)
@@ -136,11 +136,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.969599, -0.4489
 physics_material_override = SubResource("PhysicsMaterial_3e066")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 mesh = SubResource("BoxMesh_3lul6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.16)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
 shape = SubResource("ConvexPolygonShape3D_mkmhy")
 
 [node name="Lights" type="Node3D" parent="."]

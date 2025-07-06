@@ -17,18 +17,19 @@ script = ExtResource("1_ttn5t")
 [node name="Boards" type="Node3D" parent="."]
 
 [node name="BowlingBoard" parent="Boards" instance=ExtResource("3_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97596, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -0.53)
 
 [node name="PinballBoard" parent="Boards" instance=ExtResource("3_ttn5t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.755214, -0.530189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.53)
 
 [node name="DropLocation" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00057745, 3.4349, -0.406975)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.86133, -0.389766)
 
 [node name="CoinRainMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)
 
 [node name="Coins" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00173918, 0.0526456)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("4_4k8hy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346936, -0.132247, 0.0372853)
@@ -631,6 +632,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.522115, 0.894833)
 shape = SubResource("BoxShape3D_ttn5t")
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00173918, 0.0526456)
 use_collision = true
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
@@ -638,7 +640,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
 size = Vector3(1, 0.2, 1.03658)
 
 [node name="Pusher" parent="." instance=ExtResource("4_5c2ke")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0926247, -0.510616)
 
 [node name="Killzone" type="Area3D" parent="."]
 
