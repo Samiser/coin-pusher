@@ -37,3 +37,4 @@ mesh = SubResource("BoxMesh_lbvxh")
 
 [node name="flipper_stream" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_g4y0b")
+volume_db = -21.165

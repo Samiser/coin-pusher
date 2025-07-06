@@ -22,8 +22,9 @@ fov = 61.1
 
 [node name="vine_stream" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_lquwl")
-max_polyphony = 20
+volume_db = -18.695
 
 [node name="money_stream" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("6_7mycd")
-max_polyphony = 20
+volume_db = -20.952
+max_polyphony = 4
