@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=9 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
 [ext_resource type="Texture2D" uid="uid://b1voflqxkqr7k" path="res://Textures/me.jpg" id="2_e6gg6"]
 [ext_resource type="Script" uid="uid://bu0ucjaihmk7a" path="res://UI/debug_menu.gd" id="3_e6gg6"]
+[ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="3_hat8c"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -31,6 +32,16 @@ hue_variation_curve = SubResource("CurveTexture_3sbvi")
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_2fwl4")
+
+[node name="coin_particle" type="GPUParticles2D" parent="."]
+visible = false
+position = Vector2(14, 19)
+scale = Vector2(2, 0.421)
+amount = 1
+texture = ExtResource("3_hat8c")
+randomness = 1.0
+visibility_rect = Rect2(0, -100, 100, 100)
+process_material = SubResource("ParticleProcessMaterial_hat8c")
 
 [node name="CoinBalanceLabel" type="RichTextLabel" parent="."]
 offset_right = 231.0

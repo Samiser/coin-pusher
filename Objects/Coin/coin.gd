@@ -10,10 +10,6 @@ func _set_color(new_color: Color) -> void:
 	material.albedo_color = new_color
 	mesh.set_surface_override_material(0, material)
 
-func _process(_delta: float) -> void:
-	if global_position.y < -12:
-		queue_free()
-
 func _get_random_color() -> Color:
 	var hue := randf()
 	var saturation := 0.5

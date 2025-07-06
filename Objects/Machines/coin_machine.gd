@@ -7,6 +7,8 @@ class_name CoinMachine
 @onready var coin_parent := $Coins
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
+var coins_in_play := 0
+
 signal coin_collected(value: int)
 
 func _get_drop_location() -> Vector3:
@@ -15,7 +17,7 @@ func _get_drop_location() -> Vector3:
 
 func coin_rain() -> void:
 	for i in range(10):
-		var coin := coin_scene.instantiate()
+		var coin := spawn_coin([])
 		coin_parent.add_child(coin)
 		coin.global_position = coin_rain_marker.global_position
 		coin.linear_velocity = Vector3(randf_range(-0.7, 0.7), 0., randf_range(-0.7, 0.7))
@@ -28,12 +30,25 @@ func coin_explode() -> void:
 		if coin is RigidBody3D:
 			coin.apply_impulse(Vector3.UP * randf_range(0.01, 0.1), Vector3.ZERO)
 
-func spawn_coin() -> Coin:
+func spawn_coin(add_groups: Array) -> Coin:
 	var coin := coin_scene.instantiate()
+	
+	for group:String in add_groups:
+		coin.add_to_group(group)
+	
 	coin_parent.add_child(coin)
+	
 	coin.rotation_degrees = Vector3(90, 0, 0)
 	coin.position = _get_drop_location()
+	
+	coins_in_play += 1
+	print(coins_in_play)
 	return coin
+	
+func spawn_ability_coin(coin_type: String) -> void:
+	print("spawning ", coin_type, " coin.")
+	var special_coin := spawn_coin([coin_type])
+	special_coin.global_position = coin_rain_marker.global_position
 
 func _coin_detected(coin: Coin) -> void:
 	print("coin detected")
@@ -43,6 +58,8 @@ func _coin_detected(coin: Coin) -> void:
 	if coin.is_in_group("bomb"):
 		coin_explode()
 	
+	coins_in_play -= 1
+	
 	coin.queue_free()	# prevents coin from setting off this function again
 						# was happening with da bomb coin :(
 
@@ -50,5 +67,7 @@ func _ready() -> void:
 	if not coin_detector:
 		push_error("Missing 'CoinDetector' Area3D in %s" % name)
 		return
-
+	
+	coins_in_play = coin_parent.get_child_count()
+	
 	coin_detector.connect("body_entered", _coin_detected)
