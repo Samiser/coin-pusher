@@ -1,12 +1,12 @@
 extends Node3D
 class_name CoinMachine
-## Base class for all other coin machines
 
 @onready var coin_detector: Area3D = $CoinDetector
 @onready var coin_rain_marker := $CoinRainMarker
 @onready var coin_parent := $Coins
 @onready var drop_location_marker := $DropLocation
 @onready var boards := $Boards
+@onready var killzone := $Killzone
 
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
@@ -74,6 +74,9 @@ func _ready() -> void:
 	coins_in_play = coin_parent.get_child_count()
 	
 	coin_detector.connect("body_entered", _coin_detected)
+	killzone.connect("body_entered", func(body: PhysicsBody3D) -> void:
+		if body.is_in_group("coin"): body.queue_free()
+		coins_in_play -= 1)
 	
 	for board in boards.get_children():
 		board.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))
