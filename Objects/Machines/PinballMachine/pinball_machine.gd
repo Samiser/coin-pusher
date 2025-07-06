@@ -7,6 +7,7 @@ extends CoinMachine
 var charge_value := 0
 
 func _ready() -> void:
+	super._ready()
 	for bumper in bumper_parent.get_children():
 		bumper.connect("bumped", bumper_charge)
 

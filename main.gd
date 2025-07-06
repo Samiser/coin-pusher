@@ -36,6 +36,7 @@ func switch_machine(machine_name: String) -> void:
 		add_child(new_machine)
 		machine = new_machine
 		machine.connect("coin_collected", update_coin_count)
+		machine.connect("add_combo", _on_add_combo)
 	else:
 		push_error("Unknown machine name: %s" % machine_name)
 

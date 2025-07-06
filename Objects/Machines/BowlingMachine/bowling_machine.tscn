@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://mluikoycsgij" path="res://Objects/Machines/BowlingMachine/bowling_machine.gd" id="1_wtywe"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="2_4b7hc"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="3_jyr2k"]
-[ext_resource type="Script" path="res://Objects/Machines/BowlingMachine/dropper.gd" id="5_nrx74"]
+[ext_resource type="Script" uid="uid://bnxdy40gcm7g7" path="res://Objects/Machines/BowlingMachine/dropper.gd" id="5_nrx74"]
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/Machines/BowlingMachine/Pin/pin.tscn" id="5_spnkw"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]

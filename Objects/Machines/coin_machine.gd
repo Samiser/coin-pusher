@@ -35,6 +35,7 @@ func spawn_coin() -> void:
 	coin.position = _get_drop_location()
 
 func _coin_detected(coin: Coin) -> void:
+	print("coin detected")
 	emit_signal("coin_collected", coin.value)
 	if coin.is_in_group("rain"):
 		coin_rain()

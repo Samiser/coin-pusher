@@ -23,5 +23,6 @@ func _on_pin_hit(_pin: Pin) -> void:
 		emit_signal("add_combo", 1)
 
 func _ready() -> void:
+	super._ready()
 	for pin in pins.get_children():
 		pin.connect("hit", _on_pin_hit)
