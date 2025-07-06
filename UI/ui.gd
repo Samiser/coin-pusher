@@ -7,13 +7,21 @@ extends CanvasLayer
 @onready var shop := $Panel/Shop
 @onready var debug_menu := $DebugPanel/DebugMenu
 @onready var multi_particles := $multi_particles
+@onready var coin_particles := $coin_particle
 
 signal drop_triggered
 signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
 
+var coin_count := 0.0
+
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str("Coins: ", value))
+	coin_count += float(value)
+
+func _process(delta: float) -> void:
+	coin_count -= delta * 2.0
+	coin_particles.amount = int(coin_count)
 
 func set_multi(value: int) -> void:
 	coin_multi_label.set_text(str("Coins Mult\nx", value))

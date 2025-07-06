@@ -30,7 +30,7 @@ func update_coin_count(value: int) -> void:
 	money_audio.play()
 
 func drop_coin() -> void:
-	latest_coin = machine.spawn_coin()
+	latest_coin = machine.spawn_coin([])
 	coins -= 1
 
 func _physics_process(delta: float) -> void:
@@ -41,10 +41,9 @@ func purchase(item_name: String, cost: int) -> void:
 	print("purchasing ", item_name, " for ", cost)
 	coins -= cost
 	
-	if item_name == "rain_coin":
-		machine.coin_rain()
-	if item_name == "bomb_coin":
-		machine.coin_explode()
+	match item_name:
+		"rain", "bomb":
+			machine.spawn_ability_coin(item_name)
 
 func debug_option(option: String) -> void:
 	match option:
