@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dh0gg8lf7jnqg"]
+[gd_scene load_steps=8 format=3 uid="uid://dh0gg8lf7jnqg"]
 
 [ext_resource type="Script" uid="uid://crhnrohue36tj" path="res://Objects/CoinMachine/coin_machine.gd" id="1_ttn5t"]
 [ext_resource type="PackedScene" uid="uid://bx8ipfwgt72ot" path="res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.tscn" id="3_4k8hy"]
@@ -8,6 +8,8 @@
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ttn5t"]
 size = Vector3(1, 0.333496, 1.10004)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xuo70"]
 
 [node name="CoinMachine" type="Node3D"]
 script = ExtResource("1_ttn5t")
@@ -636,3 +638,9 @@ size = Vector3(1, 0.2, 1.03658)
 
 [node name="Pusher" parent="." instance=ExtResource("4_5c2ke")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.090885, -0.563262)
+
+[node name="Killzone" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74672, 0)
+shape = SubResource("WorldBoundaryShape3D_xuo70")
