@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var flipper_body := $AnimatedRigidBody3D
 @onready var collision_shape := $AnimatedRigidBody3D/Area3D
+@onready var flipper_stream := $flipper_stream
 var flip_speed := 24
 var tween : Tween
 @export var invert := false
@@ -16,7 +17,7 @@ func _ready() -> void:
 	flipper_body.rotation_degrees.z = flip_range
 
 func _flip(release:bool) -> void:
-	
+	flipper_stream.play()
 	if(tween):
 		tween.kill()
 		
