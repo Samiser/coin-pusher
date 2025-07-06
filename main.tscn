@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=7 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="PackedScene" uid="uid://b5hauakq4adel" path="res://Objects/Machines/FirstMachine/first_machine.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b028rg20gl7fs" path="res://UI/ui.tscn" id="3_lquwl"]
+[ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
 
 [node name="Main" type="Node3D"]
 script = ExtResource("1_h2yge")
@@ -17,3 +19,11 @@ coin_scene = ExtResource("2_h2yge")
 transform = Transform3D(0.999981, 0.0010102, -0.00606636, -0.000699601, 0.998699, 0.0509859, 0.00610998, -0.0509807, 0.998681, -0.00582998, 1.13474, 2.7521)
 current = true
 fov = 61.1
+
+[node name="vine_stream" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_lquwl")
+max_polyphony = 20
+
+[node name="money_stream" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_7mycd")
+max_polyphony = 20

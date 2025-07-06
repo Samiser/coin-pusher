@@ -3,6 +3,8 @@ extends Node3D
 @export var coin_scene: PackedScene
 @onready var machine := $FirstMachine
 @onready var ui := $UI
+@onready var vine_audio := $vine_stream
+@onready var money_audio := $money_stream
 
 var machine_scenes := {
 	"first": preload("res://Objects/Machines/FirstMachine/first_machine.tscn"),
@@ -23,9 +25,11 @@ var coin_multi := 1:
 		
 func _on_add_combo(value: int) -> void:
 	coin_multi += value
+	vine_audio.play()
 
 func update_coin_count(value: int) -> void:
 	coins += value * coin_multi
+	money_audio.play()
 
 func switch_machine(machine_name: String) -> void:
 	if machine:

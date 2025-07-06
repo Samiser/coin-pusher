@@ -2,6 +2,7 @@ extends Node3D
 
 @onready var collision_shape := $Area3D
 @onready var animated_body : AnimatableBody3D = $AnimatedBody3D
+@onready var bumper_stream := $bumper_stream
 
 var material : StandardMaterial3D
 var tween : Tween
@@ -21,6 +22,7 @@ func _coin_hit(body:Node3D) -> void:
 		return
 	
 	emit_signal("bumped")
+	bumper_stream.play()
 	
 	if(tween):
 		tween.kill()
