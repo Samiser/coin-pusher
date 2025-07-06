@@ -18,6 +18,7 @@ script = ExtResource("1_ttn5t")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.97596, 0)
 
 [node name="PinballBoard" parent="Boards" instance=ExtResource("3_ttn5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.755214, -0.530189)
 
 [node name="DropLocation" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00057745, 3.4349, -0.406975)
