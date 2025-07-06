@@ -8,7 +8,6 @@ extends CanvasLayer
 @onready var debug_menu := $DebugPanel/DebugMenu
 @onready var multi_particles := $multi_particles
 
-signal machine_selected(machine: String)
 signal drop_triggered
 signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
@@ -21,10 +20,6 @@ func set_multi(value: int) -> void:
 	multi_particles.emitting = true
 
 func _ready() -> void:
-	for button in machine_buttons.get_children():
-		button.connect("pressed", func() -> void:
-			emit_signal("machine_selected", button.text.to_lower())
-		)
 
 	drop_button.connect("pressed", func() -> void:
 		emit_signal("drop_triggered")

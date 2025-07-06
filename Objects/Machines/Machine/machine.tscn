@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dh0gg8lf7jnqg"]
 
-[ext_resource type="Script" uid="uid://blkfifoexjdwb" path="res://Objects/Machines/WumboMachine/wumbo_machine.gd" id="1_ttn5t"]
-[ext_resource type="PackedScene" uid="uid://bx8ipfwgt72ot" path="res://Objects/Machines/WumboMachine/BowlingBoard/bowling_board.tscn" id="3_4k8hy"]
-[ext_resource type="PackedScene" uid="uid://dq2tr3r3buo8v" path="res://Objects/Machines/WumboMachine/PinballBoard/pinball_board.tscn" id="3_ttn5t"]
+[ext_resource type="Script" uid="uid://blkfifoexjdwb" path="res://Objects/Machines/Machine/machine.gd" id="1_ttn5t"]
+[ext_resource type="PackedScene" uid="uid://bx8ipfwgt72ot" path="res://Objects/Machines/Machine/BowlingBoard/bowling_board.tscn" id="3_4k8hy"]
+[ext_resource type="PackedScene" uid="uid://dq2tr3r3buo8v" path="res://Objects/Machines/Machine/PinballBoard/pinball_board.tscn" id="3_ttn5t"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="4_4k8hy"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/MachineComponents/Pusher/pusher.tscn" id="4_5c2ke"]
 

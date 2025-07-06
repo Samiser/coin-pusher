@@ -69,32 +69,6 @@ offset_bottom = 499.0
 theme_override_font_sizes/font_size = 33
 text = "Drop"
 
-[node name="MachineButtons" type="VBoxContainer" parent="."]
-offset_left = 1536.0
-offset_top = 405.0
-offset_right = 1691.0
-offset_bottom = 563.0
-
-[node name="First" type="Button" parent="MachineButtons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 33
-text = "First"
-
-[node name="Pinball" type="Button" parent="MachineButtons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 33
-text = "Pinball"
-
-[node name="Bowling" type="Button" parent="MachineButtons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 33
-text = "Bowling"
-
-[node name="Wumbo" type="Button" parent="MachineButtons"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 33
-text = "Wumbo"
-
 [node name="Panel" type="Panel" parent="."]
 offset_left = 55.0
 offset_top = 897.0

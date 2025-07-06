@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://dhljcf5oo4jun"]
 
-[ext_resource type="PackedScene" uid="uid://b5hauakq4adel" path="res://Objects/Machines/FirstMachine/first_machine.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b028rg20gl7fs" path="res://UI/ui.tscn" id="3_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://dh0gg8lf7jnqg" path="res://Objects/Machines/Machine/machine.tscn" id="7_5vw27"]
 [ext_resource type="Texture2D" uid="uid://t8uipxqdbutn" path="res://Textures/bg_pier.png" id="7_272bh"]
 
 [sub_resource type="Environment" id="Environment_5vw27"]
@@ -17,9 +17,9 @@ ambient_light_color = Color(0.00392157, 0, 0.0941176, 1)
 script = ExtResource("1_h2yge")
 coin_scene = ExtResource("2_h2yge")
 
-[node name="UI" parent="." instance=ExtResource("3_lquwl")]
+[node name="Machine" parent="." instance=ExtResource("7_5vw27")]
 
-[node name="FirstMachine" parent="." instance=ExtResource("1_0xm2m")]
+[node name="UI" parent="." instance=ExtResource("3_lquwl")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.998629, 0.052336, 0, -0.052336, 0.99863, -0.010263, 1.57508, 3.52805)

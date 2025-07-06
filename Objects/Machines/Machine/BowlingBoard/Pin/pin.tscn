@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhog32l8epd3n"]
 
 [ext_resource type="Texture2D" uid="uid://qjeah87c62nf" path="res://icon.svg" id="1_bphgs"]
-[ext_resource type="Script" uid="uid://by2yfbk5eukj4" path="res://Objects/Machines/BowlingMachine/Pin/pin.gd" id="1_u7pv4"]
+[ext_resource type="Script" uid="uid://by2yfbk5eukj4" path="res://Objects/Machines/Machine/BowlingBoard/Pin/pin.gd" id="1_u7pv4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7pv4"]
 size = Vector3(0.0637817, 0.0897903, 0.144516)

@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://dq2tr3r3buo8v"]
 
-[ext_resource type="Script" uid="uid://s5cuihaa1kdq" path="res://Objects/Machines/WumboMachine/PinballBoard/pinball_board.gd" id="1_8denj"]
+[ext_resource type="Script" uid="uid://s5cuihaa1kdq" path="res://Objects/Machines/Machine/PinballBoard/pinball_board.gd" id="1_8denj"]
 [ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/MachineComponents/Bumper/Bumper.tscn" id="2_cixf3"]
-[ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Machines/PinballMachine/Flipper/Flipper.tscn" id="5_lljcn"]
+[ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/Machines/Machine/PinballBoard/Flipper/Flipper.tscn" id="5_lljcn"]
 [ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/MachineComponents/LED/LED.tscn" id="6_5l1l6"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
