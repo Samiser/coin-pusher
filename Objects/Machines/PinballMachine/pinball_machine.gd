@@ -4,6 +4,8 @@ extends CoinMachine
 @onready var led_parent := $ChargeLeds
 @onready var bumper_parent := $Bumpers
 
+signal add_combo (value:int)
+
 var charge_value := 0
 
 func _ready() -> void:
@@ -22,7 +24,7 @@ func bumper_charge() -> void:
 	
 	charge_value += 1
 	if(charge_value >= 4):
-		coin_rain()
+		emit_signal("add_combo", 1)
 		charge_value = 0
 		for led in led_parent.get_children():
 			led.toggle_light(0.2)
