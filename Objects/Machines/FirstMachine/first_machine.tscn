@@ -472,7 +472,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.037285
 [node name="Coin114" parent="Coins" instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.170665)
 
-[node name="Coin115" parent="Coins" groups=["rain"] instance=ExtResource("3_26eu2")]
+[node name="Coin115" parent="Coins" groups=["bomb"] instance=ExtResource("3_26eu2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.30533)
 
 [node name="Coin116" parent="Coins" instance=ExtResource("3_26eu2")]

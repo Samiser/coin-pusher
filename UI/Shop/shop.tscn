@@ -31,3 +31,18 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.39
 text = "10g"
+
+[node name="BombCoin" type="HBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="BombCoin"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Bomb Coin"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="BombCoin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.39
+text = "20g"

@@ -25,4 +25,6 @@ func _ready() -> void:
 	var color := Color.PALE_GOLDENROD
 	if is_in_group("rain"):
 		color = Color.AQUA
+	if is_in_group("bomb"):
+		color = Color.RED
 	_set_color(color)

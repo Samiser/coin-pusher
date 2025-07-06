@@ -37,7 +37,11 @@ func drop_coin() -> void:
 func purchase(item_name: String, cost: int) -> void:
 	print("purchasing ", item_name, " for ", cost)
 	coins -= cost
-	machine.coin_rain()
+	
+	if item_name == "rain_coin":
+		machine.coin_rain()
+	if item_name == "bomb_coin":
+		machine.coin_explode()
 
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
