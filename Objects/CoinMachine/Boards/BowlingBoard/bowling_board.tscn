@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://bx8ipfwgt72ot"]
 
-[ext_resource type="Script" uid="uid://crc5ysjub6i8y" path="res://Objects/Machines/Machine/BowlingBoard/bowling_board.gd" id="1_7p1pe"]
-[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/Machines/Machine/BowlingBoard/Pin/pin.tscn" id="4_7jrdl"]
+[ext_resource type="Script" uid="uid://crc5ysjub6i8y" path="res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.gd" id="1_7p1pe"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Boards/BowlingBoard/Pin/pin.tscn" id="4_7jrdl"]
 [ext_resource type="AudioStream" uid="uid://c8uf4e030gnmt" path="res://Audio/strike.mp3" id="4_sta64"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]

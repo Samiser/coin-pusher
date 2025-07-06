@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://i72rao7q5t74"]
 
-[ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Machines/Machine/PinballBoard/Flipper/flipper.gd" id="1_m8m2f"]
+[ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/CoinMachine/Boards/PinballBoard/Flipper/flipper.gd" id="1_m8m2f"]
 [ext_resource type="AudioStream" uid="uid://b51tgfoyhsxtg" path="res://Audio/FlipperUp.wav" id="2_g4y0b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]

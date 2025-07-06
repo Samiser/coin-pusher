@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var coin_scene: PackedScene
-@onready var machine := $Machine
+@onready var machine := $CoinMachine
 @onready var ui := $UI
 @onready var vine_audio := $vine_stream
 @onready var money_audio := $money_stream

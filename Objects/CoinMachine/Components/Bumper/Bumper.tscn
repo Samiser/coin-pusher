@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://coe0tehdfyiny"]
 
-[ext_resource type="Script" uid="uid://ciekyja42rhik" path="res://Objects/MachineComponents/Bumper/bumper.gd" id="1_4r7mt"]
+[ext_resource type="Script" uid="uid://ciekyja42rhik" path="res://Objects/CoinMachine/Components/Bumper/bumper.gd" id="1_4r7mt"]
 [ext_resource type="AudioStream" uid="uid://c0bhjg5qf25hc" path="res://Audio/bumper.mp3" id="2_vxtij"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_vxtij"]

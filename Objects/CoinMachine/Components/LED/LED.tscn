@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dym4en2ttm838"]
 
 [ext_resource type="Texture2D" uid="uid://qjeah87c62nf" path="res://icon.svg" id="1_8vj3e"]
-[ext_resource type="Script" uid="uid://ce0cngiltate" path="res://Objects/MachineComponents/LED/led.gd" id="1_opced"]
+[ext_resource type="Script" uid="uid://ce0cngiltate" path="res://Objects/CoinMachine/Components/LED/led.gd" id="1_opced"]
 
 [node name="Led" type="Node3D"]
 script = ExtResource("1_opced")

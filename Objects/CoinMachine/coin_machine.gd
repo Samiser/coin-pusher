@@ -5,15 +5,18 @@ class_name CoinMachine
 @onready var coin_detector: Area3D = $CoinDetector
 @onready var coin_rain_marker := $CoinRainMarker
 @onready var coin_parent := $Coins
+@onready var drop_location_marker := $DropLocation
+@onready var boards := $Boards
+
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
 var coins_in_play := 0
 
 signal coin_collected(value: int)
+signal add_combo (value:int)
 
 func _get_drop_location() -> Vector3:
-	push_error("_get_drop_location() not implemented in %s" % name)
-	return Vector3.ZERO
+	return drop_location_marker.global_position
 
 func coin_rain() -> void:
 	for i in range(10):
@@ -71,3 +74,6 @@ func _ready() -> void:
 	coins_in_play = coin_parent.get_child_count()
 	
 	coin_detector.connect("body_entered", _coin_detected)
+	
+	for board in boards.get_children():
+		board.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))
