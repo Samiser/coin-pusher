@@ -5,6 +5,8 @@ extends Node3D
 
 var charge_value := 0
 
+signal add_combo (value:int)
+
 func _ready() -> void:
 	for bumper in bumper_parent.get_children():
 		bumper.connect("bumped", bumper_charge)
@@ -17,7 +19,7 @@ func bumper_charge() -> void:
 	
 	charge_value += 1
 	if(charge_value >= 4):
-		#coin_rain()
+		emit_signal("add_combo", 1)
 		charge_value = 0
 		for led in led_parent.get_children():
 			led.toggle_light(0.2)

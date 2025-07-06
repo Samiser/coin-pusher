@@ -12,10 +12,12 @@ size = Vector3(1, 0.333496, 1.10004)
 [node name="WumboMachine" type="Node3D"]
 script = ExtResource("1_ttn5t")
 
-[node name="BowlingBoard" parent="." instance=ExtResource("3_4k8hy")]
+[node name="Boards" type="Node3D" parent="."]
+
+[node name="BowlingBoard" parent="Boards" instance=ExtResource("3_4k8hy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33278, 1.52612, 0.00544095)
 
-[node name="PinballBoard" parent="." instance=ExtResource("3_ttn5t")]
+[node name="PinballBoard" parent="Boards" instance=ExtResource("3_ttn5t")]
 
 [node name="DropLocation" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.334, 2.97951, -0.406975)
