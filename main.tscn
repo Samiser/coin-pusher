@@ -14,6 +14,6 @@ coin_scene = ExtResource("2_h2yge")
 [node name="FirstMachine" parent="." instance=ExtResource("1_0xm2m")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999981, 0.0010102, -0.00606637, 0, 0.986417, 0.164263, 0.0061499, -0.16426, 0.986398, -0.00582998, 0.688291, 1.65123)
+transform = Transform3D(0.999981, 0.0010102, -0.00606636, -0.000699601, 0.998699, 0.0509859, 0.00610998, -0.0509807, 0.998681, -0.00582998, 1.13474, 2.7521)
 current = true
 fov = 61.1

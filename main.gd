@@ -8,6 +8,7 @@ var machine_scenes := {
 	"first": preload("res://Objects/Machines/FirstMachine/first_machine.tscn"),
 	"pinball": preload("res://Objects/Machines/PinballMachine/pinball_machine.tscn"),
 	"bowling": preload("res://Objects/Machines/BowlingMachine/bowling_machine.tscn"),
+	"wumbo": preload("res://Objects/Machines/WumboMachine/wumbo_machine.tscn")
 }
 
 var coins := 10:
