@@ -4,6 +4,8 @@ extends CoinMachine
 @onready var pins := $Pins
 @onready var bowling_ball := $BowlingBall
 
+signal add_combo (value:int)
+
 func _get_drop_location() -> Vector3:
 	return drop_locations.get_children().pick_random().global_position
 
@@ -17,7 +19,8 @@ func _on_pin_hit(_pin: Pin) -> void:
 		await _flash_and_reset_all_pins()
 		bowling_ball.freeze = false
 		bowling_ball.position = Vector3(-0.6, 2, 0.1)
-		bowling_ball.linear_velocity = Vector3(3, -10, 0)
+		bowling_ball.linear_velocity = Vector3(3, -10, 0)#
+		emit_signal("add_combo", 1)
 
 func _ready() -> void:
 	for pin in pins.get_children():

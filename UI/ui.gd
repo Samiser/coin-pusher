@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var coin_balance_label := $CoinBalanceLabel
+@onready var coin_multi_label := $CoinMultiLabel
 @onready var machine_buttons := $MachineButtons
 @onready var drop_button := $DropButton
 @onready var shop := $Panel/Shop
@@ -11,6 +12,9 @@ signal purchase(item_name: String, cost: int)
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str("Coins: ", value))
+
+func set_multi(value: int) -> void:
+	coin_multi_label.set_text(str("Coins Mult\nx", value))
 
 func _ready() -> void:
 	for button in machine_buttons.get_children():

@@ -16,8 +16,16 @@ var coins := 10:
 		ui.set_balance(value)
 		coins = value
 
+var coin_multi := 1:
+	set(value):
+		ui.set_multi(value)
+		coin_multi = value
+		
+func _on_add_combo(value: int) -> void:
+	coin_multi += value
+
 func update_coin_count(value: int) -> void:
-	coins += value
+	coins += value * coin_multi
 
 func switch_machine(machine_name: String) -> void:
 	if machine:
@@ -46,7 +54,9 @@ func purchase(item_name: String, cost: int) -> void:
 
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
+	machine.connect("add_combo", _on_add_combo)
 	ui.connect("machine_selected", switch_machine)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("purchase", purchase)
 	ui.set_balance(coins)
+	ui.set_multi(coin_multi)

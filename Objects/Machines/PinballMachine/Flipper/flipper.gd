@@ -40,10 +40,7 @@ func _process(delta: float) -> void:
 func _coin_hit(body:Node3D) -> void:
 	if !body.is_in_group("coin"):
 		return
-		
-	print("flip_hold")
 	
 	_flip(false)
 	await get_tree().create_timer(0.4).timeout
-	print("flip_release")
 	_flip(true)

@@ -12,6 +12,19 @@ offset_bottom = 102.0
 theme_override_font_sizes/normal_font_size = 33
 text = "Coins: 0000"
 
+[node name="CoinMultiLabel" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -115.5
+offset_right = 115.5
+offset_bottom = 102.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 33
+text = "Coins Multi
+x1"
+horizontal_alignment = 1
+
 [node name="DropButton" type="Button" parent="."]
 offset_left = 277.0
 offset_top = 449.0
