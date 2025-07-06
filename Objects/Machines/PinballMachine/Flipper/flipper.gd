@@ -1,11 +1,14 @@
 extends Node3D
 
 @onready var flipper_body := $AnimatedRigidBody3D
+@onready var collision_shape := $AnimatedRigidBody3D/Area3D
 var flip_speed := 24
 var tween : Tween
 @export var invert := false
 
 func _ready() -> void:
+	collision_shape.connect("body_entered", _coin_hit)
+	
 	var flip_range := 32
 	if invert: 
 		flip_range *= -1
@@ -28,9 +31,19 @@ func _flip(release:bool) -> void:
 	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(flipper_body, "rotation_degrees:z", flip_range, 0.1)
 
-# might want to use a tween for this https://docs.godotengine.org/en/stable/classes/class_tween.html
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("flip"):
 		_flip(false)
 	if Input.is_action_just_released("flip"):
 		_flip(true)
+		
+func _coin_hit(body:Node3D) -> void:
+	if !body.is_in_group("coin"):
+		return
+		
+	print("flip_hold")
+	
+	_flip(false)
+	await get_tree().create_timer(0.4).timeout
+	print("flip_release")
+	_flip(true)
