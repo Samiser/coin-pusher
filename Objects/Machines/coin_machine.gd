@@ -28,11 +28,12 @@ func coin_explode() -> void:
 		if coin is RigidBody3D:
 			coin.apply_impulse(Vector3.UP * randf_range(0.01, 0.1), Vector3.ZERO)
 
-func spawn_coin() -> void:
+func spawn_coin() -> Coin:
 	var coin := coin_scene.instantiate()
 	coin_parent.add_child(coin)
 	coin.rotation_degrees = Vector3(90, 0, 0)
 	coin.position = _get_drop_location()
+	return coin
 
 func _coin_detected(coin: Coin) -> void:
 	print("coin detected")

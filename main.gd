@@ -5,6 +5,9 @@ extends Node3D
 @onready var ui := $UI
 @onready var vine_audio := $vine_stream
 @onready var money_audio := $money_stream
+@onready var camera: Camera3D = $Camera3D
+
+var latest_coin: Coin
 
 var machine_scenes := {
 	"first": preload("res://Objects/Machines/FirstMachine/first_machine.tscn"),
@@ -45,8 +48,14 @@ func switch_machine(machine_name: String) -> void:
 		push_error("Unknown machine name: %s" % machine_name)
 
 func drop_coin() -> void:
-	machine.spawn_coin()
+	latest_coin = machine.spawn_coin()
+	var tween := create_tween()
+	tween.tween_property(camera, "fov", 20, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	coins -= 1
+
+func _physics_process(delta: float) -> void:
+	if latest_coin:
+		camera.look_at(latest_coin.position)
 
 func purchase(item_name: String, cost: int) -> void:
 	print("purchasing ", item_name, " for ", cost)
