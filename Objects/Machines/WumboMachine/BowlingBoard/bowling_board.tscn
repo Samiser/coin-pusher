@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=4 uid="uid://bx8ipfwgt72ot"]
+[gd_scene load_steps=14 format=4 uid="uid://bx8ipfwgt72ot"]
 
 [ext_resource type="Script" uid="uid://crc5ysjub6i8y" path="res://Objects/Machines/WumboMachine/BowlingBoard/bowling_board.gd" id="1_7p1pe"]
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/Machines/BowlingMachine/Pin/pin.tscn" id="4_7jrdl"]
+[ext_resource type="AudioStream" uid="uid://c8uf4e030gnmt" path="res://Audio/strike.mp3" id="4_sta64"]
 [ext_resource type="Script" uid="uid://bnxdy40gcm7g7" path="res://Objects/Machines/BowlingMachine/dropper.gd" id="5_vr1jg"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dkuib"]
@@ -149,3 +150,6 @@ mesh = SubResource("ArrayMesh_wtywe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dropper"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0808489, 0)
 shape = SubResource("ConcavePolygonShape3D_spnkw")
+
+[node name="StrikeAudio" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("4_sta64")
