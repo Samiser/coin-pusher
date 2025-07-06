@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://i72rao7q5t74"]
+[gd_scene load_steps=7 format=3 uid="uid://i72rao7q5t74"]
 
 [ext_resource type="Script" uid="uid://bbmff7ajsrcl0" path="res://Objects/Machines/PinballMachine/Flipper/flipper.gd" id="1_m8m2f"]
+[ext_resource type="AudioStream" uid="uid://b51tgfoyhsxtg" path="res://Audio/FlipperUp.wav" id="2_g4y0b"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_m8m2f"]
 friction = 0.2
@@ -33,3 +34,6 @@ shape = SubResource("BoxShape3D_ls7b3")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatedRigidBody3D/CollisionShape3D"]
 transform = Transform3D(0.185, 0, 0, 0, 0.046, 0, 0, 0, 0.0708655, 0, 0, 0)
 mesh = SubResource("BoxMesh_lbvxh")
+
+[node name="flipper_stream" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_g4y0b")
