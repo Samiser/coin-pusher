@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=8 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
 [ext_resource type="Texture2D" uid="uid://b1voflqxkqr7k" path="res://Textures/me.jpg" id="2_e6gg6"]
+[ext_resource type="Script" uid="uid://bu0ucjaihmk7a" path="res://UI/debug_menu.gd" id="3_e6gg6"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -111,3 +112,29 @@ offset_right = 0.0
 offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="DebugPanel" type="Panel" parent="."]
+offset_left = 54.0
+offset_top = 762.0
+offset_right = 267.0
+offset_bottom = 854.0
+
+[node name="DebugMenu" type="VBoxContainer" parent="DebugPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+script = ExtResource("3_e6gg6")
+
+[node name="Label" type="Label" parent="DebugPanel/DebugMenu"]
+layout_mode = 2
+text = "Debug Menu"
+horizontal_alignment = 1
+
+[node name="CoinFollowButton" type="Button" parent="DebugPanel/DebugMenu"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Toggle Coin Follow"

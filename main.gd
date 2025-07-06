@@ -9,6 +9,8 @@ extends Node3D
 
 var latest_coin: Coin
 
+var coin_follow: bool = false
+
 var machine_scenes := {
 	"first": preload("res://Objects/Machines/FirstMachine/first_machine.tscn"),
 	"pinball": preload("res://Objects/Machines/PinballMachine/pinball_machine.tscn"),
@@ -49,12 +51,10 @@ func switch_machine(machine_name: String) -> void:
 
 func drop_coin() -> void:
 	latest_coin = machine.spawn_coin()
-	var tween := create_tween()
-	tween.tween_property(camera, "fov", 20, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	coins -= 1
 
 func _physics_process(delta: float) -> void:
-	if latest_coin:
+	if latest_coin and coin_follow:
 		camera.look_at(latest_coin.position)
 
 func purchase(item_name: String, cost: int) -> void:
@@ -66,11 +66,23 @@ func purchase(item_name: String, cost: int) -> void:
 	if item_name == "bomb_coin":
 		machine.coin_explode()
 
+func debug_option(option: String) -> void:
+	match option:
+		"coin_follow":
+			coin_follow = !coin_follow
+			var tween := create_tween()
+			if coin_follow == false:
+				tween.tween_property(camera, "fov", 75, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+				tween.parallel().tween_property(camera, "rotation_degrees", Vector3(-3, 0, 0), 1)
+			else:
+				tween.tween_property(camera, "fov", 20, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
+
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	ui.connect("machine_selected", switch_machine)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("purchase", purchase)
+	ui.connect("debug_menu_button", debug_option)
 	ui.set_balance(coins)
 	ui.set_multi(coin_multi)

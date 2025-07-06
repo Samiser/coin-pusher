@@ -5,11 +5,13 @@ extends CanvasLayer
 @onready var machine_buttons := $MachineButtons
 @onready var drop_button := $DropButton
 @onready var shop := $Panel/Shop
+@onready var debug_menu := $DebugPanel/DebugMenu
 @onready var multi_particles := $multi_particles
 
 signal machine_selected(machine: String)
 signal drop_triggered
 signal purchase(item_name: String, cost: int)
+signal debug_menu_button(option: String)
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str("Coins: ", value))
@@ -30,4 +32,8 @@ func _ready() -> void:
 	
 	shop.connect("purchase", func(item_name: String, cost: int) -> void:
 		emit_signal("purchase", item_name, cost)
+	)
+	
+	debug_menu.connect("debug_menu_button", func(option: String) -> void:
+		emit_signal("debug_menu_button", option)
 	)
