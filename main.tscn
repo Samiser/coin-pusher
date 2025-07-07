@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=10 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b028rg20gl7fs" path="res://UI/ui.tscn" id="3_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dd0cno3cohh2j" path="res://UI/Sprites/coin_reaction.jpg" id="5_5vw27"]
 [ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dh0gg8lf7jnqg" path="res://Objects/CoinMachine/coin_machine.tscn" id="7_5vw27"]
@@ -20,6 +21,31 @@ coin_scene = ExtResource("2_h2yge")
 [node name="CoinMachine" parent="." instance=ExtResource("7_5vw27")]
 
 [node name="UI" parent="." instance=ExtResource("3_lquwl")]
+
+[node name="TextureRect" type="TextureRect" parent="UI"]
+offset_left = 1272.0
+offset_top = 597.0
+offset_right = 1817.0
+offset_bottom = 987.0
+texture = ExtResource("5_5vw27")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]
+offset_left = 1280.0
+offset_top = 687.0
+offset_right = 1793.0
+offset_bottom = 979.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="UI/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(513, 292)
+render_target_update_mode = 4
+
+[node name="PusherCamera" type="Camera3D" parent="UI/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.773342, -0.290798, 0.563363, -0.0244208, 0.874279, 0.48481, -0.633518, -0.388682, 0.669015, 0.799, 0.501, 0.797)
+fov = 63.3
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -0.010263, 1.80102, 3.52805)
