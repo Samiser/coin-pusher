@@ -60,6 +60,7 @@ func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	ui.connect("drop_triggered", drop_coin)
+	ui.connect("swap_boards", func() -> void: machine.swap_boards(0, 1))
 	ui.connect("purchase", purchase)
 	ui.connect("debug_menu_button", debug_option)
 	ui.set_balance(coins)

@@ -81,6 +81,14 @@ offset_bottom = 499.0
 theme_override_font_sizes/font_size = 33
 text = "Drop"
 
+[node name="SwapBoards" type="Button" parent="."]
+offset_left = 1453.0
+offset_top = 449.0
+offset_right = 1608.0
+offset_bottom = 503.0
+theme_override_font_sizes/font_size = 33
+text = "Swap"
+
 [node name="Panel" type="Panel" parent="."]
 offset_left = 55.0
 offset_top = 897.0

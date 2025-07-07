@@ -11,6 +11,11 @@ class_name CoinMachine
 
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
+var board_scenes: Dictionary[String, PackedScene] = {
+	"pinball": preload("res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.tscn"),
+	"bowling": preload("res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.tscn"),
+}
+
 var coins_in_play := 0
 
 signal coin_collected(value: int)
@@ -19,10 +24,34 @@ signal add_combo (value:int)
 func _get_drop_location() -> Vector3:
 	return drop_location_marker.global_position
 
+func add_board(board_name: String) -> void:
+	if board_name in board_scenes:
+		boards.add_child(board_scenes[board_name].instantiate())
+
+func swap_boards(first_idx: int, second_idx: int) -> void:
+	if first_idx == second_idx:
+		return
+
+	var children := boards.get_children()
+	var count := children.size()
+
+	if first_idx < 0 or first_idx >= count or second_idx < 0 or second_idx >= count:
+		push_error("Index out of bounds.")
+		return
+
+	var first_node := children[first_idx]
+	var second_node := children[second_idx]
+
+	if first_idx < second_idx:
+		boards.move_child(second_node, first_idx)
+		#boards.move_child(first_node, second_idx)
+	else:
+		boards.move_child(first_node, second_idx)
+		#boards.move_child(second_node, first_idx)
+
 func coin_rain() -> void:
 	for i in range(10):
 		var coin := spawn_coin([])
-		coin_parent.add_child(coin)
 		coin.global_position = coin_rain_marker.global_position
 		coin.linear_velocity = Vector3(randf_range(-0.7, 0.7), 0., randf_range(-0.7, 0.7))
 		coin.rotation = Vector3(randf_range(-0.3, 0.3), randf_range(-0.3, 0.3), randf_range(-0.3, 0.3))
