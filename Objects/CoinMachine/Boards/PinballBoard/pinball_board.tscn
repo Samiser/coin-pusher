@@ -1,28 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dq2tr3r3buo8v"]
+[gd_scene load_steps=6 format=3 uid="uid://dq2tr3r3buo8v"]
 
 [ext_resource type="Script" uid="uid://s5cuihaa1kdq" path="res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.gd" id="1_8denj"]
 [ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/CoinMachine/Components/Bumper/Bumper.tscn" id="2_cixf3"]
+[ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="5_3lul6"]
 [ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/CoinMachine/Boards/PinballBoard/Flipper/Flipper.tscn" id="5_lljcn"]
 [ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/CoinMachine/Components/LED/LED.tscn" id="6_5l1l6"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3e066"]
-friction = 0.0
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6a4ke"]
-transparency = 1
-blend_mode = 1
-albedo_color = Color(0.8, 1, 1, 0.431373)
-metallic = 0.9
-roughness = 0.3
-emission_energy_multiplier = 8.03
-normal_scale = -16.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_3lul6"]
-material = SubResource("StandardMaterial3D_6a4ke")
-size = Vector3(2.4, 2, 0.04)
-
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_mkmhy"]
-points = PackedVector3Array(1.2, 1, 0.02, 1.2, 1, -0.02, -1.2, 1, 0.02, 1.2, -1, 0.02, 1.2, -1, -0.02, -1.2, 1, -0.02, -1.2, -1, 0.02, -1.2, -1, -0.02)
 
 [node name="PinballBoard" type="Node3D"]
 script = ExtResource("1_8denj")
@@ -35,20 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.411631, 1.10133, -0.406)
 
 [node name="Bumper3" parent="Bumpers" instance=ExtResource("2_cixf3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.412, 1.10121, -0.406)
-
-[node name="Body" type="CSGCombiner3D" parent="."]
-use_collision = true
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Body"]
-size = Vector3(2.4, 2, 0.2)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="Body"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.3, 0, 0)
-size = Vector3(1, 2, 0.2)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="Body"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.3, 0, 0)
-size = Vector3(1, 2, 0.2)
 
 [node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
 transform = Transform3D(1.07024, 0, 0, 0, 1, 0, 0, 0, 1, -2.02358e-05, -0.764, 0.526816)
@@ -83,13 +51,13 @@ transform = Transform3D(0.00014543, 0.19758, 0.812083, -0.000353513, -0.27496, 0
 size = Vector3(1.70203, 3.59579, 0.2)
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-0.00276863, -0.781711, 0.623635, -0.00130541, -0.623634, -0.781715, 0.999995, -0.00297838, 0.000706158, -0.884446, 1.67526, -0.360203)
-size = Vector3(0.139289, 1.01177, 0.415478)
+transform = Transform3D(-0.00276863, -0.781711, 0.623635, -0.00130541, -0.623634, -0.781715, 0.999995, -0.00297838, 0.000706158, -0.902254, 1.67527, -0.369443)
+size = Vector3(0.119084, 1.01177, 0.415478)
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(-0.00276863, -0.964963, -0.26237, -0.00130541, 0.262374, -0.964965, 0.999995, -0.00232913, -0.00198609, -0.819902, 1.89482, -0.405636)
+transform = Transform3D(-0.00298572, -0.88518, -0.465239, -0.000674444, 0.465243, -0.885182, 0.999995, -0.00232913, -0.00198609, -0.936496, 1.90487, -0.330351)
 operation = 2
-size = Vector3(0.047492, 1.01177, 0.425024)
+size = Vector3(0.198062, 1.01177, 0.425024)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025819, 1.96197, -0.560547)
@@ -97,12 +65,12 @@ operation = 2
 size = Vector3(2.83252, 0.398438, 1.21143)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33737, 1.52587, -0.560547)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.37256, 1.52587, -0.560547)
 operation = 2
-size = Vector3(0.155151, 0.474487, 1.21143)
+size = Vector3(0.225525, 0.474487, 1.21143)
 
 [node name="Flippers" type="Node3D" parent="."]
-transform = Transform3D(1.08897, 0, 0, 0, 1, 0, 0, 0, 1, -0.00573634, -0.674032, 0.537765)
+transform = Transform3D(1.08897, 0, 0, 0, 1, 0, 0, 0, 1, -0.00573634, -0.760935, 0.507556)
 
 [node name="Flipper" parent="Flippers" instance=ExtResource("5_lljcn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26, 0.258, -0.377)
@@ -132,17 +100,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.806179, -0.4489
 [node name="Led4" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.969599, -0.448964)
 
-[node name="Glass" type="StaticBody3D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_3e066")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
-mesh = SubResource("BoxMesh_3lul6")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Glass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
-shape = SubResource("ConvexPolygonShape3D_mkmhy")
-
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
@@ -152,3 +109,5 @@ light_color = Color(0, 0.580392, 1, 1)
 [node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.3)
 light_color = Color(0.690196, 0, 1, 1)
+
+[node name="Board" parent="." instance=ExtResource("5_3lul6")]

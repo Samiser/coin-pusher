@@ -30,7 +30,7 @@ func _flip(release:bool) -> void:
 	
 	tween = get_tree().create_tween()
 	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
-	tween.tween_property(flipper_body, "rotation_degrees:z", flip_range, 0.1)
+	tween.tween_property(flipper_body, "global_rotation_degrees:z", flip_range, 0.1)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("flip"):
