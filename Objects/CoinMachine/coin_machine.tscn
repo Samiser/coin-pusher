@@ -46,10 +46,10 @@ script = ExtResource("1_ttn5t")
 [node name="Boards" type="Node3D" parent="."]
 
 [node name="BowlingBoard" parent="Boards" instance=ExtResource("3_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -0.53)
-
-[node name="PinballBoard" parent="Boards" groups=["bottom"] instance=ExtResource("3_ttn5t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.53)
+
+[node name="PinballBoard" parent="Boards" instance=ExtResource("3_ttn5t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -0.53)
 
 [node name="DropLocation" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.86133, -0.439399)

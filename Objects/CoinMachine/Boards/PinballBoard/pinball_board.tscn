@@ -86,19 +86,19 @@ invert = true
 transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -1.01603, 0.701341, -0.377)
 
 [node name="ChargeLeds" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.63597, 0.515557)
+transform = Transform3D(1.76551, 0, 0, 0, 1.89452, 0, 0, 0, 1, 0, 0.198254, 0.516)
 
 [node name="Led" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.42846, -0.448964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.277695, -0.448964)
 
 [node name="Led2" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.620586, -0.448964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.0855693, -0.448964)
 
 [node name="Led3" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.806179, -0.448964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.100024, -0.448964)
 
 [node name="Led4" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.969599, -0.448964)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.263444, -0.448964)
 
 [node name="Lights" type="Node3D" parent="."]
 

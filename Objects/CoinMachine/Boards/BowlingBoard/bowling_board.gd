@@ -15,7 +15,7 @@ func _on_pin_hit(_pin: Pin) -> void:
 	if all_pins_hit:
 		_flash_and_reset_all_pins()
 		bowling_ball.freeze = false
-		bowling_ball.position = Vector3(-0.6, 2, 0.1)
+		bowling_ball.position = Vector3(-0.9, 2, 0.8)
 		bowling_ball.linear_velocity = Vector3(3, -10, 0)
 		emit_signal("add_combo", 1)
 		strike_audio.play()

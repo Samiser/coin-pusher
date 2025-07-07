@@ -69,7 +69,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0539423, 0.433743, -0.4292
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16192, 0.433743, -0.429253)
 
 [node name="BowlingBall" type="RigidBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.934324, 1.718, 0.852204)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.934324, 1.718, 1.00092)
 mass = 3.0
 freeze = true
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b42c5n0k7yhn8"]
+[gd_scene load_steps=8 format=3 uid="uid://b42c5n0k7yhn8"]
 
 [ext_resource type="Script" uid="uid://cajfcyj3j2tj4" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.gd" id="1_vc08w"]
 
@@ -24,6 +24,9 @@ points = PackedVector3Array(1.2, 1, 0.02, 1.2, 1, -0.02, -1.2, 1, 0.02, 1.2, -1,
 [sub_resource type="BoxMesh" id="BoxMesh_oty48"]
 material = SubResource("StandardMaterial3D_vc08w")
 size = Vector3(2.4, 1.6, 0.04)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oty48"]
+points = PackedVector3Array(1.2, 0.8, 0.02, 1.2, 0.8, -0.02, -1.2, 0.8, 0.02, 1.2, -0.8, 0.02, 1.2, -0.8, -0.02, -1.2, 0.8, -0.02, -1.2, -0.8, 0.02, -1.2, -0.8, -0.02)
 
 [node name="Board" type="Node3D"]
 script = ExtResource("1_vc08w")
@@ -64,8 +67,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.2)
 mesh = SubResource("BoxMesh_oty48")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BottomGlass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2)
-shape = SubResource("ConvexPolygonShape3D_vc08w")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.2)
+shape = SubResource("ConvexPolygonShape3D_oty48")
 
 [node name="Lights" type="Node3D" parent="."]
 visible = false
