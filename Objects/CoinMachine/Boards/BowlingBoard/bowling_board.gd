@@ -19,7 +19,6 @@ func _on_pin_hit(_pin: Pin) -> void:
 		bowling_ball.linear_velocity = Vector3(3, -10, 0)
 		emit_signal("add_combo", 1)
 		strike_audio.play()
-		await get_tree().create_timer(1)
 		
 
 func _ready() -> void:

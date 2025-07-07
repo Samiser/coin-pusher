@@ -67,7 +67,7 @@ func _coin_detected(coin: Coin) -> void:
 	coin.queue_free()	# prevents coin from setting off this function again
 						# was happening with da bomb coin :(
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	for i: int in boards.get_child_count():
 		var boards_array := boards.get_children()
 		boards_array[i].global_position = Vector3(0, 1 + i * 2, -0.53)

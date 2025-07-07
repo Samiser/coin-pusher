@@ -32,7 +32,7 @@ func _flip(release:bool) -> void:
 	tween.set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
 	tween.tween_property(flipper_body, "global_rotation_degrees:z", flip_range, 0.1)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("flip"):
 		_flip(false)
 	if Input.is_action_just_released("flip"):

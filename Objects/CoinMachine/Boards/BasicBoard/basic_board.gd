@@ -13,7 +13,7 @@ func set_disabled(node: StaticBody3D, value: bool) -> void:
 	node.visible = !value
 	node.get_child(1).disabled = value
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if get_parent().is_in_group("bottom") or is_in_group("bottom"):
 		set_disabled(glass, true)
 		set_disabled(bottom_glass, false)

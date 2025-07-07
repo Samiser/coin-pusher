@@ -33,7 +33,7 @@ func drop_coin() -> void:
 	latest_coin = machine.spawn_coin([])
 	coins -= 1
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if latest_coin and coin_follow:
 		camera.look_at(latest_coin.position)
 
