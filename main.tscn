@@ -61,7 +61,7 @@ volume_db = -20.952
 max_polyphony = 4
 
 [node name="bg_sprite" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.587, -3.46043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.403, -2.93)
 alpha_cut = 2
 texture = ExtResource("7_272bh")
 
