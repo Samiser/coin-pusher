@@ -88,16 +88,16 @@ transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -1.016
 [node name="ChargeLeds" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.198254, 0.516)
 
-[node name="Pin" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+[node name="Pin" parent="ChargeLeds" groups=["unhittable"] instance=ExtResource("4_3lul6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.472678, -0.410064)
 
-[node name="Pin2" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+[node name="Pin2" parent="ChargeLeds" groups=["unhittable"] instance=ExtResource("4_3lul6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, -0.164718, -0.41)
 
-[node name="Pin3" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+[node name="Pin3" parent="ChargeLeds" groups=["unhittable"] instance=ExtResource("4_3lul6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.142244, -0.41)
 
-[node name="Pin4" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+[node name="Pin4" parent="ChargeLeds" groups=["unhittable"] instance=ExtResource("4_3lul6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.445212, -0.41)
 
 [node name="Lights" type="Node3D" parent="."]

@@ -36,6 +36,7 @@ func change_board(index: int, new_board: String) -> void:
 	
 	var new_board_node := board_scenes[new_board].instantiate()
 	var old_board_node := boards.get_child(index)
+	new_board_node.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))
 	old_board_node.add_sibling(new_board_node)
 	old_board_node.queue_free()
 	
@@ -128,8 +129,10 @@ func _ready() -> void:
 	
 	coin_detector.connect("body_entered", _coin_detected)
 	killzone.connect("body_entered", func(body: PhysicsBody3D) -> void:
-		if body.is_in_group("coin"): body.queue_free()
-		coins_in_play -= 1)
+		if body.is_in_group("coin"):
+			body.queue_free()
+		coins_in_play -= 1
+	)
 	
 	for board in boards.get_children():
 		board.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))

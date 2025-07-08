@@ -15,11 +15,11 @@ func bumper_charge() -> void:
 	for i in range(led_parent.get_child_count()):
 		if i > charge_value:
 			break
-		led_parent.get_child(i).toggle_light(1)
+		led_parent.get_child(i).activate()
 	
 	charge_value += 1
 	if(charge_value >= 4):
 		emit_signal("add_combo", 1)
 		charge_value = 0
 		for led in led_parent.get_children():
-			led.toggle_light(0.2)
+			led.flash_and_reset()
