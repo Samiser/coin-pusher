@@ -69,6 +69,7 @@ mesh = SubResource("BoxMesh_oty48")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BottomGlass"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.2)
 shape = SubResource("ConvexPolygonShape3D_oty48")
+disabled = true
 
 [node name="Lights" type="Node3D" parent="."]
 visible = false

@@ -1,21 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bhog32l8epd3n"]
 
 [ext_resource type="Texture2D" uid="uid://qjeah87c62nf" path="res://icon.svg" id="1_bphgs"]
-[ext_resource type="Script" uid="uid://by2yfbk5eukj4" path="res://Objects/CoinMachine/Boards/BowlingBoard/Pin/pin.gd" id="1_u7pv4"]
+[ext_resource type="Script" uid="uid://by2yfbk5eukj4" path="res://Objects/CoinMachine/Components/Pin/pin.gd" id="1_u7pv4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_u7pv4"]
-size = Vector3(0.0637817, 0.0897903, 0.144516)
+size = Vector3(0.256428, 0.255297, 0.102531)
 
 [node name="Pin" type="Node3D"]
 script = ExtResource("1_u7pv4")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(0.05, 0, 0, 0, 0.07, 0, 0, 0, 0.1, 0, 0, 0)
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.286, 0, 0, 0)
 modulate = Color(0.439049, 0.439049, 0.439049, 1)
 texture = ExtResource("1_bphgs")
 
 [node name="CoinDetectorArea" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CoinDetectorArea"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000213623, -7.24792e-05, 0.0655441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.33589e-05, 8.67806e-05, 0.0445518)
 shape = SubResource("BoxShape3D_u7pv4")

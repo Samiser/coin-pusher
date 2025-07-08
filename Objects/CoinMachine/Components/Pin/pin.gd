@@ -14,6 +14,10 @@ func _hit() -> void:
 	is_hit = true
 	emit_signal("hit", self)
 
+func _unhit() -> void:
+	is_hit = false
+	sprite.modulate = Color.DARK_GRAY
+
 func flash_and_reset() -> void:
 	animating = true
 	var tween := get_tree().create_tween()
@@ -29,4 +33,5 @@ func _on_body_entered(body: Node3D) -> void:
 		_hit()
 
 func _ready() -> void:
+	_unhit()
 	coin_detector_area.connect("body_entered", _on_body_entered)

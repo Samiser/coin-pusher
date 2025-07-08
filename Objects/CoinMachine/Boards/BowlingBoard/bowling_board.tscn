@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bx8ipfwgt72ot"]
 
 [ext_resource type="Script" uid="uid://crc5ysjub6i8y" path="res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.gd" id="1_7p1pe"]
-[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Boards/BowlingBoard/Pin/pin.tscn" id="4_7jrdl"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="4_7jrdl"]
 [ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="4_bqv3n"]
 [ext_resource type="AudioStream" uid="uid://c8uf4e030gnmt" path="res://Audio/strike.mp3" id="4_sta64"]
 
@@ -36,37 +36,37 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.3)
 light_color = Color(0.690196, 0, 1, 1)
 
 [node name="Pins" type="Node3D" parent="."]
-transform = Transform3D(3.65944, 0, 0, 0, 2.76318, 0, 0, 0, 1, -0.00784388, -1.59976, 0.541093)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00784388, -0.143915, 0.100806)
 
 [node name="Pin" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00248622, 0.757444, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00248622, 0.579872, 0)
 
 [node name="Pin2" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053155, 0.654155, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.160872, 0.268708, 0)
 
 [node name="Pin3" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0567528, 0.654155, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.179588, 0.268708, 0)
 
 [node name="Pin4" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106369, 0.543752, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.326871, -0.0435565, 0)
 
 [node name="Pin5" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000424586, 0.543752, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00902442, -0.0435565, 0)
 
 [node name="Pin6" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.108753, 0.543752, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352175, -0.0435565, 0)
 
 [node name="Pin7" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.166255, 0.433743, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.517534, -0.361125, 0)
 
 [node name="Pin8" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0535172, 0.433743, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.187816, -0.361125, 0)
 
 [node name="Pin9" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0539423, 0.433743, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.160665, -0.361125, 0)
 
 [node name="Pin10" parent="Pins" instance=ExtResource("4_7jrdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16192, 0.433743, -0.429253)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.486591, -0.361125, 0)
 
 [node name="BowlingBall" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.934324, 1.718, 1.00092)

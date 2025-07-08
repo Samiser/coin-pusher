@@ -22,7 +22,7 @@ var coin_multi := 1:
 	set(value):
 		ui.set_multi(value)
 		coin_multi = value
-		
+
 func _on_add_combo(value: int) -> void:
 	coin_multi += value
 	vine_audio.play()

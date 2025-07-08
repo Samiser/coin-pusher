@@ -5,7 +5,7 @@ class_name CoinMachine
 @onready var coin_detector: Area3D = $CoinDetector
 @onready var coin_rain_marker := $CoinRainMarker
 @onready var coin_parent := $Coins
-@onready var drop_location_marker := $DropLocation
+@onready var drop_location_marker := $Dropper/DropLocation
 @onready var boards := $Boards
 @onready var killzone := $Killzone
 

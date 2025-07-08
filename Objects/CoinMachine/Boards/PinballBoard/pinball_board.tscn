@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://s5cuihaa1kdq" path="res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.gd" id="1_8denj"]
 [ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/CoinMachine/Components/Bumper/Bumper.tscn" id="2_cixf3"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="4_3lul6"]
 [ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="5_3lul6"]
 [ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/CoinMachine/Boards/PinballBoard/Flipper/Flipper.tscn" id="5_lljcn"]
-[ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/CoinMachine/Components/LED/LED.tscn" id="6_5l1l6"]
 
 [node name="PinballBoard" type="Node3D"]
 script = ExtResource("1_8denj")
@@ -86,19 +86,19 @@ invert = true
 transform = Transform3D(-1, 0, -1.19209e-07, 0, 1, 0, 1.19209e-07, 0, -1, -1.01603, 0.701341, -0.377)
 
 [node name="ChargeLeds" type="Node3D" parent="."]
-transform = Transform3D(1.76551, 0, 0, 0, 1.89452, 0, 0, 0, 1, 0, 0.198254, 0.516)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.198254, 0.516)
 
-[node name="Led" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.277695, -0.448964)
+[node name="Pin" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.472678, -0.410064)
 
-[node name="Led2" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, -0.0855693, -0.448964)
+[node name="Pin2" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, -0.164718, -0.41)
 
-[node name="Led3" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.100024, -0.448964)
+[node name="Pin3" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.142244, -0.41)
 
-[node name="Led4" parent="ChargeLeds" instance=ExtResource("6_5l1l6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00181916, 0.263444, -0.448964)
+[node name="Pin4" parent="ChargeLeds" instance=ExtResource("4_3lul6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0.445212, -0.41)
 
 [node name="Lights" type="Node3D" parent="."]
 
