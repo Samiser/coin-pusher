@@ -1,30 +1,15 @@
-[gd_scene load_steps=11 format=4 uid="uid://dh0gg8lf7jnqg"]
+[gd_scene load_steps=10 format=4 uid="uid://dh0gg8lf7jnqg"]
 
 [ext_resource type="Script" uid="uid://crhnrohue36tj" path="res://Objects/CoinMachine/coin_machine.gd" id="1_ttn5t"]
-[ext_resource type="PackedScene" uid="uid://bx8ipfwgt72ot" path="res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.tscn" id="3_4k8hy"]
-[ext_resource type="PackedScene" uid="uid://dq2tr3r3buo8v" path="res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.tscn" id="3_ttn5t"]
+[ext_resource type="PackedScene" uid="uid://bll5hvjioc1dk" path="res://Objects/CoinMachine/Boards/PinBoard/pin_board.tscn" id="2_i7tb6"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="4_4k8hy"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/CoinMachine/Components/Pusher/pusher.tscn" id="4_5c2ke"]
+[ext_resource type="Script" uid="uid://di0kwy2q7vdj4" path="res://Objects/CoinMachine/dropper.gd" id="6_1hgft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ttn5t"]
 size = Vector3(1, 0.333496, 1.10004)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xuo70"]
-
-[sub_resource type="GDScript" id="GDScript_xuo70"]
-script/source = "extends AnimatableBody3D
-
-@export var frequency := 0.3
-@export var amplitude := 90
-var axis := Vector3.FORWARD
-var time_passed := 0.0
-
-func _physics_process(delta: float) -> void:
-	time_passed += delta
-	var offset := amplitude * sin(time_passed * frequency * TAU)
-	rotation_degrees = axis * offset
-	
-"
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_1hgft"]
 _surfaces = [{
@@ -45,14 +30,11 @@ script = ExtResource("1_ttn5t")
 
 [node name="Boards" type="Node3D" parent="."]
 
-[node name="PinballBoard" parent="Boards" instance=ExtResource("3_ttn5t")]
+[node name="PinBoard" parent="Boards" instance=ExtResource("2_i7tb6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.53)
 
-[node name="BowlingBoard" parent="Boards" instance=ExtResource("3_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -0.53)
-
 [node name="DropLocation" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.86133, -0.439399)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.11484, -0.439399)
 
 [node name="CoinRainMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)
@@ -678,8 +660,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74672, 0)
 shape = SubResource("WorldBoundaryShape3D_xuo70")
 
 [node name="Dropper" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.85455, -0.363794)
-script = SubResource("GDScript_xuo70")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10806, -0.363794)
+script = ExtResource("6_1hgft")
 
 [node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Dropper"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0808489, 0)

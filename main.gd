@@ -11,6 +11,8 @@ var latest_coin: Coin
 
 var coin_follow: bool = false
 
+var round_goal: int = 100
+
 var coins := 10:
 	set(value):
 		ui.set_balance(value)
@@ -26,10 +28,17 @@ func _on_add_combo(value: int) -> void:
 	vine_audio.play()
 
 func update_coin_count(value: int) -> void:
-	coins += value * coin_multi
-	money_audio.play()
+	if coins >= round_goal:
+		print("win!!!!")
+	else:
+		coins += value * coin_multi
+		money_audio.play()
 
 func drop_coin() -> void:
+	if coins <= 0:
+		print("out of coins!!")
+		return
+
 	latest_coin = machine.spawn_coin([])
 	coins -= 1
 
@@ -60,7 +69,7 @@ func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	ui.connect("drop_triggered", drop_coin)
-	ui.connect("swap_boards", func() -> void: machine.swap_boards(0, 1))
+	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
 	ui.connect("purchase", purchase)
 	ui.connect("debug_menu_button", debug_option)
 	ui.set_balance(coins)

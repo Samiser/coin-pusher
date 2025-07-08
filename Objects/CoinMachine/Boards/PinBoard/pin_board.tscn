@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://bll5hvjioc1dk"]
+
+[ext_resource type="Script" uid="uid://bqk1xo3n1t7b0" path="res://Objects/CoinMachine/Boards/PinBoard/pin_board.gd" id="1_7xdxt"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Boards/BowlingBoard/Pin/pin.tscn" id="2_ry0au"]
+[ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="4_k44lo"]
+
+[node name="PinBoard" type="Node3D"]
+script = ExtResource("1_7xdxt")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, -0.8, 0.148)
+size = Vector3(0.5, 0.4, 0.12)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.841379, 0.540446, 0, -0.540446, 0.841379, 0, 0, 0, 1, -0.872417, -0.605108, 0.148)
+operation = 2
+size = Vector3(0.684418, 0.4, 0.12)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, -0.8, 0.148)
+size = Vector3(0.5, 0.4, 0.12)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.841511, -0.54024, 0, 0.54024, 0.841511, 0, 0, 0, 1, 0.872, -0.605, 0.148)
+operation = 2
+size = Vector3(0.684418, 0.4, 0.12)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.963443, -0.0269607, 0.449463)
+light_color = Color(0.95563, 0.479048, 0.0475388, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.967282, -0.0425117, 0.428229)
+light_color = Color(0.690196, 0, 1, 1)
+
+[node name="Pins" type="Node3D" parent="."]
+transform = Transform3D(3.65944, 0, 0, 0, 2.76318, 0, 0, 0, 1, -0.008, 0, 0.541)
+
+[node name="Pin" parent="Pins" instance=ExtResource("2_ry0au")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.002, 0, -0.429)
+
+[node name="Pin2" parent="Pins" instance=ExtResource("2_ry0au")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, -0.429)
+
+[node name="Pin3" parent="Pins" instance=ExtResource("2_ry0au")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, -0.429)
+
+[node name="Board" parent="." instance=ExtResource("4_k44lo")]

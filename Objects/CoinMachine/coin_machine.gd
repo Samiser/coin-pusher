@@ -14,6 +14,7 @@ var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 var board_scenes: Dictionary[String, PackedScene] = {
 	"pinball": preload("res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.tscn"),
 	"bowling": preload("res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.tscn"),
+	"pin": preload("res://Objects/CoinMachine/Boards/PinBoard/pin_board.tscn")
 }
 
 var coins_in_play := 0
@@ -27,6 +28,17 @@ func _get_drop_location() -> Vector3:
 func add_board(board_name: String) -> void:
 	if board_name in board_scenes:
 		boards.add_child(board_scenes[board_name].instantiate())
+
+func change_board(index: int, new_board: String) -> void:
+	if not new_board in board_scenes:
+		push_error("Board ", new_board, " not in board_scenes!")
+		return
+	
+	var new_board_node := board_scenes[new_board].instantiate()
+	var old_board_node := boards.get_child(index)
+	old_board_node.add_sibling(new_board_node)
+	old_board_node.queue_free()
+	
 
 func swap_boards(first_idx: int, second_idx: int) -> void:
 	if first_idx == second_idx:
@@ -44,10 +56,10 @@ func swap_boards(first_idx: int, second_idx: int) -> void:
 
 	if first_idx < second_idx:
 		boards.move_child(second_node, first_idx)
-		#boards.move_child(first_node, second_idx)
+		boards.move_child(first_node, second_idx)
 	else:
 		boards.move_child(first_node, second_idx)
-		#boards.move_child(second_node, first_idx)
+		boards.move_child(second_node, first_idx)
 
 func coin_rain() -> void:
 	for i in range(10):
@@ -106,7 +118,6 @@ func _process(_delta: float) -> void:
 				board.add_to_group("bottom")
 		elif board.is_in_group("bottom"):
 			boards_array[i].remove_from_group("bottom")
-			
 
 func _ready() -> void:
 	if not coin_detector:
