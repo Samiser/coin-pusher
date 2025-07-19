@@ -6,6 +6,7 @@ class_name CoinMachine
 @onready var coin_rain_marker := $CoinRainMarker
 @onready var coin_parent := $Coins
 @onready var drop_location_marker := $Dropper/DropLocation
+@onready var dropper := $Dropper
 @onready var boards := $Boards
 @onready var killzone := $Killzone
 
@@ -53,14 +54,15 @@ func focus_up() -> void:
 func focus_down() -> void:
 	_change_focus(-1)
 
-func add_board(board_name: String) -> int: # return index
+func add_board(board_name: String) -> BoardData: # return index
 	if board_name in board_scenes:
 		var new_board := board_scenes[board_name].instantiate()
 		boards.add_child(new_board)
+		#dropper.y += 
 		_arrange_boards()
 		_focus_board(boards.get_children()[-1])
-		return boards.get_children().find(new_board)
-	return -1
+		return BoardData.new(boards.get_children().find(new_board), board_name)
+	return null
 
 func remove_board() -> void:
 	if boards.get_child_count() > 1:

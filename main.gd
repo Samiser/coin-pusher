@@ -72,9 +72,9 @@ func _move_camera_to_board(board: Node3D) -> void:
 	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
 
 func _add_board() -> void:
-	var index := machine.add_board("pinball")
-	if index >= 0:
-		ui.add_display_board(index)
+	var board_data := machine.add_board(machine.get_random_board())
+	if board_data:
+		ui.add_display_board(board_data)
 
 func _remove_board() -> void:
 	machine.remove_board()

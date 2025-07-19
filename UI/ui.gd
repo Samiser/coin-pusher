@@ -40,12 +40,13 @@ signal focus_board(index: int)
 
 var coin_count := 0.0
 
-func add_display_board(board_index: int) -> void:
+func add_display_board(data: BoardData) -> void:
 	var board_frame_button := frame_scene.instantiate()
 	board_container.add_child(board_frame_button)
 	board_container.move_child(board_frame_button, 0)
+	board_frame_button.set_meta("board_name", data.name)
 	board_frame_button.pressed.connect(func() -> void:
-		focus_board.emit(board_index)
+		focus_board.emit(data.index)
 	)
 	
 func remove_display_board() -> void:
@@ -59,7 +60,7 @@ func select_display_board(index: int) -> void:
 	var move_index := (board_container.get_child_count() - 1) - index
 	if move_index == -1:
 		move_index = 0
-	board_title.text = "(" + str(move_index) + ") board"
+	board_title.text = board_container.get_child(move_index).get_meta("board_name")
 	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
 func set_balance(value: int) -> void:
@@ -81,6 +82,7 @@ func _ready() -> void:
 	_ToggleMenu() # hides menu by default
 	_ToggleShop()
 	board_container.get_child(0).pressed.connect(func() -> void: focus_board.emit(0))
+	board_container.get_child(0).set_meta("board_name", "bla")
 	drop_button.pressed.connect(func() -> void: emit_signal("drop_triggered"))
 	swap_button.pressed.connect(func() -> void: emit_signal("swap_boards"))
 	add_button.pressed.connect(func() -> void: emit_signal("add_board"))
