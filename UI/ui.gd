@@ -17,7 +17,7 @@ signal debug_menu_button(option: String)
 var coin_count := 0.0
 
 func set_balance(value: int) -> void:
-	coin_balance_label.set_text(str("Coins: ", value))
+	coin_balance_label.set_text(str(value))
 	coin_count += float(value)
 
 func _process(delta: float) -> void:
@@ -25,7 +25,7 @@ func _process(delta: float) -> void:
 	coin_particles.amount = max(1, int(coin_count))
 
 func set_multi(value: int) -> void:
-	coin_multi_label.set_text(str("Coins Mult\nx", value))
+	coin_multi_label.set_text(str(value) + "x")
 	multi_particles.emitting = true
 
 func _ready() -> void:

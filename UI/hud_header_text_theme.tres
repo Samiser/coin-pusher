@@ -1,0 +1,17 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bbuyx3nghd4qb"]
+
+[ext_resource type="FontFile" uid="uid://c08n2s5qxxye5" path="res://Fonts/soopafre.ttf" id="1_2ltw8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbxxq"]
+bg_color = Color(2.79158e-06, 0.702337, 0.559337, 1)
+
+[resource]
+default_font_size = 32
+Panel/styles/panel = SubResource("StyleBoxFlat_lbxxq")
+RichTextLabel/colors/default_color = Color(0.956863, 0.827451, 0.368627, 1)
+RichTextLabel/colors/font_outline_color = Color(0.0313726, 0.239216, 0.466667, 1)
+RichTextLabel/colors/font_shadow_color = Color(0.0313726, 0.239216, 0.466667, 0.192157)
+RichTextLabel/constants/outline_size = 18
+RichTextLabel/constants/shadow_outline_size = 32
+RichTextLabel/font_sizes/normal_font_size = 86
+RichTextLabel/fonts/normal_font = ExtResource("1_2ltw8")

@@ -1,0 +1,15 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://c2k242pbhj3qy"]
+
+[ext_resource type="FontFile" uid="uid://chs73uy63hqpd" path="res://Fonts/vhs-vcr-osd.ttf" id="1_cpl6x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lbxxq"]
+bg_color = Color(2.79158e-06, 0.702337, 0.559337, 1)
+
+[resource]
+default_font_size = 32
+Panel/styles/panel = SubResource("StyleBoxFlat_lbxxq")
+RichTextLabel/colors/default_color = Color(0.956863, 1, 1, 1)
+RichTextLabel/colors/font_outline_color = Color(0.0313726, 0.239216, 0.466667, 1)
+RichTextLabel/constants/outline_size = 16
+RichTextLabel/font_sizes/normal_font_size = 32
+RichTextLabel/fonts/normal_font = ExtResource("1_cpl6x")

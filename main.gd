@@ -6,6 +6,7 @@ extends Node3D
 @onready var vine_audio := $vine_stream
 @onready var money_audio := $money_stream
 @onready var camera: Camera3D = $Camera3D
+@onready var environment : WorldEnvironment = $WorldEnvironment
 
 var latest_coin: Coin
 
@@ -74,3 +75,6 @@ func _ready() -> void:
 	ui.connect("debug_menu_button", debug_option)
 	ui.set_balance(coins)
 	ui.set_multi(coin_multi)
+	
+func _process(delta: float) -> void:
+	environment.environment.sky_rotation.y += 0.1 * delta
