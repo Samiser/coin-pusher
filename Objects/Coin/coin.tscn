@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://dwdc85om4xhvs"]
+[gd_scene load_steps=14 format=4 uid="uid://dwdc85om4xhvs"]
 
 [ext_resource type="Script" uid="uid://chcsavcy6fgf2" path="res://Objects/Coin/coin.gd" id="1_6bv11"]
 [ext_resource type="Texture2D" uid="uid://bdjpyyfpp24kx" path="res://Meshes/Coin/mesh_coin_0.png" id="2_4o8nj"]
 [ext_resource type="Texture2D" uid="uid://d2ewehv2hl0yc" path="res://Meshes/Coin/mesh_coin_1.png" id="3_drevj"]
 [ext_resource type="Texture2D" uid="uid://ch8etvnkccn32" path="res://Meshes/Coin/mesh_coin_2.png" id="4_1bl43"]
+[ext_resource type="Script" uid="uid://ox31ss4en7sk" path="res://Objects/Coin/trail.gd" id="5_drevj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5gmh"]
 friction = 0.4
@@ -76,6 +77,12 @@ normal_texture = ExtResource("4_1bl43")
 ao_enabled = true
 ao_texture = ExtResource("3_drevj")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_drevj"]
+emission_enabled = true
+emission = Color(1, 0.969, 0.69, 1)
+
+[sub_resource type="ImmediateMesh" id="ImmediateMesh_1bl43"]
+
 [node name="Coin" type="RigidBody3D" groups=["coin"]]
 mass = 0.02
 physics_material_override = SubResource("PhysicsMaterial_d5gmh")
@@ -91,3 +98,8 @@ transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 0, 0, 0)
 mesh = SubResource("ArrayMesh_whctr")
 skeleton = NodePath("")
 surface_material_override/0 = SubResource("StandardMaterial3D_66c87")
+
+[node name="TrailMesh" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_drevj")
+mesh = SubResource("ImmediateMesh_1bl43")
+script = ExtResource("5_drevj")
