@@ -38,7 +38,7 @@ func add_display_board(board_index: int) -> void:
 	
 func remove_display_board() -> void:
 	if board_container.get_child_count() > 1:
-		board_container.get_child(-1).queue_free()
+		board_container.get_child(0).queue_free()
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
@@ -57,11 +57,7 @@ func _ready() -> void:
 	drop_button.pressed.connect(func() -> void: emit_signal("drop_triggered"))
 	swap_button.pressed.connect(func() -> void: emit_signal("swap_boards"))
 	add_button.pressed.connect(func() -> void: emit_signal("add_board"))
-	
-	remove_button.pressed.connect(func() -> void:
-		emit_signal("remove_board")
-		remove_display_board()
-	)
+	remove_button.pressed.connect(func() -> void: emit_signal("remove_board"))
 	
 	up_button.pressed.connect(func() -> void: emit_signal("move_up"))
 	down_button.pressed.connect(func() -> void: emit_signal("move_down"))
