@@ -71,6 +71,7 @@ func _ready() -> void:
 	machine.connect("add_combo", _on_add_combo)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
+	ui.connect("add_board", func() -> void: machine.add_board("pinball"))
 	ui.connect("purchase", purchase)
 	ui.connect("debug_menu_button", debug_option)
 	ui.set_balance(coins)

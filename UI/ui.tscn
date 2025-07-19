@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=14 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://bu0ucjaihmk7a" path="res://UI/debug_menu.gd" id="3_e6gg6"]
 [ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="3_hat8c"]
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
+[ext_resource type="Texture2D" uid="uid://cik2jv65arqbs" path="res://UI/Sprites/ui_board_dropper.png" id="9_0w6e5"]
+[ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -120,10 +122,26 @@ offset_bottom = 503.0
 theme_override_font_sizes/font_size = 33
 text = "Swap"
 
+[node name="AddButton" type="Button" parent="."]
+offset_left = 1453.0
+offset_top = 514.0
+offset_right = 1608.0
+offset_bottom = 568.0
+theme_override_font_sizes/font_size = 33
+text = "Add +1"
+
+[node name="RemoveButton" type="Button" parent="."]
+offset_left = 1453.0
+offset_top = 575.0
+offset_right = 1608.0
+offset_bottom = 629.0
+theme_override_font_sizes/font_size = 33
+text = "Remove -1"
+
 [node name="Panel" type="Panel" parent="."]
-offset_left = 1509.0
+offset_left = 995.0
 offset_top = 918.0
-offset_right = 1892.0
+offset_right = 1378.0
 offset_bottom = 1043.0
 theme = ExtResource("3_c7tqi")
 
@@ -140,9 +158,9 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DebugPanel" type="Panel" parent="."]
-offset_left = 1508.0
+offset_left = 994.0
 offset_top = 783.0
-offset_right = 1721.0
+offset_right = 1207.0
 offset_bottom = 875.0
 theme = ExtResource("3_c7tqi")
 
@@ -167,9 +185,9 @@ size_flags_horizontal = 4
 text = "Toggle Coin Follow"
 
 [node name="OptionsPanel" type="Panel" parent="."]
-offset_left = 1508.0
+offset_left = 994.0
 offset_top = 671.0
-offset_right = 1721.0
+offset_right = 1207.0
 offset_bottom = 763.0
 theme = ExtResource("3_c7tqi")
 
@@ -208,3 +226,23 @@ min_value = 0.001
 max_value = 1.0
 step = 0.001
 value = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 1751.0
+offset_top = 424.0
+offset_right = 1896.0
+offset_bottom = 1058.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_0w6e5")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect5" type="TextureRect" parent="VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("12_ow1yt")
+expand_mode = 5
+stretch_mode = 5

@@ -4,6 +4,8 @@ extends CanvasLayer
 @onready var coin_multi_label := $CoinMultiLabel
 @onready var drop_button := $DropButton
 @onready var swap_button := $SwapBoards
+@onready var add_button := $AddButton
+@onready var remove_button := $RemoveButton
 @onready var shop := $Panel/Shop
 @onready var debug_menu := $DebugPanel/DebugMenu
 @onready var multi_particles := $multi_particles
@@ -11,6 +13,7 @@ extends CanvasLayer
 
 signal drop_triggered
 signal swap_boards
+signal add_board
 signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
 
@@ -36,6 +39,14 @@ func _ready() -> void:
 	swap_button.connect("pressed", func() -> void:
 		emit_signal("swap_boards")
 	)
+	
+	add_button.connect("pressed", func() -> void:
+		emit_signal("add_board")
+		)
+		
+	remove_button.connect("pressed", func() -> void:
+		emit_signal("remove_board")
+		)
 	
 	shop.connect("purchase", func(item_name: String, cost: int) -> void:
 		emit_signal("purchase", item_name, cost)
