@@ -1054,3 +1054,8 @@ mesh = SubResource("ArrayMesh_1hgft")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Dropper"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0808489, 0)
 shape = SubResource("ConcavePolygonShape3D_i7tb6")
+
+[node name="VisibleOnScreenEnabler3D" type="VisibleOnScreenEnabler3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.658671, 1.08935, 0.0948133)
+aabb = AABB(-0.0986113, -0.0276792, 0.287769, 0.197223, 0.0553583, 0.107079)
+enable_node_path = NodePath("")

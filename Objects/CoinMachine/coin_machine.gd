@@ -9,6 +9,7 @@ class_name CoinMachine
 @onready var dropper := $Dropper
 @onready var boards := $Boards
 @onready var killzone := $Killzone
+@onready var pusher_visible_area := $VisibleOnScreenEnabler3D
 
 signal focus_changed
 
@@ -27,6 +28,7 @@ var coins_in_play := 0
 signal coin_collected(value: int)
 signal add_combo(value: int)
 signal move_camera_to_board(board: Node3D)
+signal pusher_visible(is_visible: bool)
 
 func _get_drop_location() -> Vector3:
 	return drop_location_marker.global_position
@@ -177,8 +179,14 @@ func _ready() -> void:
 	coins_in_play = coin_parent.get_child_count()
 	
 	coin_detector.connect("body_entered", _coin_detected)
+	pusher_visible_area.screen_exited.connect(func() -> void: _pusher_visible(false))
+	pusher_visible_area.screen_entered.connect(func() -> void: _pusher_visible(true))
 	killzone.connect("body_entered", func(body: PhysicsBody3D) -> void:
 		if body.is_in_group("coin"):
 			body.queue_free()
 		coins_in_play -= 1
 	)
+
+func _pusher_visible(is_visible: bool) -> void:
+	pusher_visible.emit(is_visible)
+	print(is_visible)
