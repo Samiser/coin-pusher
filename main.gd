@@ -66,14 +66,23 @@ func debug_option(option: String) -> void:
 			else:
 				tween.tween_property(camera, "fov", 20, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
+func _move_camera_to_board(board: Node3D) -> void:
+	print(camera.global_position, " - ", board.global_position)
+	var tween := create_tween()
+	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.2)
+	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
+
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
+	machine.move_camera_to_board.connect(_move_camera_to_board)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
 	ui.connect("add_board", func() -> void: machine.add_board("pinball"))
 	ui.connect("purchase", purchase)
 	ui.connect("debug_menu_button", debug_option)
+	ui.move_up.connect(machine.focus_up)
+	ui.move_down.connect(machine.focus_down)
 	ui.set_balance(coins)
 	ui.set_multi(coin_multi)
 	

@@ -9,6 +9,8 @@ class_name CoinMachine
 @onready var boards := $Boards
 @onready var killzone := $Killzone
 
+var focused_board: Node3D
+
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 
 var board_scenes: Dictionary[String, PackedScene] = {
@@ -20,15 +22,34 @@ var board_scenes: Dictionary[String, PackedScene] = {
 var coins_in_play := 0
 
 signal coin_collected(value: int)
-signal add_combo (value:int)
+signal add_combo(value: int)
+signal move_camera_to_board(board: Node3D)
 
 func _get_drop_location() -> Vector3:
 	return drop_location_marker.global_position
 
+func _focus_board(board: Node3D) -> void:
+	move_camera_to_board.emit(board)
+	focused_board = board
+
+func _change_focus(change: int) -> void:
+	var board_array := boards.get_children()
+	var focused_index := board_array.find(focused_board)
+	var new_index := (focused_index + change) % board_array.size()
+	_focus_board(boards.get_child(new_index))
+
+func focus_up() -> void:
+	_change_focus(1)
+
+func focus_down() -> void:
+	_change_focus(-1)
+
 func add_board(board_name: String) -> void:
 	if board_name in board_scenes:
-		boards.add_child(board_scenes[board_name].instantiate())
+		var new_board := board_scenes[board_name].instantiate()
+		boards.add_child(new_board)
 		_arrange_boards()
+		_focus_board(new_board)
 
 func change_board(index: int, new_board: String) -> void:
 	if not new_board in board_scenes:
@@ -41,6 +62,7 @@ func change_board(index: int, new_board: String) -> void:
 	old_board_node.add_sibling(new_board_node)
 	_arrange_boards()
 	old_board_node.queue_free()
+	_focus_board(new_board_node)
 
 func swap_boards(first_idx: int, second_idx: int) -> void:
 	if first_idx == second_idx:
