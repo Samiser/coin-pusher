@@ -61,6 +61,7 @@ func add_board(board_name: String) -> BoardData: # return index
 		dropper.position.y += 2
 		_arrange_boards()
 		_focus_board(boards.get_children()[-1])
+		new_board.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))
 		return BoardData.new(boards.get_children().find(new_board), board_name, new_board.board_icon)
 	return null
 
