@@ -20,6 +20,8 @@ extends CanvasLayer
 @onready var options_panel := $OptionsPanel
 @onready var shop_panel := $ShopPanel
 
+@onready var board_title := $board_subtitle
+
 var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
 var select_frame_tex := preload("res://UI/Sprites/ui_board_frame_current.png")
 var default_frame_tex := preload("res://UI/Sprites/ui_board_frame.png")
@@ -53,6 +55,7 @@ func select_display_board(index: int) -> void:
 		child.set_texture_normal(default_frame_tex)
 	var move_index := (board_container.get_child_count() - 1) - index
 	print(move_index)
+	board_title.text = "(" + str(move_index) + ") board"
 	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
 func set_balance(value: int) -> void:
