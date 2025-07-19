@@ -71,8 +71,9 @@ func debug_option(option: String) -> void:
 
 func _move_camera_to_board(board: Node3D) -> void:
 	var tween := create_tween()
-	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.2)
-	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
+	tween.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUART)
+	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.3)
+	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.3)
 
 func _add_board() -> void:
 	var board_data := machine.add_board(machine.get_random_board())
@@ -92,8 +93,10 @@ func _ready() -> void:
 	machine.focus_changed.connect(ui.select_display_board)
 	machine.pusher_visible.connect(func(is_visible: bool) -> void: 
 		tween = get_tree().create_tween()
-		tween.tween_property(pusher_title, "visible_ratio", 1, 0.4).from(0.0) 
+		tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUART)
 		tween.tween_property(pusher_cam, "global_position:y", 750.0 if !is_visible else 1100.0, .5)
+		tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
+		tween.tween_property(pusher_title, "visible_ratio", 1, 0.4).from(0.0) 
 		)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
