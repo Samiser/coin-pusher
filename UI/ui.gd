@@ -88,8 +88,6 @@ func set_multi(value: int) -> void:
 func _ready() -> void:
 	_ToggleMenu() # hides menu by default
 	_ToggleShop()
-	board_container.get_child(0).pressed.connect(func() -> void: focus_board.emit(0))
-	board_container.get_child(0).set_meta("board_name", "bla")
 	drop_button.pressed.connect(func() -> void: emit_signal("drop_triggered"))
 	swap_button.pressed.connect(func() -> void: emit_signal("swap_boards"))
 	add_button.pressed.connect(func() -> void: emit_signal("add_board"))

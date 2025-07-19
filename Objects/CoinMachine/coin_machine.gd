@@ -182,6 +182,3 @@ func _ready() -> void:
 			body.queue_free()
 		coins_in_play -= 1
 	)
-	
-	for board in boards.get_children():
-		board.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))

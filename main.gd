@@ -81,6 +81,7 @@ func _remove_board() -> void:
 	ui.remove_display_board()
 
 func _ready() -> void:
+	_add_board()
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	machine.move_camera_to_board.connect(_move_camera_to_board)

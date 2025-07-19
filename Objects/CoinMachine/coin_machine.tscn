@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=4 uid="uid://dh0gg8lf7jnqg"]
+[gd_scene load_steps=9 format=4 uid="uid://dh0gg8lf7jnqg"]
 
 [ext_resource type="Script" uid="uid://crhnrohue36tj" path="res://Objects/CoinMachine/coin_machine.gd" id="1_ttn5t"]
-[ext_resource type="PackedScene" uid="uid://bll5hvjioc1dk" path="res://Objects/CoinMachine/Boards/PinBoard/pin_board.tscn" id="2_i7tb6"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="4_4k8hy"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/CoinMachine/Components/Pusher/pusher.tscn" id="4_5c2ke"]
 [ext_resource type="Script" uid="uid://di0kwy2q7vdj4" path="res://Objects/CoinMachine/dropper.gd" id="6_1hgft"]
@@ -29,9 +28,6 @@ data = PackedVector3Array(-0.0865, -0.4853, -0.0347, 0.0863, -0.4853, -0.0347, 0
 script = ExtResource("1_ttn5t")
 
 [node name="Boards" type="Node3D" parent="."]
-
-[node name="PinBoard" parent="Boards" instance=ExtResource("2_i7tb6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -0.53)
 
 [node name="CoinRainMarker" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)
@@ -1044,7 +1040,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74672, 0)
 shape = SubResource("WorldBoundaryShape3D_xuo70")
 
 [node name="Dropper" type="AnimatableBody3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.10806, -0.363794)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108, -0.364)
 script = ExtResource("6_1hgft")
 
 [node name="DropLocation" type="Marker3D" parent="Dropper"]

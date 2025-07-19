@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=18 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
@@ -8,8 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="3_hat8c"]
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://cik2jv65arqbs" path="res://UI/Sprites/ui_board_dropper.png" id="9_0w6e5"]
-[ext_resource type="PackedScene" uid="uid://br7xeqslputa0" path="res://UI/board_frame.tscn" id="10_6rr40"]
-[ext_resource type="Texture2D" uid="uid://wcoc76cxjm2x" path="res://UI/Sprites/ui_board_slots.png" id="11_2qbci"]
 [ext_resource type="Texture2D" uid="uid://kmimeaxukx4p" path="res://UI/Sprites/ui_hud_button_1.png" id="12_o2jkc"]
 [ext_resource type="Texture2D" uid="uid://cwfqenkt16dv2" path="res://UI/Sprites/ui_board_frame_current.png" id="12_o2t6a"]
 [ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
@@ -309,10 +307,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 alignment = 2
-
-[node name="board_frame" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
-layout_mode = 2
-texture_normal = ExtResource("11_2qbci")
 
 [node name="TextureRect5" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
