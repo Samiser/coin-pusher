@@ -32,8 +32,6 @@ func _input(event: InputEvent) -> void:
 		var delta_x: float = event.position.x - drag_start_mouse_x
 		var move_amount: float = delta_x * 0.0035
 		global_position = Vector3(original_position.x + move_amount, original_position.y, original_position.z)
-	
-	print(dragging)
 
 
 #func _physics_process(delta: float) -> void:

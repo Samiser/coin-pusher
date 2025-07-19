@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var coin_balance_label := $CoinBalanceLabel
 @onready var coin_multi_label := $CoinMultiLabel
-@onready var drop_button := $DropButton
+@onready var drop_button := $VBoxContainer/DropButton
 @onready var swap_button := $SwapBoards
 @onready var add_button := $AddButton
 @onready var up_button := $UpButton
@@ -12,6 +12,9 @@ extends CanvasLayer
 @onready var debug_menu := $DebugPanel/DebugMenu
 @onready var multi_particles := $multi_particles
 @onready var coin_particles := $coin_particle
+@onready var board_container := $VBoxContainer/board_container
+
+var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
 
 signal drop_triggered
 signal swap_boards
@@ -23,6 +26,14 @@ signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
 
 var coin_count := 0.0
+
+func add_display_board() -> void:
+	board_container.add_child(frame_scene.instantiate())
+	
+func remove_display_board() -> void:
+	if board_container.get_child_count() > 0:
+		board_container.get_child(0).queue_free()
+
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
@@ -47,10 +58,12 @@ func _ready() -> void:
 	
 	add_button.connect("pressed", func() -> void:
 		emit_signal("add_board")
+		add_display_board()
 	)
 	
 	remove_button.connect("pressed", func() -> void:
 		emit_signal("remove_board")
+		remove_display_board()
 	)
 	
 	up_button.connect("pressed", func() -> void:

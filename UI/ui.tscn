@@ -82,6 +82,20 @@ theme = ExtResource("3_c7tqi")
 text = "multiplier"
 horizontal_alignment = 2
 
+[node name="board_subtitle" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 971.0
+offset_right = -24.0
+offset_bottom = 1073.0
+grow_horizontal = 0
+theme = ExtResource("3_c7tqi")
+text = "board name"
+horizontal_alignment = 2
+
 [node name="multi_particles" type="GPUParticles2D" parent="."]
 position = Vector2(833, 66)
 scale = Vector2(2.45455, 1.12571)
@@ -107,35 +121,27 @@ bbcode_enabled = true
 text = "x1"
 horizontal_alignment = 2
 
-[node name="DropButton" type="Button" parent="."]
-offset_left = 277.0
-offset_top = 449.0
-offset_right = 432.0
-offset_bottom = 499.0
-theme_override_font_sizes/font_size = 33
-text = "Drop"
-
 [node name="SwapBoards" type="Button" parent="."]
-offset_left = 1453.0
-offset_top = 449.0
-offset_right = 1608.0
-offset_bottom = 503.0
+offset_left = 1510.0
+offset_top = 780.0
+offset_right = 1665.0
+offset_bottom = 834.0
 theme_override_font_sizes/font_size = 33
 text = "Swap"
 
 [node name="AddButton" type="Button" parent="."]
-offset_left = 1453.0
-offset_top = 514.0
-offset_right = 1608.0
-offset_bottom = 568.0
+offset_left = 1510.0
+offset_top = 845.0
+offset_right = 1665.0
+offset_bottom = 899.0
 theme_override_font_sizes/font_size = 33
 text = "Add +1"
 
 [node name="RemoveButton" type="Button" parent="."]
-offset_left = 1453.0
-offset_top = 575.0
-offset_right = 1608.0
-offset_bottom = 629.0
+offset_left = 1510.0
+offset_top = 906.0
+offset_right = 1707.0
+offset_bottom = 960.0
 theme_override_font_sizes/font_size = 33
 text = "Remove -1"
 
@@ -156,10 +162,10 @@ theme_override_font_sizes/font_size = 33
 text = "Down"
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 995.0
-offset_top = 918.0
-offset_right = 1378.0
-offset_bottom = 1043.0
+offset_left = 29.0
+offset_top = 226.0
+offset_right = 412.0
+offset_bottom = 351.0
 theme = ExtResource("3_c7tqi")
 
 [node name="Shop" parent="Panel" instance=ExtResource("2_dajm1")]
@@ -175,10 +181,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DebugPanel" type="Panel" parent="."]
-offset_left = 994.0
-offset_top = 783.0
-offset_right = 1207.0
-offset_bottom = 875.0
+offset_left = 117.0
+offset_top = 370.0
+offset_right = 330.0
+offset_bottom = 462.0
 theme = ExtResource("3_c7tqi")
 
 [node name="DebugMenu" type="VBoxContainer" parent="DebugPanel"]
@@ -202,10 +208,10 @@ size_flags_horizontal = 4
 text = "Toggle Coin Follow"
 
 [node name="OptionsPanel" type="Panel" parent="."]
-offset_left = 994.0
-offset_top = 671.0
-offset_right = 1207.0
-offset_bottom = 763.0
+offset_left = 49.0
+offset_top = 482.0
+offset_right = 262.0
+offset_bottom = 574.0
 theme = ExtResource("3_c7tqi")
 
 [node name="OptionsMenu" type="VBoxContainer" parent="OptionsPanel"]
@@ -245,17 +251,22 @@ step = 0.001
 value = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = -1
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -148.0
-offset_top = -653.0
+offset_left = -178.0
+offset_top = -340.0
 offset_right = -30.0
-offset_bottom = -35.0
+offset_bottom = -105.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="DropButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 33
+text = "Drop"
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
@@ -264,21 +275,10 @@ stretch_mode = 5
 
 [node name="board_container" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 alignment = 2
 
 [node name="Control" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
-layout_mode = 2
-
-[node name="Control2" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
-layout_mode = 2
-
-[node name="Control5" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
-layout_mode = 2
-
-[node name="Control3" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
-layout_mode = 2
-
-[node name="Control4" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
 layout_mode = 2
 
 [node name="TextureRect5" type="TextureRect" parent="VBoxContainer"]
