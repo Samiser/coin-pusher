@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=15 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
@@ -7,10 +7,34 @@
 [ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dh0gg8lf7jnqg" path="res://Objects/CoinMachine/coin_machine.tscn" id="7_5vw27"]
-[ext_resource type="Texture2D" uid="uid://t8uipxqdbutn" path="res://Textures/bg_pier.png" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://dibud4fo6il0g" path="res://Audio/bgm.mp3" id="8_5vw27"]
+
+[sub_resource type="Gradient" id="Gradient_272bh"]
+colors = PackedColorArray(0, 0.264277, 0.456509, 1, 1, 0.80298, 0.913962, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_5vw27"]
+noise_type = 2
+seed = 45
+frequency = 0.0025
+fractal_octaves = 10
+fractal_gain = 0.6
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kek77"]
+width = 256
+height = 256
+seamless = true
+color_ramp = SubResource("Gradient_272bh")
+noise = SubResource("FastNoiseLite_5vw27")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4c57u"]
+panorama = SubResource("NoiseTexture2D_kek77")
+
+[sub_resource type="Sky" id="Sky_272bh"]
+sky_material = SubResource("PanoramaSkyMaterial_4c57u")
 
 [sub_resource type="Environment" id="Environment_5vw27"]
-background_mode = 1
+background_mode = 2
+sky = SubResource("Sky_272bh")
 ambient_light_source = 2
 ambient_light_color = Color(0.00392157, 0, 0.0941176, 1)
 
@@ -60,10 +84,10 @@ stream = ExtResource("6_7mycd")
 volume_db = -20.952
 max_polyphony = 4
 
-[node name="bg_sprite" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.403, -2.93)
-alpha_cut = 2
-texture = ExtResource("7_272bh")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_5vw27")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_5vw27")
+volume_db = -20.0
+autoplay = true
