@@ -1041,6 +1041,7 @@ shape = SubResource("WorldBoundaryShape3D_xuo70")
 
 [node name="Dropper" type="AnimatableBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.108, -0.364)
+collision_layer = 2
 script = ExtResource("6_1hgft")
 
 [node name="DropLocation" type="Marker3D" parent="Dropper"]

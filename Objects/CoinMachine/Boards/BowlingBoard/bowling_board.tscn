@@ -28,6 +28,53 @@ script = ExtResource("1_7p1pe")
 board_name = "Bowling"
 board_icon = ExtResource("2_1s1id")
 
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1.07024, 0, 0, 0, 1, 0, 0, 0, 1, -2.02358e-05, -0.764, 0.526816)
+use_collision = true
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="CSGCombiner3D"]
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D"]
+transform = Transform3D(-0.00279593, -0.794876, 0.606767, -0.00124587, -0.606766, -0.794879, 0.999995, -0.00297838, 0.000706158, -0.680361, 1.69896, -0.369937)
+size = Vector3(0.119084, 1.27639, 0.763849)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D"]
+transform = Transform3D(-0.00234572, -0.999962, -0.00839093, -0.00196647, 0.0083954, -0.999962, 0.999995, -0.00232913, -0.00198609, -1.38271, 0.872449, -0.396494)
+operation = 2
+size = Vector3(0.32364, 1.06033, 2.96263)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025819, 2.11718, -0.560547)
+operation = 2
+size = Vector3(2.83252, 0.708863, 1.21143)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D"]
+transform = Transform3D(0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 0, 1, -0.66643, 2.04307, -0.560547)
+operation = 2
+size = Vector3(1.5553, 0.708863, 1.21143)
+
+[node name="CSGCombiner3D2" type="CSGCombiner3D" parent="CSGCombiner3D"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -0.740044)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D2"]
+transform = Transform3D(-0.00279593, -0.794876, 0.606767, -0.00124587, -0.606766, -0.794879, 0.999995, -0.00297838, 0.000706158, -0.680361, 1.69896, -0.369937)
+size = Vector3(0.119084, 1.27639, 0.763849)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D2"]
+transform = Transform3D(-0.00234572, -0.999962, -0.00839093, -0.00196647, 0.0083954, -0.999962, 0.999995, -0.00232913, -0.00198609, -1.38271, 0.872449, -0.396494)
+operation = 2
+size = Vector3(0.32364, 1.06033, 2.96263)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.025819, 2.11718, -0.560547)
+operation = 2
+size = Vector3(2.83252, 0.708863, 1.21143)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D/CSGCombiner3D2"]
+transform = Transform3D(0.819152, 0.573576, 0, -0.573576, 0.819152, 0, 0, 0, 1, -0.66643, 2.04307, -0.560547)
+operation = 2
+size = Vector3(1.5553, 0.708863, 1.21143)
+
 [node name="Lights" type="Node3D" parent="."]
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights"]

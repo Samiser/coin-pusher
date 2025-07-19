@@ -16,7 +16,6 @@ func _on_pin_hit(_pin: Pin) -> void:
 		_flash_and_reset_all_pins()
 		emit_signal("add_combo", 1)
 		strike_audio.play()
-		
 
 func _ready() -> void:
 	for pin in pins.get_children():
