@@ -139,6 +139,22 @@ offset_bottom = 629.0
 theme_override_font_sizes/font_size = 33
 text = "Remove -1"
 
+[node name="UpButton" type="Button" parent="."]
+offset_left = 1451.0
+offset_top = 269.0
+offset_right = 1560.0
+offset_bottom = 323.0
+theme_override_font_sizes/font_size = 33
+text = "Up"
+
+[node name="DownButton" type="Button" parent="."]
+offset_left = 1450.0
+offset_top = 334.0
+offset_right = 1560.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 33
+text = "Down"
+
 [node name="Panel" type="Panel" parent="."]
 offset_left = 995.0
 offset_top = 918.0

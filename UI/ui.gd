@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var drop_button := $DropButton
 @onready var swap_button := $SwapBoards
 @onready var add_button := $AddButton
+@onready var up_button := $UpButton
+@onready var down_button := $DownButton
 @onready var remove_button := $RemoveButton
 @onready var shop := $Panel/Shop
 @onready var debug_menu := $DebugPanel/DebugMenu
@@ -14,6 +16,9 @@ extends CanvasLayer
 signal drop_triggered
 signal swap_boards
 signal add_board
+signal remove_board
+signal move_up
+signal move_down
 signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
 
@@ -42,11 +47,19 @@ func _ready() -> void:
 	
 	add_button.connect("pressed", func() -> void:
 		emit_signal("add_board")
-		)
-		
+	)
+	
 	remove_button.connect("pressed", func() -> void:
 		emit_signal("remove_board")
-		)
+	)
+	
+	up_button.connect("pressed", func() -> void:
+		emit_signal("move_up")
+	)
+	
+	down_button.connect("pressed", func() -> void:
+		emit_signal("move_down")
+	)
 	
 	shop.connect("purchase", func(item_name: String, cost: int) -> void:
 		emit_signal("purchase", item_name, cost)
