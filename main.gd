@@ -93,10 +93,13 @@ func _ready() -> void:
 	machine.focus_changed.connect(ui.select_display_board)
 	machine.pusher_visible.connect(func(is_visible: bool) -> void: 
 		tween = get_tree().create_tween()
+		if !is_visible:
+			pusher_title.visible_ratio = 0
 		tween.set_ease(Tween.EASE_IN_OUT).set_trans(Tween.TRANS_QUART)
 		tween.tween_property(pusher_cam, "global_position:y", 750.0 if !is_visible else 1100.0, .5)
-		tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
-		tween.tween_property(pusher_title, "visible_ratio", 1, 0.4).from(0.0) 
+		if !is_visible:
+			tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
+			tween.tween_property(pusher_title, "visible_ratio", 1, 0.4).from(0.0) 
 		)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
