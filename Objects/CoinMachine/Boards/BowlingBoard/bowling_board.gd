@@ -1,4 +1,4 @@
-extends Node3D
+extends Board
 
 @onready var pins := $Pins
 @onready var bowling_ball := $BowlingBall

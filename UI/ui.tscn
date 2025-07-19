@@ -1,8 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=19 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
-[ext_resource type="Texture2D" uid="uid://b1voflqxkqr7k" path="res://Textures/me.jpg" id="2_e6gg6"]
 [ext_resource type="Theme" uid="uid://c2k242pbhj3qy" path="res://UI/hud_default_text_theme.tres" id="3_c7tqi"]
 [ext_resource type="Theme" uid="uid://bbuyx3nghd4qb" path="res://UI/hud_header_text_theme.tres" id="3_cbfhl"]
 [ext_resource type="Script" uid="uid://bu0ucjaihmk7a" path="res://UI/debug_menu.gd" id="3_e6gg6"]
@@ -10,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://cik2jv65arqbs" path="res://UI/Sprites/ui_board_dropper.png" id="9_0w6e5"]
 [ext_resource type="PackedScene" uid="uid://br7xeqslputa0" path="res://UI/board_frame.tscn" id="10_6rr40"]
+[ext_resource type="Texture2D" uid="uid://wcoc76cxjm2x" path="res://UI/Sprites/ui_board_slots.png" id="11_2qbci"]
 [ext_resource type="Texture2D" uid="uid://kmimeaxukx4p" path="res://UI/Sprites/ui_hud_button_1.png" id="12_o2jkc"]
 [ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
 [ext_resource type="Theme" uid="uid://btueqn6seahvg" path="res://UI/hud_button_theme.tres" id="13_2qbci"]
@@ -37,6 +37,21 @@ scale_min = 0.1
 scale_max = 0.4
 hue_variation_min = -1.0
 hue_variation_max = 1.0
+hue_variation_curve = SubResource("CurveTexture_3sbvi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o2jkc"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(60, 40, 1)
+emission_shape = 1
+emission_sphere_radius = 122.87
+angle_min = 1.07288e-05
+angle_max = 720.0
+direction = Vector3(0, 1, 0)
+initial_velocity_max = 79.3
+gravity = Vector3(0, 98, 0)
+scale_min = 0.1
+scale_max = 0.4
+color = Color(0.960784, 1, 0, 1)
 hue_variation_curve = SubResource("CurveTexture_3sbvi")
 
 [node name="UI" type="CanvasLayer"]
@@ -100,14 +115,26 @@ text = "board name"
 horizontal_alignment = 2
 
 [node name="multi_particles" type="GPUParticles2D" parent="."]
-position = Vector2(833, 66)
+position = Vector2(1674, 27)
 scale = Vector2(2.45455, 1.12571)
 emitting = false
-texture = ExtResource("2_e6gg6")
+texture = ExtResource("12_o2jkc")
 one_shot = true
+explosiveness = 0.2
 randomness = 1.0
 visibility_rect = Rect2(0, -100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_hat8c")
+
+[node name="coin_particles" type="GPUParticles2D" parent="."]
+position = Vector2(0.00012207, 40)
+scale = Vector2(2.45455, 1.12571)
+emitting = false
+texture = ExtResource("12_o2jkc")
+one_shot = true
+explosiveness = 0.2
+randomness = 1.0
+visibility_rect = Rect2(0, -100, 100, 100)
+process_material = SubResource("ParticleProcessMaterial_o2jkc")
 
 [node name="CoinMultiLabel" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -284,6 +311,7 @@ alignment = 2
 
 [node name="board_frame" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
 layout_mode = 2
+texture_normal = ExtResource("11_2qbci")
 
 [node name="TextureRect5" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2

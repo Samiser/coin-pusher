@@ -1,4 +1,4 @@
-extends Node3D
+extends Board
 
 @onready var led_parent := $ChargeLeds
 @onready var bumper_parent := $Bumpers

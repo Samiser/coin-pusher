@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dq2tr3r3buo8v"]
+[gd_scene load_steps=7 format=3 uid="uid://dq2tr3r3buo8v"]
 
 [ext_resource type="Script" uid="uid://s5cuihaa1kdq" path="res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.gd" id="1_8denj"]
 [ext_resource type="PackedScene" uid="uid://coe0tehdfyiny" path="res://Objects/CoinMachine/Components/Bumper/Bumper.tscn" id="2_cixf3"]
+[ext_resource type="Texture2D" uid="uid://xy0v2rmct587" path="res://UI/Sprites/ui_board_pinball.png" id="2_mkmhy"]
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="4_3lul6"]
 [ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="5_3lul6"]
 [ext_resource type="PackedScene" uid="uid://i72rao7q5t74" path="res://Objects/CoinMachine/Boards/PinballBoard/Flipper/Flipper.tscn" id="5_lljcn"]
 
 [node name="PinballBoard" type="Node3D"]
 script = ExtResource("1_8denj")
+board_name = "Pinball"
+board_icon = ExtResource("2_mkmhy")
 
 [node name="Bumpers" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.668019, 0.546738)

@@ -45,6 +45,7 @@ func add_display_board(data: BoardData) -> void:
 	board_container.add_child(board_frame_button)
 	board_container.move_child(board_frame_button, 0)
 	board_frame_button.set_meta("board_name", data.name)
+	board_frame_button.set_texture_normal(data.icon)
 	board_frame_button.pressed.connect(func() -> void:
 		focus_board.emit(data.index)
 	)
@@ -55,13 +56,13 @@ func remove_display_board() -> void:
 
 func select_display_board(index: int) -> void:
 	await get_tree().process_frame
-	for child in board_container.get_children():
-		child.set_texture_normal(default_frame_tex)
+	#for child in board_container.get_children():
+	#	child.set_texture_normal(default_frame_tex)
 	var move_index := (board_container.get_child_count() - 1) - index
 	if move_index == -1:
 		move_index = 0
 	board_title.text = board_container.get_child(move_index).get_meta("board_name")
-	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
+	#board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
@@ -69,10 +70,8 @@ func set_balance(value: int) -> void:
 	
 	tween = get_tree().create_tween()
 	tween.tween_property(coin_balance_label, "visible_ratio", 1, 0.1).from(0.0) 
-
-func _process(delta: float) -> void:
-	coin_count -= delta * 2.0
-	coin_particles.amount = max(1, int(coin_count))
+	
+	coin_particles.emitting = true
 
 func set_multi(value: int) -> void:
 	coin_multi_label.set_text(str(value) + "x")
