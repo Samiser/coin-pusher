@@ -229,11 +229,17 @@ step = 0.001
 value = 1.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 1747.0
-offset_top = 327.0
-offset_right = 1895.0
-offset_bottom = 862.0
-alignment = 2
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -653.0
+offset_right = -30.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer"]
 layout_mode = 2
@@ -248,6 +254,9 @@ alignment = 2
 layout_mode = 2
 
 [node name="Control2" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
+layout_mode = 2
+
+[node name="Control5" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
 layout_mode = 2
 
 [node name="Control3" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
