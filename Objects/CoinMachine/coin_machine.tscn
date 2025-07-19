@@ -40,598 +40,985 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.33972, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00173918, 0.0526456)
 
 [node name="Coin2" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346936, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.149029, 0.191408)
 
 [node name="Coin3" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346936, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.149029, 0.327859)
 
 [node name="Coin4" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.346936, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.149029, 0.327859)
 
 [node name="Coin5" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193842, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.149029, 0.195249)
 
 [node name="Coin6" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193842, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.132817, 0.191408)
 
 [node name="Coin7" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.193842, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.132817, 0.327859)
 
 [node name="Coin8" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378533, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.132817, 0.327859)
 
 [node name="Coin9" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378533, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.132817, 0.195249)
 
 [node name="Coin10" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0378533, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.114655, 0.191408)
 
 [node name="Coin11" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110433, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.114655, 0.327859)
 
 [node name="Coin12" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110433, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.114655, 0.327859)
 
 [node name="Coin13" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.110433, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.114655, 0.195249)
 
 [node name="Coin14" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.258695, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0969538, 0.191408)
 
 [node name="Coin15" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.258695, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0969538, 0.327859)
 
 [node name="Coin16" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.258695, -0.132247, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0969538, 0.327859)
 
 [node name="Coin17" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408663, -0.132247, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0969538, 0.195249)
 
 [node name="Coin18" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.408663, -0.132247, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0807421, 0.191408)
 
 [node name="Coin19" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.410017, -0.131058, 0.3054)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0807421, 0.327859)
 
 [node name="Coin20" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40573, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0807421, 0.327859)
 
 [node name="Coin21" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40573, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0807421, 0.195249)
 
 [node name="Coin22" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.40573, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0625802, 0.191408)
 
 [node name="Coin23" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252636, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0625802, 0.327859)
 
 [node name="Coin24" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252636, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0625802, 0.327859)
 
 [node name="Coin25" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.252636, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0625802, 0.195249)
 
 [node name="Coin26" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0966471, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0466728, 0.191408)
 
 [node name="Coin27" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0966471, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0466728, 0.327859)
 
 [node name="Coin28" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0966471, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0466728, 0.327859)
 
 [node name="Coin29" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0516395, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0466728, 0.195249)
 
 [node name="Coin30" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0516395, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0304611, 0.191408)
 
 [node name="Coin31" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0516395, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0304611, 0.327859)
 
 [node name="Coin32" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199901, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0304611, 0.327859)
 
 [node name="Coin33" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199901, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0304611, 0.195249)
 
 [node name="Coin34" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.199901, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0122992, 0.191408)
 
 [node name="Coin35" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349869, -0.0718907, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, -0.0122992, 0.327859)
 
 [node name="Coin36" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349869, -0.0718907, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0122992, 0.327859)
 
 [node name="Coin37" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.349869, -0.0718907, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, -0.0122992, 0.195249)
 
 [node name="Coin38" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.313825, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.00457787, 0.191408)
 
 [node name="Coin39" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.313825, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.00457787, 0.327859)
 
 [node name="Coin40" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.313825, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.00457787, 0.327859)
 
 [node name="Coin41" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16073, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.00457787, 0.195249)
 
 [node name="Coin42" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16073, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0207896, 0.191408)
 
 [node name="Coin43" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16073, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0207896, 0.327859)
 
 [node name="Coin44" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00474146, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0207896, 0.327859)
 
 [node name="Coin45" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00474146, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0207896, 0.195249)
 
 [node name="Coin46" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00474146, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0389515, 0.191408)
 
 [node name="Coin47" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143545, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0389515, 0.327859)
 
 [node name="Coin48" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143545, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0389515, 0.327859)
 
 [node name="Coin49" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.143545, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0389515, 0.195249)
 
 [node name="Coin50" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291807, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0566528, 0.191408)
 
 [node name="Coin51" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291807, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0566528, 0.327859)
 
 [node name="Coin52" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.291807, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0566528, 0.327859)
 
 [node name="Coin53" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.441774, -0.0387315, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0566528, 0.195249)
 
 [node name="Coin54" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.441774, -0.0387315, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0728646, 0.191408)
 
 [node name="Coin55" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.441774, -0.0387315, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0728646, 0.327859)
 
 [node name="Coin56" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392489, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0728646, 0.327859)
 
 [node name="Coin57" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392489, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0728646, 0.195249)
 
 [node name="Coin58" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.392489, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0910264, 0.191408)
 
 [node name="Coin59" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239395, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.0910264, 0.327859)
 
 [node name="Coin60" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239395, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0910264, 0.327859)
 
 [node name="Coin61" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.239395, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.0910264, 0.195249)
 
 [node name="Coin62" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0834058, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.106934, 0.191408)
 
 [node name="Coin63" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0834058, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.106934, 0.327859)
 
 [node name="Coin64" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0834058, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.106934, 0.327859)
 
 [node name="Coin65" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0648808, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.106934, 0.195249)
 
 [node name="Coin66" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0648808, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.123146, 0.191408)
 
 [node name="Coin67" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0648808, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.123146, 0.327859)
 
 [node name="Coin68" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213143, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.123146, 0.327859)
 
 [node name="Coin69" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213143, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.123146, 0.195249)
 
 [node name="Coin70" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.213143, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.141307, 0.191408)
 
 [node name="Coin71" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36311, 0.00959435, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.141307, 0.327859)
 
 [node name="Coin72" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36311, 0.00959435, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.141307, 0.327859)
 
 [node name="Coin73" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.36311, 0.00959435, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.141307, 0.195249)
 
 [node name="Coin74" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0491112, 0.0372853)
-
-[node name="Coin75" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0491112, 0.170665)
-
-[node name="Coin76" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0491112, 0.30533)
-
-[node name="Coin77" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0491112, 0.0372853)
-
-[node name="Coin78" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0491112, 0.170665)
-
-[node name="Coin79" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0491112, 0.30533)
-
-[node name="Coin80" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0491112, 0.0372853)
-
-[node name="Coin81" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0491112, 0.170665)
-
-[node name="Coin82" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0491112, 0.30533)
-
-[node name="Coin83" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0491112, 0.0372853)
-
-[node name="Coin84" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0491112, 0.170665)
-
-[node name="Coin85" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0491112, 0.30533)
-
-[node name="Coin86" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0491112, 0.0372853)
-
-[node name="Coin87" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0491112, 0.170665)
-
-[node name="Coin88" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0491112, 0.30533)
-
-[node name="Coin89" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0491112, 0.0372853)
-
-[node name="Coin90" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0491112, 0.170665)
-
-[node name="Coin91" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0491112, 0.30533)
-
-[node name="Coin92" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.0372853)
-
-[node name="Coin93" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.170665)
-
-[node name="Coin94" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.320403, 0.0895905, 0.30533)
-
-[node name="Coin95" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.0372853)
-
-[node name="Coin96" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.170665)
-
-[node name="Coin97" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.167308, 0.0895905, 0.30533)
-
-[node name="Coin98" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.0372853)
-
-[node name="Coin99" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.170665)
-
-[node name="Coin100" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0113197, 0.0895905, 0.30533)
-
-[node name="Coin101" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.0372853)
-
-[node name="Coin102" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.170665)
-
-[node name="Coin103" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.136967, 0.0895905, 0.30533)
-
-[node name="Coin104" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.0372853)
-
-[node name="Coin105" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.170665)
-
-[node name="Coin106" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285229, 0.0895905, 0.30533)
-
-[node name="Coin107" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.0372853)
-
-[node name="Coin108" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.170665)
-
-[node name="Coin109" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.435196, 0.0895905, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.156602, 0.191408)
 
 [node name="Coin110" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.149029, 0.191408)
 
 [node name="Coin111" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.149029, 0.327859)
 
 [node name="Coin112" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.149029, 0.327859)
 
 [node name="Coin113" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.149029, 0.195249)
 
 [node name="Coin114" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.132817, 0.191408)
 
 [node name="Coin115" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.132817, 0.327859)
 
 [node name="Coin116" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.132817, 0.327859)
 
 [node name="Coin117" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.132817, 0.195249)
 
 [node name="Coin118" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.114655, 0.191408)
 
 [node name="Coin119" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.114655, 0.327859)
 
 [node name="Coin120" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.114655, 0.327859)
 
 [node name="Coin121" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.114655, 0.195249)
 
 [node name="Coin122" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0969538, 0.191408)
 
 [node name="Coin123" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0969538, 0.327859)
 
 [node name="Coin124" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0969538, 0.327859)
 
 [node name="Coin125" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.0372853)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0969538, 0.195249)
 
 [node name="Coin126" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.170665)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0807421, 0.191408)
 
 [node name="Coin127" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.148774, 0.30533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0807421, 0.327859)
 
 [node name="Coin128" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0807421, 0.327859)
 
 [node name="Coin129" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0807421, 0.195249)
 
 [node name="Coin130" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0625802, 0.191408)
 
 [node name="Coin131" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0625802, 0.327859)
 
 [node name="Coin132" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0625802, 0.327859)
 
 [node name="Coin133" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0625802, 0.195249)
 
 [node name="Coin134" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0466728, 0.191408)
 
 [node name="Coin135" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0466728, 0.327859)
 
 [node name="Coin136" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0466728, 0.327859)
 
 [node name="Coin137" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0466728, 0.195249)
 
 [node name="Coin138" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0304611, 0.191408)
 
 [node name="Coin139" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0304611, 0.327859)
 
 [node name="Coin140" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0304611, 0.327859)
 
 [node name="Coin141" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0304611, 0.195249)
 
 [node name="Coin142" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0122992, 0.191408)
 
 [node name="Coin143" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.186422, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, -0.0122992, 0.327859)
 
 [node name="Coin144" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.186422, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0122992, 0.327859)
 
 [node name="Coin145" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.186422, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, -0.0122992, 0.195249)
 
 [node name="Coin146" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.00457787, 0.191408)
 
 [node name="Coin147" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.00457787, 0.327859)
 
 [node name="Coin148" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.399331, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.00457787, 0.327859)
 
 [node name="Coin149" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.00457787, 0.195249)
 
 [node name="Coin150" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0207896, 0.191408)
 
 [node name="Coin151" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.246236, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0207896, 0.327859)
 
 [node name="Coin152" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0207896, 0.327859)
 
 [node name="Coin153" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0207896, 0.195249)
 
 [node name="Coin154" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0902475, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0389515, 0.191408)
 
 [node name="Coin155" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0389515, 0.327859)
 
 [node name="Coin156" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0389515, 0.327859)
 
 [node name="Coin157" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0580391, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0389515, 0.195249)
 
 [node name="Coin158" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0566528, 0.191408)
 
 [node name="Coin159" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0566528, 0.327859)
 
 [node name="Coin160" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.206301, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0566528, 0.327859)
 
 [node name="Coin161" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.256134, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0566528, 0.195249)
 
 [node name="Coin162" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.256134, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0728646, 0.191408)
 
 [node name="Coin163" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.356268, 0.256134, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0728646, 0.327859)
 
 [node name="Coin164" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0728646, 0.327859)
 
 [node name="Coin165" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0728646, 0.195249)
 
 [node name="Coin166" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0910264, 0.191408)
 
 [node name="Coin167" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.0910264, 0.327859)
 
 [node name="Coin168" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0910264, 0.327859)
 
 [node name="Coin169" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.0910264, 0.195249)
 
 [node name="Coin170" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.106934, 0.191408)
 
 [node name="Coin171" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.106934, 0.327859)
 
 [node name="Coin172" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.106934, 0.327859)
 
 [node name="Coin173" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.106934, 0.195249)
 
 [node name="Coin174" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.123146, 0.191408)
 
 [node name="Coin175" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.123146, 0.327859)
 
 [node name="Coin176" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.123146, 0.327859)
 
 [node name="Coin177" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.123146, 0.195249)
 
 [node name="Coin178" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.141307, 0.191408)
 
 [node name="Coin179" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.304201, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.141307, 0.327859)
 
 [node name="Coin180" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.304201, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.141307, 0.327859)
 
 [node name="Coin181" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.304201, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.211434, 0.141307, 0.195249)
 
 [node name="Coin182" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.356377, 0.156602, 0.191408)
 
 [node name="Coin183" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0623665, -0.370183)
 
 [node name="Coin184" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.317313, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0623665, -0.233732)
 
 [node name="Coin185" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0623665, -0.233732)
 
 [node name="Coin186" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0623665, -0.366342)
 
 [node name="Coin187" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.164218, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0785785, -0.370183)
 
 [node name="Coin188" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0785785, -0.233732)
 
 [node name="Coin189" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0785785, -0.233732)
 
 [node name="Coin190" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00822966, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0785785, -0.366342)
 
 [node name="Coin191" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0967405, -0.370183)
 
 [node name="Coin192" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.0967405, -0.233732)
 
 [node name="Coin193" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.140057, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0967405, -0.233732)
 
 [node name="Coin194" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.0967405, -0.366342)
 
 [node name="Coin195" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.114442, -0.370183)
 
 [node name="Coin196" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.288319, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.114442, -0.233732)
 
 [node name="Coin197" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.334862, -0.295548)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.114442, -0.233732)
 
 [node name="Coin198" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.334862, -0.162168)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.114442, -0.366342)
 
 [node name="Coin199" parent="Coins" instance=ExtResource("4_4k8hy")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.438286, 0.334862, -0.027504)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.130653, -0.370183)
+
+[node name="Coin200" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.130653, -0.233732)
+
+[node name="Coin201" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.130653, -0.233732)
+
+[node name="Coin202" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.130653, -0.366342)
+
+[node name="Coin203" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.148815, -0.370183)
+
+[node name="Coin204" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.148815, -0.233732)
+
+[node name="Coin205" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.148815, -0.233732)
+
+[node name="Coin206" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.148815, -0.366342)
+
+[node name="Coin207" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.164723, -0.370183)
+
+[node name="Coin208" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.164723, -0.233732)
+
+[node name="Coin209" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.164723, -0.233732)
+
+[node name="Coin210" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.164723, -0.366342)
+
+[node name="Coin211" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.180934, -0.370183)
+
+[node name="Coin212" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.180934, -0.233732)
+
+[node name="Coin213" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.180934, -0.233732)
+
+[node name="Coin214" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.180934, -0.366342)
+
+[node name="Coin215" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.199096, -0.370183)
+
+[node name="Coin216" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.199096, -0.233732)
+
+[node name="Coin217" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.199096, -0.233732)
+
+[node name="Coin218" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.199096, -0.366342)
+
+[node name="Coin219" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.215973, -0.370183)
+
+[node name="Coin220" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.215973, -0.233732)
+
+[node name="Coin221" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.215973, -0.233732)
+
+[node name="Coin222" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.215973, -0.366342)
+
+[node name="Coin223" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.232185, -0.370183)
+
+[node name="Coin224" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.232185, -0.233732)
+
+[node name="Coin225" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.232185, -0.233732)
+
+[node name="Coin226" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.232185, -0.366342)
+
+[node name="Coin227" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.250347, -0.370183)
+
+[node name="Coin228" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.250347, -0.233732)
+
+[node name="Coin229" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.250347, -0.233732)
+
+[node name="Coin230" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.250347, -0.366342)
+
+[node name="Coin231" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.268048, -0.370183)
+
+[node name="Coin232" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.268048, -0.233732)
+
+[node name="Coin233" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.268048, -0.233732)
+
+[node name="Coin234" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.268048, -0.366342)
+
+[node name="Coin235" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.28426, -0.370183)
+
+[node name="Coin236" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.28426, -0.233732)
+
+[node name="Coin237" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.28426, -0.233732)
+
+[node name="Coin238" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.28426, -0.366342)
+
+[node name="Coin239" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.302422, -0.370183)
+
+[node name="Coin240" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.302422, -0.233732)
+
+[node name="Coin241" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.302422, -0.233732)
+
+[node name="Coin242" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.302422, -0.366342)
+
+[node name="Coin243" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.318329, -0.370183)
+
+[node name="Coin244" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.318329, -0.233732)
+
+[node name="Coin245" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.318329, -0.233732)
+
+[node name="Coin246" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.318329, -0.366342)
+
+[node name="Coin247" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.334541, -0.370183)
+
+[node name="Coin248" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.334541, -0.233732)
+
+[node name="Coin249" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.334541, -0.233732)
+
+[node name="Coin250" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.334541, -0.366342)
+
+[node name="Coin251" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.352702, -0.370183)
+
+[node name="Coin252" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.352702, -0.233732)
+
+[node name="Coin253" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.352702, -0.233732)
+
+[node name="Coin254" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.205133, 0.352702, -0.366342)
+
+[node name="Coin255" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350075, 0.367997, -0.370183)
+
+[node name="Coin256" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0623665, -0.370183)
+
+[node name="Coin257" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0623665, -0.233732)
+
+[node name="Coin258" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0623665, -0.233732)
+
+[node name="Coin259" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0623665, -0.366342)
+
+[node name="Coin260" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0785785, -0.370183)
+
+[node name="Coin261" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0785785, -0.233732)
+
+[node name="Coin262" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0785785, -0.233732)
+
+[node name="Coin263" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0785785, -0.366342)
+
+[node name="Coin264" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0967405, -0.370183)
+
+[node name="Coin265" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.0967405, -0.233732)
+
+[node name="Coin266" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0967405, -0.233732)
+
+[node name="Coin267" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.0967405, -0.366342)
+
+[node name="Coin268" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.114442, -0.370183)
+
+[node name="Coin269" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.114442, -0.233732)
+
+[node name="Coin270" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.114442, -0.233732)
+
+[node name="Coin271" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.114442, -0.366342)
+
+[node name="Coin272" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.130653, -0.370183)
+
+[node name="Coin273" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.130653, -0.233732)
+
+[node name="Coin274" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.130653, -0.233732)
+
+[node name="Coin275" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.130653, -0.366342)
+
+[node name="Coin276" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.148815, -0.370183)
+
+[node name="Coin277" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.148815, -0.233732)
+
+[node name="Coin278" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.148815, -0.233732)
+
+[node name="Coin279" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.148815, -0.366342)
+
+[node name="Coin280" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.164723, -0.370183)
+
+[node name="Coin281" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.164723, -0.233732)
+
+[node name="Coin282" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.164723, -0.233732)
+
+[node name="Coin283" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.164723, -0.366342)
+
+[node name="Coin284" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.180934, -0.370183)
+
+[node name="Coin285" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.180934, -0.233732)
+
+[node name="Coin286" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.180934, -0.233732)
+
+[node name="Coin287" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.180934, -0.366342)
+
+[node name="Coin288" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.199096, -0.370183)
+
+[node name="Coin289" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.199096, -0.233732)
+
+[node name="Coin290" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.199096, -0.233732)
+
+[node name="Coin291" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.199096, -0.366342)
+
+[node name="Coin292" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.215973, -0.370183)
+
+[node name="Coin293" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.215973, -0.233732)
+
+[node name="Coin294" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.215973, -0.233732)
+
+[node name="Coin295" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.215973, -0.366342)
+
+[node name="Coin296" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.232185, -0.370183)
+
+[node name="Coin297" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.232185, -0.233732)
+
+[node name="Coin298" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.232185, -0.233732)
+
+[node name="Coin299" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.232185, -0.366342)
+
+[node name="Coin300" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.250347, -0.370183)
+
+[node name="Coin301" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.250347, -0.233732)
+
+[node name="Coin302" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.250347, -0.233732)
+
+[node name="Coin303" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.250347, -0.366342)
+
+[node name="Coin304" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.268048, -0.370183)
+
+[node name="Coin305" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.268048, -0.233732)
+
+[node name="Coin306" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.268048, -0.233732)
+
+[node name="Coin307" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.268048, -0.366342)
+
+[node name="Coin308" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.28426, -0.370183)
+
+[node name="Coin309" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.28426, -0.233732)
+
+[node name="Coin310" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.28426, -0.233732)
+
+[node name="Coin311" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.28426, -0.366342)
+
+[node name="Coin312" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.302422, -0.370183)
+
+[node name="Coin313" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.302422, -0.233732)
+
+[node name="Coin314" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.302422, -0.233732)
+
+[node name="Coin315" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.302422, -0.366342)
+
+[node name="Coin316" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.318329, -0.370183)
+
+[node name="Coin317" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.318329, -0.233732)
+
+[node name="Coin318" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.318329, -0.233732)
+
+[node name="Coin319" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.318329, -0.366342)
+
+[node name="Coin320" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.334541, -0.370183)
+
+[node name="Coin321" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.334541, -0.233732)
+
+[node name="Coin322" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.334541, -0.233732)
+
+[node name="Coin323" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.334541, -0.366342)
+
+[node name="Coin324" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.352702, -0.370183)
+
+[node name="Coin325" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.352702, -0.233732)
+
+[node name="Coin326" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.352702, -0.233732)
+
+[node name="Coin327" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.244533, 0.352702, -0.366342)
+
+[node name="Coin328" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0995905, 0.367997, -0.370183)
+
+[node name="Coin75" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.156602, 0.327859)
+
+[node name="Coin76" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.156602, 0.327859)
+
+[node name="Coin77" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.156602, 0.195249)
+
+[node name="Coin78" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.172814, 0.191408)
+
+[node name="Coin79" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.172814, 0.327859)
+
+[node name="Coin80" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.172814, 0.327859)
+
+[node name="Coin81" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.172814, 0.195249)
+
+[node name="Coin82" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.190975, 0.191408)
+
+[node name="Coin83" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.190975, 0.327859)
+
+[node name="Coin84" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.190975, 0.327859)
+
+[node name="Coin85" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.190975, 0.195249)
+
+[node name="Coin86" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.208677, 0.191408)
+
+[node name="Coin87" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.208677, 0.327859)
+
+[node name="Coin88" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.208677, 0.327859)
+
+[node name="Coin89" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.208677, 0.195249)
+
+[node name="Coin90" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.224888, 0.191408)
+
+[node name="Coin91" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.224888, 0.327859)
+
+[node name="Coin92" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.224888, 0.327859)
+
+[node name="Coin93" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.224888, 0.195249)
+
+[node name="Coin94" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.24305, 0.191408)
+
+[node name="Coin95" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.24305, 0.327859)
+
+[node name="Coin96" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.24305, 0.327859)
+
+[node name="Coin97" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.24305, 0.195249)
+
+[node name="Coin98" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.258958, 0.191408)
+
+[node name="Coin99" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.258958, 0.327859)
+
+[node name="Coin100" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.258958, 0.327859)
+
+[node name="Coin101" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.258958, 0.195249)
+
+[node name="Coin102" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.275169, 0.191408)
+
+[node name="Coin103" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.275169, 0.327859)
+
+[node name="Coin104" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.275169, 0.327859)
+
+[node name="Coin105" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.275169, 0.195249)
+
+[node name="Coin106" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.293331, 0.191408)
+
+[node name="Coin107" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0800275, 0.293331, 0.327859)
+
+[node name="Coin108" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.293331, 0.327859)
+
+[node name="Coin109" parent="Coins" instance=ExtResource("4_4k8hy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22497, 0.293331, 0.195249)
 
 [node name="CoinDetector" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.522115, 0.894833)

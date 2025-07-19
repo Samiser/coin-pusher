@@ -15,6 +15,8 @@ extends CanvasLayer
 @onready var board_container := $VBoxContainer/board_container
 
 var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
+var select_frame_tex := preload("res://UI/Sprites/ui_board_frame_current.png")
+var default_frame_tex := preload("res://UI/Sprites/ui_board_frame.png")
 
 signal drop_triggered
 signal swap_boards
@@ -39,6 +41,13 @@ func add_display_board(board_index: int) -> void:
 func remove_display_board() -> void:
 	if board_container.get_child_count() > 1:
 		board_container.get_child(0).queue_free()
+
+func select_display_board(index: int) -> void:
+	for child in board_container.get_children():
+		child.set_texture_normal(default_frame_tex)
+	var move_index := (board_container.get_child_count() - 1) - index
+	print(move_index)
+	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
