@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=12 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
 [ext_resource type="Texture2D" uid="uid://b1voflqxkqr7k" path="res://Textures/me.jpg" id="2_e6gg6"]
+[ext_resource type="Theme" uid="uid://c2k242pbhj3qy" path="res://UI/hud_default_text_theme.tres" id="3_c7tqi"]
+[ext_resource type="Theme" uid="uid://bbuyx3nghd4qb" path="res://UI/hud_header_text_theme.tres" id="3_cbfhl"]
 [ext_resource type="Script" uid="uid://bu0ucjaihmk7a" path="res://UI/debug_menu.gd" id="3_e6gg6"]
 [ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="3_hat8c"]
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
@@ -45,10 +47,37 @@ visibility_rect = Rect2(0, -100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_hat8c")
 
 [node name="CoinBalanceLabel" type="RichTextLabel" parent="."]
-offset_right = 231.0
-offset_bottom = 102.0
-theme_override_font_sizes/normal_font_size = 33
-text = "Coins: 0000"
+clip_contents = false
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 999.0
+offset_bottom = 135.0
+theme = ExtResource("3_cbfhl")
+bbcode_enabled = true
+text = "0000"
+
+[node name="coins_subtitle" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 24.0
+offset_top = 133.0
+offset_right = 255.0
+offset_bottom = 235.0
+theme = ExtResource("3_c7tqi")
+text = "coins"
+
+[node name="multiplier_subtitle" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -302.0
+offset_top = 133.0
+offset_right = -24.0
+offset_bottom = 235.0
+grow_horizontal = 0
+theme = ExtResource("3_c7tqi")
+text = "multiplier"
+horizontal_alignment = 2
 
 [node name="multi_particles" type="GPUParticles2D" parent="."]
 position = Vector2(833, 66)
@@ -61,17 +90,19 @@ visibility_rect = Rect2(0, -100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_hat8c")
 
 [node name="CoinMultiLabel" type="RichTextLabel" parent="."]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -115.5
-offset_right = 115.5
-offset_bottom = 102.0
-grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 33
-text = "Coins Multi
-x1"
-horizontal_alignment = 1
+clip_contents = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -255.0
+offset_top = 24.0
+offset_right = -24.0
+offset_bottom = 143.0
+grow_horizontal = 0
+theme = ExtResource("3_cbfhl")
+bbcode_enabled = true
+text = "x1"
+horizontal_alignment = 2
 
 [node name="DropButton" type="Button" parent="."]
 offset_left = 277.0
@@ -90,10 +121,11 @@ theme_override_font_sizes/font_size = 33
 text = "Swap"
 
 [node name="Panel" type="Panel" parent="."]
-offset_left = 55.0
-offset_top = 897.0
-offset_right = 438.0
-offset_bottom = 1022.0
+offset_left = 1509.0
+offset_top = 918.0
+offset_right = 1892.0
+offset_bottom = 1043.0
+theme = ExtResource("3_c7tqi")
 
 [node name="Shop" parent="Panel" instance=ExtResource("2_dajm1")]
 layout_mode = 1
@@ -108,10 +140,11 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DebugPanel" type="Panel" parent="."]
-offset_left = 54.0
-offset_top = 762.0
-offset_right = 267.0
-offset_bottom = 854.0
+offset_left = 1508.0
+offset_top = 783.0
+offset_right = 1721.0
+offset_bottom = 875.0
+theme = ExtResource("3_c7tqi")
 
 [node name="DebugMenu" type="VBoxContainer" parent="DebugPanel"]
 layout_mode = 1
@@ -134,10 +167,11 @@ size_flags_horizontal = 4
 text = "Toggle Coin Follow"
 
 [node name="OptionsPanel" type="Panel" parent="."]
-offset_left = 54.0
-offset_top = 650.0
-offset_right = 267.0
-offset_bottom = 742.0
+offset_left = 1508.0
+offset_top = 671.0
+offset_right = 1721.0
+offset_bottom = 763.0
+theme = ExtResource("3_c7tqi")
 
 [node name="OptionsMenu" type="VBoxContainer" parent="OptionsPanel"]
 layout_mode = 1
@@ -146,6 +180,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_c7tqi")
 alignment = 1
 script = ExtResource("6_nm1m0")
 

@@ -1,23 +1,24 @@
-[gd_scene load_steps=15 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=16 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b028rg20gl7fs" path="res://UI/ui.tscn" id="3_lquwl"]
-[ext_resource type="Texture2D" uid="uid://dd0cno3cohh2j" path="res://UI/Sprites/coin_reaction.jpg" id="5_5vw27"]
 [ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
+[ext_resource type="Texture2D" uid="uid://dkf6nq5goa3yv" path="res://UI/Sprites/ui_cam_frame.png" id="6_4c57u"]
 [ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
 [ext_resource type="PackedScene" uid="uid://dh0gg8lf7jnqg" path="res://Objects/CoinMachine/coin_machine.tscn" id="7_5vw27"]
+[ext_resource type="Theme" uid="uid://c2k242pbhj3qy" path="res://UI/hud_default_text_theme.tres" id="7_efxa6"]
 [ext_resource type="AudioStream" uid="uid://dibud4fo6il0g" path="res://Audio/bgm.mp3" id="8_5vw27"]
 
 [sub_resource type="Gradient" id="Gradient_272bh"]
-colors = PackedColorArray(0, 0.264277, 0.456509, 1, 1, 0.80298, 0.913962, 1)
+offsets = PackedFloat32Array(0, 0.348974, 1)
+colors = PackedColorArray(0.286204, 0.587006, 0.948614, 1, 0.248003, 0.422884, 0.904303, 1, 0.881133, 0.877524, 0.997683, 1)
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_5vw27"]
 noise_type = 2
-seed = 45
-frequency = 0.0025
+seed = 69
+frequency = 0.0136
 fractal_octaves = 10
-fractal_gain = 0.6
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kek77"]
 width = 256
@@ -46,30 +47,49 @@ coin_scene = ExtResource("2_h2yge")
 
 [node name="UI" parent="." instance=ExtResource("3_lquwl")]
 
-[node name="TextureRect" type="TextureRect" parent="UI"]
-offset_left = 1272.0
-offset_top = 597.0
-offset_right = 1817.0
-offset_bottom = 987.0
-texture = ExtResource("5_5vw27")
-expand_mode = 1
-stretch_mode = 4
+[node name="pusher_cam2" type="TextureRect" parent="UI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -330.0
+offset_right = 467.0
+offset_bottom = -41.0
+grow_vertical = 0
+texture = ExtResource("6_4c57u")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="UI"]
-offset_left = 1280.0
-offset_top = 687.0
-offset_right = 1793.0
-offset_bottom = 979.0
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI/pusher_cam2"]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 28.0
+offset_right = 419.0
+offset_bottom = 234.0
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="UI/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="UI/pusher_cam2/SubViewportContainer"]
+transparent_bg = true
 handle_input_locally = false
-size = Vector2i(513, 292)
+size = Vector2i(389, 206)
 render_target_update_mode = 4
 
-[node name="PusherCamera" type="Camera3D" parent="UI/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.773342, -0.290798, 0.563363, -0.0244208, 0.874279, 0.48481, -0.633518, -0.388682, 0.669015, 0.799, 0.501, 0.797)
-fov = 63.3
+[node name="PusherCamera" type="Camera3D" parent="UI/pusher_cam2/SubViewportContainer/SubViewport"]
+transform = Transform3D(0.72141, -0.320314, 0.613976, -0.0244208, 0.874279, 0.48481, -0.692077, -0.364741, 0.622891, 0.870725, 0.549419, 0.87942)
+projection = 1
+fov = 40.2
+size = 0.8
+
+[node name="coins_subtitle2" type="RichTextLabel" parent="UI/pusher_cam2"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = -1
+offset_left = 168.0
+offset_top = 212.0
+offset_right = 439.0
+offset_bottom = 322.0
+theme = ExtResource("7_efxa6")
+text = "Pusher Cam"
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -0.010263, 0.924324, 2.1271)
