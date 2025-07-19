@@ -58,7 +58,7 @@ func add_board(board_name: String) -> BoardData: # return index
 	if board_name in board_scenes:
 		var new_board := board_scenes[board_name].instantiate()
 		boards.add_child(new_board)
-		#dropper.y += 
+		dropper.position.y += 2
 		_arrange_boards()
 		_focus_board(boards.get_children()[-1])
 		return BoardData.new(boards.get_children().find(new_board), board_name)
@@ -70,6 +70,7 @@ func remove_board() -> void:
 		if focused_board == board_array[-1]:
 			_focus_board(board_array[-2])
 		board_array[-1].queue_free()
+		dropper.position.y -= 2
 
 func change_board(index: int, new_board: String) -> void:
 	if not new_board in board_scenes:
