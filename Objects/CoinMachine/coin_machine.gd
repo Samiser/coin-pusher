@@ -47,12 +47,14 @@ func focus_up() -> void:
 func focus_down() -> void:
 	_change_focus(-1)
 
-func add_board(board_name: String) -> void:
+func add_board(board_name: String) -> int: # return index
 	if board_name in board_scenes:
 		var new_board := board_scenes[board_name].instantiate()
 		boards.add_child(new_board)
 		_arrange_boards()
 		_focus_board(new_board)
+		return boards.get_children().find(new_board)
+	return -1
 
 func change_board(index: int, new_board: String) -> void:
 	if not new_board in board_scenes:

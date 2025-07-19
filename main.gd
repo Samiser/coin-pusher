@@ -1,7 +1,7 @@
 extends Node3D
 
 @export var coin_scene: PackedScene
-@onready var machine := $CoinMachine
+@onready var machine: CoinMachine = $CoinMachine
 @onready var ui := $UI
 @onready var vine_audio := $vine_stream
 @onready var money_audio := $money_stream
@@ -72,13 +72,23 @@ func _move_camera_to_board(board: Node3D) -> void:
 	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.2)
 	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
 
+func _add_board() -> void:
+	var index := machine.add_board("pinball")
+	if index >= 0:
+		ui.add_display_board(index)
+
+func _remove_board() -> void:
+	# machine.remove_board()
+	ui.remove_board()
+
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	machine.move_camera_to_board.connect(_move_camera_to_board)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
-	ui.connect("add_board", func() -> void: machine.add_board("pinball"))
+	ui.add_board.connect(_add_board)
+	ui.remove_board.connect(_remove_board)
 	ui.connect("purchase", purchase)
 	ui.connect("debug_menu_button", debug_option)
 	ui.move_up.connect(machine.focus_up)
