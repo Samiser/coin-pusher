@@ -33,10 +33,10 @@ func _get_drop_location() -> Vector3:
 func _focus_board(board: Node3D) -> void:
 	move_camera_to_board.emit(board)
 	focused_board = board
+	focus_changed.emit(boards.get_children().find(focused_board))
 
 func focus_on(board_index: int) -> void:
 	_focus_board(boards.get_child(board_index))
-	focus_changed.emit(board_index)
 
 func get_random_board() -> String:
 	return board_scenes.keys().pick_random()
@@ -58,7 +58,7 @@ func add_board(board_name: String) -> int: # return index
 		var new_board := board_scenes[board_name].instantiate()
 		boards.add_child(new_board)
 		_arrange_boards()
-		_focus_board(new_board)
+		_focus_board(boards.get_children()[-1])
 		return boards.get_children().find(new_board)
 	return -1
 

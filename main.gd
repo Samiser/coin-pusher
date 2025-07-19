@@ -67,7 +67,6 @@ func debug_option(option: String) -> void:
 				tween.tween_property(camera, "fov", 20, 1).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 
 func _move_camera_to_board(board: Node3D) -> void:
-	print(camera.global_position, " - ", board.global_position)
 	var tween := create_tween()
 	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.2)
 	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
