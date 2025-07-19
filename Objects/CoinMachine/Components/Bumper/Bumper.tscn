@@ -31,6 +31,7 @@ shape = SubResource("CylinderShape3D_vxtij")
 [node name="AnimatedBody3D" type="AnimatableBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 physics_material_override = SubResource("PhysicsMaterial_pg04f")
+sync_to_physics = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="AnimatedBody3D"]
 transform = Transform3D(0.119084, 0, 0, 0, 0.0209675, 0, 0, 5.55112e-17, 0.119084, 0, 0, 0)

@@ -19,7 +19,9 @@ script = ExtResource("1_m8m2f")
 
 [node name="AnimatedRigidBody3D" type="AnimatableBody3D" parent="."]
 transform = Transform3D(0.913546, -0.406737, 0, 0.406737, 0.913546, 0, 0, 0, 1, 0, 0, 0)
+disable_mode = 2
 physics_material_override = SubResource("PhysicsMaterial_m8m2f")
+sync_to_physics = false
 
 [node name="Area3D" type="Area3D" parent="AnimatedRigidBody3D"]
 

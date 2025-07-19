@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bdjpyyfpp24kx" path="res://Meshes/Coin/mesh_coin_0.png" id="2_4o8nj"]
 [ext_resource type="Texture2D" uid="uid://d2ewehv2hl0yc" path="res://Meshes/Coin/mesh_coin_1.png" id="3_drevj"]
 [ext_resource type="Texture2D" uid="uid://ch8etvnkccn32" path="res://Meshes/Coin/mesh_coin_2.png" id="4_1bl43"]
-[ext_resource type="Script" uid="uid://ox31ss4en7sk" path="res://Objects/Coin/trail.gd" id="5_drevj"]
+[ext_resource type="Script" path="res://Objects/Coin/trail.gd" id="5_drevj"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d5gmh"]
 friction = 0.4
@@ -86,6 +86,7 @@ emission = Color(1, 0.969, 0.69, 1)
 [node name="Coin" type="RigidBody3D" groups=["coin"]]
 mass = 0.02
 physics_material_override = SubResource("PhysicsMaterial_d5gmh")
+center_of_mass_mode = 1
 continuous_cd = true
 script = ExtResource("1_6bv11")
 
