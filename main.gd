@@ -85,6 +85,7 @@ func _ready() -> void:
 	ui.move_down.connect(machine.focus_down)
 	ui.set_balance(coins)
 	ui.set_multi(coin_multi)
+	ui.focus_board.connect(machine.focus_on)
 	
 func _process(delta: float) -> void:
 	environment.environment.sky_rotation.y += 0.1 * delta

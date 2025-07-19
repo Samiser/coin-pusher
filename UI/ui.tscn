@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="3_hat8c"]
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://cik2jv65arqbs" path="res://UI/Sprites/ui_board_dropper.png" id="9_0w6e5"]
-[ext_resource type="PackedScene" uid="uid://m7ftceas5exn" path="res://UI/board_frame.tscn" id="10_6rr40"]
+[ext_resource type="PackedScene" uid="uid://br7xeqslputa0" path="res://UI/board_frame.tscn" id="10_6rr40"]
 [ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
@@ -278,7 +278,7 @@ layout_mode = 2
 size_flags_vertical = 3
 alignment = 2
 
-[node name="Control" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
+[node name="board_frame" parent="VBoxContainer/board_container" instance=ExtResource("10_6rr40")]
 layout_mode = 2
 
 [node name="TextureRect5" type="TextureRect" parent="VBoxContainer"]

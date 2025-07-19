@@ -24,11 +24,17 @@ signal move_up
 signal move_down
 signal purchase(item_name: String, cost: int)
 signal debug_menu_button(option: String)
+signal focus_board(index: int)
 
 var coin_count := 0.0
 
 func add_display_board() -> void:
-	board_container.add_child(frame_scene.instantiate())
+	var board_frame_button := frame_scene.instantiate()
+	board_container.add_child(board_frame_button)
+	var index := board_container.get_child_count() - 1
+	board_frame_button.pressed.connect(func() -> void:
+		focus_board.emit(index)
+		)
 	
 func remove_display_board() -> void:
 	if board_container.get_child_count() > 0:
@@ -48,6 +54,9 @@ func set_multi(value: int) -> void:
 	multi_particles.emitting = true
 
 func _ready() -> void:
+	board_container.get_child(0).pressed.connect(func() -> void:
+		focus_board.emit(0)
+		)
 	drop_button.connect("pressed", func() -> void:
 		emit_signal("drop_triggered")
 	)
