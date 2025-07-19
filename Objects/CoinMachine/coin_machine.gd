@@ -35,6 +35,9 @@ func _focus_board(board: Node3D) -> void:
 func focus_on(board_index: int) -> void:
 	_focus_board(boards.get_child(board_index))
 
+func get_random_board() -> String:
+	return board_scenes.keys().pick_random()
+
 func _change_focus(change: int) -> void:
 	var board_array := boards.get_children()
 	var focused_index := board_array.find(focused_board)
