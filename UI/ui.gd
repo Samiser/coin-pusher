@@ -26,6 +26,8 @@ var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
 var select_frame_tex := preload("res://UI/Sprites/ui_board_frame_current.png")
 var default_frame_tex := preload("res://UI/Sprites/ui_board_frame.png")
 
+var tween : Tween
+
 signal drop_triggered
 signal swap_boards
 signal add_board
@@ -61,6 +63,9 @@ func select_display_board(index: int) -> void:
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
 	coin_count += float(value)
+	
+	tween = get_tree().create_tween()
+	tween.tween_property(coin_balance_label, "visible_ratio", 1, 0.1).from(0.0) 
 
 func _process(delta: float) -> void:
 	coin_count -= delta * 2.0

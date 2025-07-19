@@ -278,6 +278,7 @@ stretch_mode = 5
 
 [node name="board_container" type="VBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 3
 alignment = 2
 
