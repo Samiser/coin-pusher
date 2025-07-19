@@ -9,6 +9,8 @@ class_name CoinMachine
 @onready var boards := $Boards
 @onready var killzone := $Killzone
 
+signal focus_changed
+
 var focused_board: Node3D
 
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
@@ -34,6 +36,7 @@ func _focus_board(board: Node3D) -> void:
 
 func focus_on(board_index: int) -> void:
 	_focus_board(boards.get_child(board_index))
+	focus_changed.emit(board_index)
 
 func get_random_board() -> String:
 	return board_scenes.keys().pick_random()
@@ -42,7 +45,7 @@ func _change_focus(change: int) -> void:
 	var board_array := boards.get_children()
 	var focused_index := board_array.find(focused_board)
 	var new_index := (focused_index + change) % board_array.size()
-	_focus_board(boards.get_child(new_index))
+	focus_on(new_index)
 
 func focus_up() -> void:
 	_change_focus(1)
