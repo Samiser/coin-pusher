@@ -56,6 +56,13 @@ func add_board(board_name: String) -> int: # return index
 		return boards.get_children().find(new_board)
 	return -1
 
+func remove_board() -> void:
+	if boards.get_child_count() > 1:
+		var board_array := boards.get_children()
+		if focused_board == board_array[-1]:
+			_focus_board(board_array[-2])
+		board_array[-1].queue_free()
+
 func change_board(index: int, new_board: String) -> void:
 	if not new_board in board_scenes:
 		push_error("Board ", new_board, " not in board_scenes!")

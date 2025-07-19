@@ -78,8 +78,8 @@ func _add_board() -> void:
 		ui.add_display_board(index)
 
 func _remove_board() -> void:
-	# machine.remove_board()
-	ui.remove_board()
+	machine.remove_board()
+	ui.remove_display_board()
 
 func _ready() -> void:
 	machine.connect("coin_collected", update_coin_count)

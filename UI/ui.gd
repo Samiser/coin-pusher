@@ -37,8 +37,8 @@ func add_display_board(board_index: int) -> void:
 	)
 	
 func remove_display_board() -> void:
-	if board_container.get_child_count() > 0:
-		board_container.get_child(0).queue_free()
+	if board_container.get_child_count() > 1:
+		board_container.get_child(-1).queue_free()
 
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
