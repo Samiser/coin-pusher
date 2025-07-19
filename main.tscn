@@ -48,7 +48,7 @@ coin_scene = ExtResource("2_h2yge")
 
 [node name="UI" parent="." instance=ExtResource("3_lquwl")]
 
-[node name="pusher_cam2" type="TextureRect" parent="UI"]
+[node name="pusher_cam" type="TextureRect" parent="UI"]
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -59,7 +59,7 @@ offset_bottom = -41.0
 grow_vertical = 0
 texture = ExtResource("6_4c57u")
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="UI/pusher_cam2"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="UI/pusher_cam"]
 layout_mode = 1
 offset_left = 30.0
 offset_top = 28.0
@@ -67,19 +67,19 @@ offset_right = 419.0
 offset_bottom = 234.0
 stretch = true
 
-[node name="SubViewport" type="SubViewport" parent="UI/pusher_cam2/SubViewportContainer"]
+[node name="SubViewport" type="SubViewport" parent="UI/pusher_cam/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
 size = Vector2i(389, 206)
 render_target_update_mode = 4
 
-[node name="PusherCamera" type="Camera3D" parent="UI/pusher_cam2/SubViewportContainer/SubViewport"]
+[node name="PusherCamera" type="Camera3D" parent="UI/pusher_cam/SubViewportContainer/SubViewport"]
 transform = Transform3D(0.72141, -0.320314, 0.613976, -0.0244208, 0.874279, 0.48481, -0.692077, -0.364741, 0.622891, 0.870725, 0.549419, 0.87942)
 projection = 1
 fov = 40.2
 size = 0.8
 
-[node name="coins_subtitle2" type="RichTextLabel" parent="UI/pusher_cam2"]
+[node name="coins_subtitle2" type="RichTextLabel" parent="UI/pusher_cam"]
 clip_contents = false
 layout_mode = 1
 anchors_preset = -1

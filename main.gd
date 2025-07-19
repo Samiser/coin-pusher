@@ -7,6 +7,7 @@ extends Node3D
 @onready var money_audio := $money_stream
 @onready var camera: Camera3D = $Camera3D
 @onready var environment : WorldEnvironment = $WorldEnvironment
+@onready var pusher_cam := $UI/pusher_cam
 
 var latest_coin: Coin
 
@@ -71,6 +72,8 @@ func _move_camera_to_board(board: Node3D) -> void:
 	tween.tween_property(camera, "global_position:x", board.global_position.x, 0.2)
 	tween.parallel().tween_property(camera, "global_position:y", board.global_position.y, 0.2)
 
+	pusher_cam.visible = board.global_position.y > 2
+	
 func _add_board() -> void:
 	var board_data := machine.add_board(machine.get_random_board())
 	if board_data:
@@ -81,6 +84,7 @@ func _remove_board() -> void:
 	ui.remove_display_board()
 
 func _ready() -> void:
+	pusher_cam.visible = false # hide by default
 	machine.connect("coin_collected", update_coin_count)
 	machine.connect("add_combo", _on_add_combo)
 	machine.move_camera_to_board.connect(_move_camera_to_board)
