@@ -20,6 +20,8 @@ extends CanvasLayer
 @onready var options_panel := $OptionsPanel
 @onready var shop_panel := $ShopPanel
 
+@onready var selection_rect := $selection_rect
+
 @onready var board_title := $board_subtitle
 
 var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
@@ -56,14 +58,20 @@ func remove_display_board() -> void:
 
 func select_display_board(index: int) -> void:
 	await get_tree().process_frame
-	#for child in board_container.get_children():
-	#	child.set_texture_normal(default_frame_tex)
 	var move_index := (board_container.get_child_count() - 1) - index
 	if move_index == -1:
 		move_index = 0
 	board_title.text = board_container.get_child(move_index).get_meta("board_name")
-	#board_container.get_child(move_index).set_texture_normal(select_frame_tex)
-
+	var selected_height : float = board_container.get_child(move_index).global_position.y
+	selection_rect.global_position.y = selected_height
+	
+	var tween := get_tree().create_tween() 
+	tween.set_loops(4)
+	
+	tween.tween_property(selection_rect, "modulate", Color.LIGHT_GRAY, 0.1)
+	tween.tween_property(selection_rect, "modulate", Color.WHITE, 0.1)
+	
+	
 func set_balance(value: int) -> void:
 	coin_balance_label.set_text(str(value))
 	coin_count += float(value)
