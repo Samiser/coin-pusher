@@ -35,7 +35,5 @@ func _on_body_entered(body: Node3D) -> void:
 func _ready() -> void:
 	deactivate()
 	
-	if is_in_group("unhittable"):
-		return
-		
-	coin_detector_area.connect("body_entered", _on_body_entered)
+	if not is_in_group("unhittable"):
+		coin_detector_area.connect("body_entered", _on_body_entered)

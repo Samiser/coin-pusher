@@ -28,6 +28,7 @@ func _get_drop_location() -> Vector3:
 func add_board(board_name: String) -> void:
 	if board_name in board_scenes:
 		boards.add_child(board_scenes[board_name].instantiate())
+		_arrange_boards()
 
 func change_board(index: int, new_board: String) -> void:
 	if not new_board in board_scenes:
@@ -38,8 +39,8 @@ func change_board(index: int, new_board: String) -> void:
 	var old_board_node := boards.get_child(index)
 	new_board_node.connect("add_combo", func(value: int) -> void: emit_signal("add_combo", value))
 	old_board_node.add_sibling(new_board_node)
+	_arrange_boards()
 	old_board_node.queue_free()
-	
 
 func swap_boards(first_idx: int, second_idx: int) -> void:
 	if first_idx == second_idx:
@@ -109,16 +110,20 @@ func _coin_detected(coin: Coin) -> void:
 	coin.queue_free()	# prevents coin from setting off this function again
 						# was happening with da bomb coin :(
 
-func _process(_delta: float) -> void:
+func _arrange_boards() -> void:
 	var boards_array := boards.get_children()
 	for i: int in boards.get_child_count():
 		var board := boards_array[i]
 		board.global_position = Vector3(0, 1 + i * 2, -0.53)
+		
 		if i == 0:
 			if not board.is_in_group("bottom"):
 				board.add_to_group("bottom")
 		elif board.is_in_group("bottom"):
 			boards_array[i].remove_from_group("bottom")
+
+func _process(_delta: float) -> void:
+	_arrange_boards()
 
 func _ready() -> void:
 	if not coin_detector:
