@@ -62,6 +62,10 @@ func select_display_board(index: int) -> void:
 	if move_index == -1:
 		move_index = 0
 	board_title.text = board_container.get_child(move_index).get_meta("board_name")
+	
+	tween = get_tree().create_tween()
+	tween.tween_property(board_title, "visible_ratio", 1, 0.4).from(0.0) 
+	
 	var selected_height : float = board_container.get_child(move_index).global_position.y
 	selection_rect.global_position.y = selected_height
 	
