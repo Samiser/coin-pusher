@@ -32,6 +32,9 @@ func _focus_board(board: Node3D) -> void:
 	move_camera_to_board.emit(board)
 	focused_board = board
 
+func focus_on(board_index: int) -> void:
+	_focus_board(boards.get_child(board_index))
+
 func _change_focus(change: int) -> void:
 	var board_array := boards.get_children()
 	var focused_index := board_array.find(focused_board)
