@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://dhljcf5oo4jun"]
+[gd_scene load_steps=17 format=3 uid="uid://dhljcf5oo4jun"]
 
 [ext_resource type="Script" uid="uid://0dov62wq86il" path="res://main.gd" id="1_h2yge"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://b028rg20gl7fs" path="res://UI/ui.tscn" id="3_lquwl"]
-[ext_resource type="AudioStream" uid="uid://dfww2e0h4amht" path="res://Audio/vine_boom.mp3" id="5_lquwl"]
 [ext_resource type="Texture2D" uid="uid://dkf6nq5goa3yv" path="res://UI/Sprites/ui_cam_frame.png" id="6_4c57u"]
 [ext_resource type="AudioStream" uid="uid://dctl87ig7epc0" path="res://Audio/money.mp3" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://b32lbj7yjirtx" path="res://Audio/oh_my_goodness.mp3" id="7_4c57u"]
 [ext_resource type="PackedScene" uid="uid://dh0gg8lf7jnqg" path="res://Objects/CoinMachine/coin_machine.tscn" id="7_5vw27"]
 [ext_resource type="Theme" uid="uid://c2k242pbhj3qy" path="res://UI/hud_default_text_theme.tres" id="7_efxa6"]
 [ext_resource type="AudioStream" uid="uid://dibud4fo6il0g" path="res://Audio/bgm.mp3" id="8_5vw27"]
+[ext_resource type="AudioStream" uid="uid://c2su6o3p8tr4q" path="res://Audio/what_is_going_on.mp3" id="10_4c57u"]
 
 [sub_resource type="Gradient" id="Gradient_272bh"]
 offsets = PackedFloat32Array(0, 0.348974, 1)
@@ -96,7 +97,7 @@ transform = Transform3D(1, 0, 0, 0, 0.99863, 0.052336, 0, -0.052336, 0.99863, -0
 current = true
 
 [node name="vine_stream" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("5_lquwl")
+stream = ExtResource("7_4c57u")
 volume_db = -18.695
 
 [node name="money_stream" type="AudioStreamPlayer3D" parent="."]
@@ -110,4 +111,8 @@ environment = SubResource("Environment_5vw27")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_5vw27")
 volume_db = -20.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_4c57u")
 autoplay = true
