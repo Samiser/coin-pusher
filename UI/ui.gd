@@ -51,10 +51,12 @@ func remove_display_board() -> void:
 		board_container.get_child(0).queue_free()
 
 func select_display_board(index: int) -> void:
+	await get_tree().process_frame
 	for child in board_container.get_children():
 		child.set_texture_normal(default_frame_tex)
 	var move_index := (board_container.get_child_count() - 1) - index
-	print(move_index)
+	if move_index == -1:
+		move_index = 0
 	board_title.text = "(" + str(move_index) + ") board"
 	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
