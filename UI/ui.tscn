@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=18 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
@@ -10,7 +10,10 @@
 [ext_resource type="Script" uid="uid://bt0t7a8lkm1xj" path="res://UI/options_menu.gd" id="6_nm1m0"]
 [ext_resource type="Texture2D" uid="uid://cik2jv65arqbs" path="res://UI/Sprites/ui_board_dropper.png" id="9_0w6e5"]
 [ext_resource type="PackedScene" uid="uid://br7xeqslputa0" path="res://UI/board_frame.tscn" id="10_6rr40"]
+[ext_resource type="Texture2D" uid="uid://kmimeaxukx4p" path="res://UI/Sprites/ui_hud_button_1.png" id="12_o2jkc"]
 [ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
+[ext_resource type="Theme" uid="uid://btueqn6seahvg" path="res://UI/hud_button_theme.tres" id="13_2qbci"]
+[ext_resource type="Texture2D" uid="uid://cbxdddl2xtxub" path="res://UI/Sprites/ui_hud_button_0.png" id="14_2qbci"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -161,14 +164,14 @@ offset_bottom = 388.0
 theme_override_font_sizes/font_size = 33
 text = "Down"
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 29.0
-offset_top = 226.0
-offset_right = 412.0
-offset_bottom = 351.0
+[node name="ShopPanel" type="Panel" parent="."]
+offset_left = 784.0
+offset_top = 468.0
+offset_right = 1167.0
+offset_bottom = 593.0
 theme = ExtResource("3_c7tqi")
 
-[node name="Shop" parent="Panel" instance=ExtResource("2_dajm1")]
+[node name="Shop" parent="ShopPanel" instance=ExtResource("2_dajm1")]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -181,10 +184,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="DebugPanel" type="Panel" parent="."]
-offset_left = 117.0
-offset_top = 370.0
-offset_right = 330.0
-offset_bottom = 462.0
+offset_left = 870.0
+offset_top = 723.0
+offset_right = 1083.0
+offset_bottom = 815.0
 theme = ExtResource("3_c7tqi")
 
 [node name="DebugMenu" type="VBoxContainer" parent="DebugPanel"]
@@ -208,10 +211,10 @@ size_flags_horizontal = 4
 text = "Toggle Coin Follow"
 
 [node name="OptionsPanel" type="Panel" parent="."]
-offset_left = 49.0
-offset_top = 482.0
-offset_right = 262.0
-offset_bottom = 574.0
+offset_left = 871.0
+offset_top = 618.0
+offset_right = 1084.0
+offset_bottom = 710.0
 theme = ExtResource("3_c7tqi")
 
 [node name="OptionsMenu" type="VBoxContainer" parent="OptionsPanel"]
@@ -286,3 +289,57 @@ layout_mode = 2
 texture = ExtResource("12_ow1yt")
 expand_mode = 5
 stretch_mode = 5
+
+[node name="shop_button" type="TextureButton" parent="."]
+offset_left = 31.0
+offset_top = 227.0
+offset_right = 154.0
+offset_bottom = 349.0
+texture_normal = ExtResource("12_o2jkc")
+
+[node name="button_text" type="RichTextLabel" parent="shop_button"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -51.0
+offset_right = 100.5
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("13_2qbci")
+text = "SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="menu_button" type="TextureButton" parent="."]
+offset_left = 213.0
+offset_top = 227.0
+offset_right = 336.0
+offset_bottom = 349.0
+texture_normal = ExtResource("14_2qbci")
+
+[node name="button_text" type="RichTextLabel" parent="menu_button"]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.5
+offset_top = -51.0
+offset_right = 100.5
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("13_2qbci")
+text = "MENU"
+horizontal_alignment = 1
+vertical_alignment = 1

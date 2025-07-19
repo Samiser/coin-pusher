@@ -8,11 +8,19 @@ extends CanvasLayer
 @onready var up_button := $UpButton
 @onready var down_button := $DownButton
 @onready var remove_button := $RemoveButton
-@onready var shop := $Panel/Shop
+@onready var shop := $ShopPanel/Shop
+@onready var shop_button := $shop_button
 @onready var debug_menu := $DebugPanel/DebugMenu
+@onready var menu_button := $menu_button
 @onready var multi_particles := $multi_particles
 @onready var coin_particles := $coin_particle
 @onready var board_container := $VBoxContainer/board_container
+
+@onready var debug_panel := $DebugPanel
+@onready var options_panel := $OptionsPanel
+@onready var shop_panel := $ShopPanel
+
+@onready var board_title := $board_subtitle
 
 var frame_scene: PackedScene = preload("res://UI/board_frame.tscn")
 var select_frame_tex := preload("res://UI/Sprites/ui_board_frame_current.png")
@@ -47,6 +55,7 @@ func select_display_board(index: int) -> void:
 		child.set_texture_normal(default_frame_tex)
 	var move_index := (board_container.get_child_count() - 1) - index
 	print(move_index)
+	board_title.text = "(" + str(move_index) + ") board"
 	board_container.get_child(move_index).set_texture_normal(select_frame_tex)
 
 func set_balance(value: int) -> void:
@@ -62,6 +71,8 @@ func set_multi(value: int) -> void:
 	multi_particles.emitting = true
 
 func _ready() -> void:
+	_ToggleMenu() # hides menu by default
+	_ToggleShop()
 	board_container.get_child(0).pressed.connect(func() -> void: focus_board.emit(0))
 	drop_button.pressed.connect(func() -> void: emit_signal("drop_triggered"))
 	swap_button.pressed.connect(func() -> void: emit_signal("swap_boards"))
@@ -71,6 +82,9 @@ func _ready() -> void:
 	up_button.pressed.connect(func() -> void: emit_signal("move_up"))
 	down_button.pressed.connect(func() -> void: emit_signal("move_down"))
 	
+	shop_button.pressed.connect(func() -> void: _ToggleShop())
+	menu_button.pressed.connect(func() -> void: _ToggleMenu())
+	
 	shop.purchase.connect(func(item_name: String, cost: int) -> void: 
 		emit_signal("purchase", item_name, cost)
 	)
@@ -78,3 +92,9 @@ func _ready() -> void:
 	debug_menu.debug_menu_button.connect(func(option: String) -> void:
 		emit_signal("debug_menu_button", option)
 	)
+
+func _ToggleMenu() -> void:
+		options_panel.visible = !options_panel.visible
+		debug_panel.visible = !debug_panel.visible
+func _ToggleShop() -> void:
+	shop_panel.visible = !shop_panel.visible
