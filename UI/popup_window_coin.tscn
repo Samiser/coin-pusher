@@ -93,6 +93,7 @@ offset_bottom = 168.0
 texture = ExtResource("5_2m0hb")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="preview_image"]
+layout_mode = 0
 offset_left = 6.0
 offset_top = 4.0
 offset_right = 167.0
@@ -102,7 +103,6 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="preview_image/SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-scaling_3d_scale = 0.5
 canvas_cull_mask = 4293918720
 size = Vector2i(161, 150)
 render_target_update_mode = 0
@@ -111,7 +111,7 @@ render_target_update_mode = 0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
 cull_mask = 1
 projection = 1
-size = 0.24
+size = 0.42
 
 [node name="info" type="RichTextLabel" parent="."]
 clip_contents = false
