@@ -45,6 +45,9 @@ func drop_coin() -> void:
 
 	latest_coin = machine.spawn_coin([])
 	coins -= 1
+	
+	if Input.is_action_pressed("follow"):
+		ui.Create_Coin_Window(latest_coin)
 
 func _physics_process(_delta: float) -> void:
 	if latest_coin and coin_follow:

@@ -4,6 +4,9 @@ class_name Coin
 @onready var mesh := $MeshInstance3D
 
 var value := 1
+var spawn_time := 0
+var spawn_height := 1
+var id := 0
 
 func _set_color(new_color: Color) -> void:
 	var material: StandardMaterial3D = mesh.get_surface_override_material(0).duplicate()
@@ -17,6 +20,7 @@ func _get_random_color() -> Color:
 	return Color.from_hsv(hue, saturation, val)
 
 func _ready() -> void:
+	spawn_time = Time.get_ticks_msec()
 	#var color := _get_random_color()
 	var color := Color.PALE_GOLDENROD
 	if is_in_group("rain"):

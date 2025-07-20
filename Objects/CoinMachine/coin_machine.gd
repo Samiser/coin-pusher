@@ -24,6 +24,7 @@ var board_scenes: Dictionary[String, PackedScene] = {
 }
 
 var coins_in_play := 0
+var coins_dropped := 0
 
 signal coin_collected(value: int)
 signal add_combo(value: int)
@@ -133,9 +134,12 @@ func spawn_coin(add_groups: Array) -> Coin:
 	
 	coin.rotation_degrees = Vector3(90, 0, 0)
 	coin.position = _get_drop_location()
+	coin.spawn_height = coin.position.y
+	coin.id = coins_dropped
 	
+	coins_dropped += 1
 	coins_in_play += 1
-	print(coins_in_play)
+
 	return coin
 	
 func spawn_ability_coin(coin_type: String) -> void:
