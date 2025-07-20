@@ -31,8 +31,6 @@ var default_frame_tex := preload("res://UI/Sprites/ui_board_frame.png")
 
 var tween : Tween
 
-var popup_windows_count := 0
-
 signal drop_triggered
 signal swap_boards
 signal add_board
@@ -121,16 +119,8 @@ func _ToggleShop() -> void:
 	shop_panel.visible = !shop_panel.visible
 	
 func Create_Coin_Window(coin: Coin) -> void:
-	if popup_windows_count > 6:
-		return
-		
-	popup_windows_count += 1
-	
-	var popup := coin_window.instantiate()
+	var popup : CoinPopup = coin_window.instantiate()
 	add_child(popup)
-	popup.global_position.y += 32 * popup_windows_count
-	popup.global_position.x += 32 * popup_windows_count
-	popup.window_close_button.pressed.connect(func() -> void: popup_windows_count -= 1)
 	
 	popup.coin = coin
 	print("creating coin window, " + popup.name)
