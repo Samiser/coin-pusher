@@ -113,9 +113,20 @@ func swap_boards(first_idx: int, second_idx: int) -> void:
 func coin_rain() -> void:
 	for i in range(10):
 		var coin := spawn_coin([])
-		coin.global_position = coin_rain_marker.global_position
-		coin.linear_velocity = Vector3(randf_range(-0.7, 0.7), 0., randf_range(-0.7, 0.7))
-		coin.rotation = Vector3(randf_range(-0.3, 0.3), randf_range(-0.3, 0.3), randf_range(-0.3, 0.3))
+		var base_pos: Vector3 = coin_rain_marker.global_position
+		var offset := Vector3(
+			randf_range(-0.4, 0.4),
+			0.0,
+			randf_range(-0.3, 0.4)
+		)
+
+		coin.global_position = base_pos + offset
+		coin.rotation = Vector3(
+			randf_range(-0.3, 0.3),
+			randf_range(-0.3, 0.3),
+			randf_range(-0.3, 0.3)
+		)
+
 		await get_tree().create_timer(0.05).timeout
 
 func coin_explode() -> void:
@@ -179,6 +190,9 @@ func _ready() -> void:
 	if not coin_detector:
 		push_error("Missing 'CoinDetector' Area3D in %s" % name)
 		return
+	
+	for i in range(10):
+		coin_rain()
 	
 	coins_in_play = coin_parent.get_child_count()
 	
