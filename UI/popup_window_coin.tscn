@@ -1,61 +1,73 @@
-[gd_scene load_steps=11 format=3 uid="uid://bflmhsbk883o7"]
+[gd_scene load_steps=15 format=3 uid="uid://bflmhsbk883o7"]
 
 [ext_resource type="Script" uid="uid://wfutheqrlnse" path="res://UI/popup_window_coin.gd" id="1_54hyb"]
+[ext_resource type="FontFile" uid="uid://chs73uy63hqpd" path="res://Fonts/vhs-vcr-osd.ttf" id="1_se8nt"]
 [ext_resource type="Theme" uid="uid://c2k242pbhj3qy" path="res://UI/hud_default_text_theme.tres" id="2_4cpng"]
 [ext_resource type="Texture2D" uid="uid://dm3h5u40d0rbj" path="res://UI/Sprites/ui_slider_non_interactable.png" id="3_8e0sw"]
 [ext_resource type="Texture2D" uid="uid://b8sqb521uosvu" path="res://UI/Sprites/ui_slider_non_interactable_handle.png" id="4_0a4de"]
 [ext_resource type="Texture2D" uid="uid://dgi3o7gkikjtm" path="res://UI/Sprites/ui_square_frame.png" id="5_2m0hb"]
+[ext_resource type="Texture2D" uid="uid://dvomvetcjl65d" path="res://UI/Sprites/ui_window_close.png" id="6_4cpng"]
 [ext_resource type="Texture2D" uid="uid://bwwc45vm4kgus" path="res://UI/Sprites/ui_mini_board_frame.png" id="7_0a4de"]
 [ext_resource type="Texture2D" uid="uid://51rsh4nmqd34" path="res://UI/Sprites/ui_mini_clock.png" id="8_2m0hb"]
 [ext_resource type="Texture2D" uid="uid://30mbkcgvrqch" path="res://UI/Sprites/ui_hud_button_2.png" id="9_2m0hb"]
 [ext_resource type="Theme" uid="uid://btueqn6seahvg" path="res://UI/hud_button_theme.tres" id="10_54hyb"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_se8nt"]
+bg_color = Color(0.921569, 0.921569, 0.827451, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.921569, 0.921569, 0.827451, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 60.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+shadow_color = Color(0.0313726, 0.239216, 0.466667, 0.509804)
+shadow_size = 8
+
+[sub_resource type="Theme" id="Theme_0fdkb"]
+Window/colors/title_color = Color(0.875, 0.875, 0.875, 1)
+Window/constants/close_h_offset = 0
+Window/constants/close_v_offset = 50
+Window/font_sizes/title_font_size = 32
+Window/icons/close = ExtResource("6_4cpng")
+Window/styles/embedded_border = SubResource("StyleBoxFlat_se8nt")
+Window/styles/embedded_unfocused_border = SubResource("StyleBoxFlat_se8nt")
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2m0hb"]
 
 [node name="Window" type="Window"]
 auto_translate_mode = 1
-transparent_bg = true
-position = Vector2i(0, 36)
-size = Vector2i(450, 240)
+title = "Coin Name"
+initial_position = 1
+size = Vector2i(256, 174)
 unresizable = true
-transparent = true
+keep_title_visible = true
+theme = SubResource("Theme_0fdkb")
+theme_override_colors/title_color = Color(0.956863, 1, 1, 1)
+theme_override_colors/title_outline_modulate = Color(0.0313726, 0.239216, 0.466667, 1)
+theme_override_constants/title_outline_size = 10
+theme_override_constants/title_height = 40
+theme_override_constants/close_h_offset = 48
+theme_override_fonts/title_font = ExtResource("1_se8nt")
+theme_override_font_sizes/title_font_size = 20
+theme_override_icons/close = ExtResource("6_4cpng")
+theme_override_icons/close_pressed = ExtResource("6_4cpng")
 script = ExtResource("1_54hyb")
 
-[node name="title" type="RichTextLabel" parent="."]
-clip_contents = false
-offset_left = 16.0
-offset_top = 8.0
-offset_right = 388.0
-offset_bottom = 57.0
-mouse_filter = 1
-mouse_default_cursor_shape = 13
-theme = ExtResource("2_4cpng")
-theme_override_font_sizes/normal_font_size = 24
-text = "Coin Name"
-scroll_active = false
-autowrap_mode = 0
-vertical_alignment = 1
-
-[node name="info" type="RichTextLabel" parent="."]
-clip_contents = false
-offset_left = 284.0
-offset_top = 68.0
-offset_right = 441.0
-offset_bottom = 166.0
-mouse_filter = 2
-theme = ExtResource("2_4cpng")
-theme_override_constants/line_separation = -24
-theme_override_font_sizes/normal_font_size = 20
-text = "Location
-00:00"
-scroll_active = false
-autowrap_mode = 0
-
 [node name="slider_bg" type="TextureRect" parent="."]
-offset_left = 19.0
-offset_top = 68.0
-offset_right = 38.0
-offset_bottom = 225.0
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 28.0
+offset_bottom = 8.0
+grow_vertical = 2
 texture = ExtResource("3_8e0sw")
 stretch_mode = 4
 
@@ -73,33 +85,86 @@ editable = false
 tick_count = 6
 
 [node name="preview_image" type="TextureRect" parent="."]
-offset_left = 49.0
-offset_top = 68.0
-offset_right = 220.0
-offset_bottom = 226.0
+visible = false
+offset_left = 37.0
+offset_top = 10.0
+offset_right = 208.0
+offset_bottom = 168.0
 texture = ExtResource("5_2m0hb")
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="preview_image"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 4.0
+offset_right = 167.0
+offset_bottom = 154.0
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="preview_image/SubViewportContainer"]
+transparent_bg = true
+handle_input_locally = false
+canvas_cull_mask = 4293918720
+size = Vector2i(161, 150)
+render_target_update_mode = 0
+
+[node name="coin_track_camera" type="Camera3D" parent="preview_image/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+cull_mask = 1
+projection = 1
+size = 0.42
+
+[node name="info" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -163.0
+offset_top = 11.0
+offset_right = -12.0
+offset_bottom = 109.0
+grow_horizontal = 0
+mouse_filter = 2
+theme = ExtResource("2_4cpng")
+theme_override_constants/line_separation = -24
+theme_override_font_sizes/normal_font_size = 20
+text = "Location
+00:00"
+scroll_active = false
+autowrap_mode = 0
+
 [node name="frame_icon" type="TextureRect" parent="."]
-offset_left = 231.0
-offset_top = 66.0
-offset_right = 271.0
-offset_bottom = 106.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -215.0
+offset_top = 10.0
+offset_right = -175.0
+offset_bottom = 50.0
+grow_horizontal = 0
 texture = ExtResource("7_0a4de")
 stretch_mode = 3
 
 [node name="clock_icon" type="TextureRect" parent="."]
-offset_left = 231.0
-offset_top = 99.0
-offset_right = 271.0
-offset_bottom = 139.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -215.0
+offset_top = 42.0
+offset_right = -175.0
+offset_bottom = 82.0
+grow_horizontal = 0
 texture = ExtResource("8_2m0hb")
 stretch_mode = 3
 
 [node name="track_button" type="TextureButton" parent="."]
-offset_left = 227.0
-offset_top = 157.0
-offset_right = 436.0
-offset_bottom = 226.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -216.0
+offset_top = 99.0
+offset_right = -7.0
+offset_bottom = 168.0
+grow_horizontal = 0
 tooltip_text = "Automatically follow this coin."
 texture_normal = ExtResource("9_2m0hb")
 stretch_mode = 4
@@ -125,25 +190,6 @@ text = "TRACK"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
-offset_left = 54.0
-offset_top = 72.0
-offset_right = 215.0
-offset_bottom = 222.0
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
-transparent_bg = true
-handle_input_locally = false
-scaling_3d_scale = 0.5
-canvas_cull_mask = 4293918720
-size = Vector2i(161, 150)
-render_target_update_mode = 4
-
-[node name="coin_track_camera" type="Camera3D" parent="SubViewportContainer/SubViewport"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
-cull_mask = 1
-projection = 1
-size = 0.24
-
 [connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
