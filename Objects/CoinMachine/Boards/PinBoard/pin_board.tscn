@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bll5hvjioc1dk"]
 
 [ext_resource type="Script" uid="uid://bqk1xo3n1t7b0" path="res://Objects/CoinMachine/Boards/PinBoard/pin_board.gd" id="1_7xdxt"]
-[ext_resource type="Texture2D" uid="uid://wcoc76cxjm2x" path="res://UI/Sprites/ui_board_slots.png" id="2_7xdxt"]
+[ext_resource type="Texture2D" uid="uid://cmg50qsfd6vma" path="res://UI/Sprites/ui_board_pins.png" id="2_7xdxt"]
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="2_ry0au"]
 [ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="4_k44lo"]
 

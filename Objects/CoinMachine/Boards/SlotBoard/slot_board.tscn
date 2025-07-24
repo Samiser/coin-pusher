@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://bumbddv4ijh63"]
+
+[ext_resource type="Script" uid="uid://df5kxo51v73ix" path="res://Objects/CoinMachine/Boards/SlotBoard/slot_board.gd" id="1_u68sd"]
+[ext_resource type="Texture2D" uid="uid://wcoc76cxjm2x" path="res://UI/Sprites/ui_board_slots.png" id="2_mbqvi"]
+[ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/CoinMachine/Components/LED/LED.tscn" id="3_1e44e"]
+[ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="3_y5d2k"]
+[ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="4_tyrnw"]
+
+[node name="SlotBoard" type="Node3D"]
+script = ExtResource("1_u68sd")
+board_name = "Slot Board"
+board_icon = ExtResource("2_mbqvi")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, -0.8, 0.148)
+size = Vector3(0.5, 0.4, 0.12)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.841379, 0.540446, 0, -0.540446, 0.841379, 0, 0, 0, 1, -0.872417, -0.605108, 0.148)
+operation = 2
+size = Vector3(0.684418, 0.4, 0.12)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, -0.8, 0.148)
+size = Vector3(0.5, 0.4, 0.12)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.841511, -0.54024, 0, 0.54024, 0.841511, 0, 0, 0, 1, 0.872, -0.605, 0.148)
+operation = 2
+size = Vector3(0.684418, 0.4, 0.12)
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.963443, -0.0269607, 0.449463)
+light_color = Color(0.95563, 0.479048, 0.0475388, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.967282, -0.0425117, 0.428229)
+light_color = Color(0.690196, 0, 1, 1)
+
+[node name="slot_trigger" parent="." instance=ExtResource("3_y5d2k")]
+transform = Transform3D(0.945, 0, 0, 0, 0.945, 0, 0, 0, 0.945, -0.008, -0.272861, 0.1024)
+
+[node name="slots" type="Node3D" parent="."]
+transform = Transform3D(0.945, 0, 0, 0, 0.945, 0, 0, 0, 0.945, -0.008, 0, 0.1024)
+
+[node name="slot1" parent="slots" instance=ExtResource("3_1e44e")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.469008, 0.552726, -0.0268092)
+
+[node name="slot2" parent="slots" instance=ExtResource("3_1e44e")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.552553, -0.027)
+
+[node name="slot3" parent="slots" instance=ExtResource("3_1e44e")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.469, 0.552553, -0.027)
+
+[node name="Board" parent="." instance=ExtResource("4_tyrnw")]
