@@ -1,13 +1,41 @@
-[gd_scene load_steps=10 format=4 uid="uid://dh0gg8lf7jnqg"]
+[gd_scene load_steps=16 format=4 uid="uid://dh0gg8lf7jnqg"]
 
 [ext_resource type="Script" uid="uid://crhnrohue36tj" path="res://Objects/CoinMachine/coin_machine.gd" id="1_ttn5t"]
-[ext_resource type="Material" uid="uid://b4vd2p1s4ptjp" path="res://Meshes/Tape/tape_mat.tres" id="3_xuo70"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="4_4k8hy"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/CoinMachine/Components/Pusher/pusher.tscn" id="4_5c2ke"]
 [ext_resource type="Script" uid="uid://di0kwy2q7vdj4" path="res://Objects/CoinMachine/dropper.gd" id="6_1hgft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ttn5t"]
 size = Vector3(2.62891, 0.333496, 1.10004)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4mab"]
+load_path = "res://.godot/imported/tape_mesh_lambert2_BaseColor.png-47f3b807100cf47ed82d47483125148d.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4vedo"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuo70"]
+load_path = "res://.godot/imported/tape_mesh_lambert2_Height.png-6f0e36c685f0b43019a01b79de7cf427.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1hgft"]
+load_path = "res://.godot/imported/tape_mesh_lambert2_Metallic.png-4714f2c885141778e21b671fb771d8e2.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i7tb6"]
+load_path = "res://.godot/imported/tape_mesh_lambert2_Normal.png-325dfb425c78c0a689570e117d356690.s3tc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c8y0w"]
+load_path = "res://.godot/imported/tape_mesh_lambert2_Roughness.png-0862cd48de74e83a35668d59ec25480c.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsj7r"]
+albedo_texture = SubResource("CompressedTexture2D_w4mab")
+metallic = 1.0
+metallic_texture = SubResource("CompressedTexture2D_1hgft")
+roughness_texture = SubResource("CompressedTexture2D_c8y0w")
+normal_enabled = true
+normal_texture = SubResource("CompressedTexture2D_i7tb6")
+ao_enabled = true
+ao_texture = SubResource("CompressedTexture2D_4vedo")
+heightmap_enabled = true
+heightmap_texture = SubResource("CompressedTexture2D_xuo70")
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xuo70"]
 
@@ -51,7 +79,7 @@ use_collision = true
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.245831, -0.119947)
-material_override = ExtResource("3_xuo70")
+material_override = SubResource("StandardMaterial3D_nsj7r")
 size = Vector3(2.40137, 0.2, 1.01939)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
