@@ -20,7 +20,8 @@ var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
 var board_scenes: Dictionary[String, PackedScene] = {
 	"pinball": preload("res://Objects/CoinMachine/Boards/PinballBoard/pinball_board.tscn"),
 	"bowling": preload("res://Objects/CoinMachine/Boards/BowlingBoard/bowling_board.tscn"),
-	"pin": preload("res://Objects/CoinMachine/Boards/PinBoard/pin_board.tscn")
+	"pin": preload("res://Objects/CoinMachine/Boards/PinBoard/pin_board.tscn"),
+	"slots": preload("res://Objects/CoinMachine/Boards/SlotBoard/slot_board.tscn")
 }
 
 var coins_in_play := 0
