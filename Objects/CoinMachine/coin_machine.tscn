@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://di0kwy2q7vdj4" path="res://Objects/CoinMachine/dropper.gd" id="6_1hgft"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ttn5t"]
-size = Vector3(1, 0.333496, 1.10004)
+size = Vector3(2.62891, 0.333496, 1.10004)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_xuo70"]
 
@@ -61,7 +61,7 @@ transform = Transform3D(0.971134, 0, 0.238533, 0, 1, 0, -0.238533, 0, 0.971134, 
 size = Vector3(0.412109, 0.481213, 1.03658)
 
 [node name="Pusher" parent="." instance=ExtResource("4_5c2ke")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0577406, -0.554204)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.176966, -0.671921)
 
 [node name="Killzone" type="Area3D" parent="."]
 
