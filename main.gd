@@ -17,7 +17,7 @@ var coin_follow: bool = false
 
 var round_goal: int = 100
 
-var coins := 10:
+var coins := 25:
 	set(value):
 		ui.set_balance(value)
 		coins = value

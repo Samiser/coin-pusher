@@ -49,11 +49,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00173918, 0.0526456)
 use_collision = true
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.261201, -0.111351)
-size = Vector3(1, 0.2, 1.03658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.245831, -0.119947)
+size = Vector3(2.40137, 0.2, 1.01939)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.971334, 0, -0.23772, 0, 1, 0, 0.23772, 0, 0.971334, 1.23494, -0.105594, -0.111351)
+size = Vector3(0.412109, 0.480475, 1.03658)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(0.971134, 0, 0.238533, 0, 1, 0, -0.238533, 0, 0.971134, -1.23744, -0.105225, -0.111351)
+size = Vector3(0.412109, 0.481213, 1.03658)
 
 [node name="Pusher" parent="." instance=ExtResource("4_5c2ke")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0577406, -0.510616)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0577406, -0.554204)
 
 [node name="Killzone" type="Area3D" parent="."]
 

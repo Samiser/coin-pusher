@@ -2,7 +2,7 @@ extends AnimatableBody3D
 
 var start_position: Vector3
 @export var frequency := 0.3
-@export var amplitude := 0.1
+@export var amplitude := 0.12
 var axis := Vector3.FORWARD
 var time_passed := 0.0
 

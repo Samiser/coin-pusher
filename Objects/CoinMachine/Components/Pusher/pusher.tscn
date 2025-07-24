@@ -12,6 +12,7 @@ points = PackedVector3Array(-0.7, -0.1, -0.5, -0.7, 0.1, -0.5, 0.699863, -0.1, -
 script = ExtResource("1_th7h0")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.64142, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_13m1l")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
