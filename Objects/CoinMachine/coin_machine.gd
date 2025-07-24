@@ -136,7 +136,7 @@ func coin_explode() -> void:
 			coin.apply_impulse(Vector3.UP * randf_range(0.01, 0.1), Vector3.ZERO)
 
 func spawn_coin(add_groups: Array) -> Coin:
-	var coin := coin_scene.instantiate()
+	var coin: Coin = coin_scene.instantiate()
 	
 	for group:String in add_groups:
 		coin.add_to_group(group)
@@ -191,10 +191,11 @@ func _ready() -> void:
 		push_error("Missing 'CoinDetector' Area3D in %s" % name)
 		return
 	
-	for i in range(10):
-		coin_rain()
-	
-	coins_in_play = coin_parent.get_child_count()
+	if not Engine.is_editor_hint():
+		for i in range(10):
+			coin_rain()
+		
+		coins_in_play = coin_parent.get_child_count()
 	
 	coin_detector.connect("body_entered", _coin_detected)
 	pusher_visible_area.screen_exited.connect(func() -> void: _pusher_visible(false))
