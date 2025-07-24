@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=4 uid="uid://dh0gg8lf7jnqg"]
+[gd_scene load_steps=10 format=4 uid="uid://dh0gg8lf7jnqg"]
 
 [ext_resource type="Script" uid="uid://crhnrohue36tj" path="res://Objects/CoinMachine/coin_machine.gd" id="1_ttn5t"]
+[ext_resource type="Material" uid="uid://b4vd2p1s4ptjp" path="res://Meshes/Tape/tape_mat.tres" id="3_xuo70"]
 [ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="4_4k8hy"]
 [ext_resource type="PackedScene" uid="uid://bwe0g5bx1v4lm" path="res://Objects/CoinMachine/Components/Pusher/pusher.tscn" id="4_5c2ke"]
 [ext_resource type="Script" uid="uid://di0kwy2q7vdj4" path="res://Objects/CoinMachine/dropper.gd" id="6_1hgft"]
@@ -50,6 +51,7 @@ use_collision = true
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGCombiner3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.245831, -0.119947)
+material_override = ExtResource("3_xuo70")
 size = Vector3(2.40137, 0.2, 1.01939)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGCombiner3D"]
