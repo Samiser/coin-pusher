@@ -111,13 +111,13 @@ func swap_boards(first_idx: int, second_idx: int) -> void:
 		boards.move_child(second_node, first_idx)
 
 func coin_rain() -> void:
-	for i in range(10):
+	for i in range(15):
 		var coin := spawn_coin([])
 		var base_pos: Vector3 = coin_rain_marker.global_position
 		var offset := Vector3(
-			randf_range(-0.4, 0.4),
+			randf_range(-0.9, 0.9),
 			0.0,
-			randf_range(-0.3, 0.4)
+			randf_range(-0.3, 0.3)
 		)
 
 		coin.global_position = base_pos + offset
