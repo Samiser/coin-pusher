@@ -13,6 +13,8 @@ class_name CoinMachine
 
 signal focus_changed
 
+signal item_collected(item: PhysicsBody3D)
+
 var focused_board: Node3D
 
 var coin_scene: PackedScene = preload("res://Objects/Coin/coin.tscn")
@@ -203,7 +205,9 @@ func _ready() -> void:
 	killzone.connect("body_entered", func(body: PhysicsBody3D) -> void:
 		if body.is_in_group("coin"):
 			body.queue_free()
-		coins_in_play -= 1
+			coins_in_play -= 1
+		elif body.is_in_group("dice"):
+			item_collected.emit(body)
 	)
 
 func _pusher_visible(is_visible: bool) -> void:

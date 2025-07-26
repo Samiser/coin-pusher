@@ -9,21 +9,16 @@
 size = Vector3(2.62891, 0.333496, 1.10004)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_w4mab"]
-load_path = "res://.godot/imported/tape_mesh_lambert2_BaseColor.png-47f3b807100cf47ed82d47483125148d.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4vedo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xuo70"]
-load_path = "res://.godot/imported/tape_mesh_lambert2_Height.png-6f0e36c685f0b43019a01b79de7cf427.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1hgft"]
-load_path = "res://.godot/imported/tape_mesh_lambert2_Metallic.png-4714f2c885141778e21b671fb771d8e2.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i7tb6"]
-load_path = "res://.godot/imported/tape_mesh_lambert2_Normal.png-325dfb425c78c0a689570e117d356690.s3tc.ctex"
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c8y0w"]
-load_path = "res://.godot/imported/tape_mesh_lambert2_Roughness.png-0862cd48de74e83a35668d59ec25480c.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nsj7r"]
 albedo_texture = SubResource("CompressedTexture2D_w4mab")
@@ -96,7 +91,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.176966, -0.671921)
 [node name="Killzone" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Killzone"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.74672, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.956487, 0)
 shape = SubResource("WorldBoundaryShape3D_xuo70")
 
 [node name="Dropper" type="AnimatableBody3D" parent="."]

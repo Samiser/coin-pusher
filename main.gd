@@ -86,7 +86,14 @@ func _add_board() -> void:
 func _remove_board() -> void:
 	machine.remove_board()
 	ui.remove_display_board()
-	
+
+func _on_dice_collected(dice: Dice) -> void:
+	var multiplier := await dice.get_number_and_animate(camera)
+	coins *= multiplier
+
+func _on_item_collected(item: PhysicsBody3D) -> void:
+	if item.is_in_group("dice"):
+		_on_dice_collected(item)
 
 func _ready() -> void:
 	_add_board()
@@ -104,6 +111,7 @@ func _ready() -> void:
 			tween.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_LINEAR)
 			tween.tween_property(pusher_title, "visible_ratio", 1, 0.4).from(0.0) 
 		)
+	machine.item_collected.connect(_on_item_collected)
 	ui.connect("drop_triggered", drop_coin)
 	ui.connect("swap_boards", func() -> void: machine.change_board(0, ["pinball", "bowling", "pin"].pick_random()))
 	ui.add_board.connect(_add_board)
