@@ -12,3 +12,6 @@ func toggle_light(brightness:float) -> void:
 	var flash_color := Color.WHITE * brightness
 	flash_color.a = 1
 	tween.tween_property(led_sprite, "modulate", flash_color, 0.1)
+
+func change_texture(texture:Texture2D) -> void:
+	led_sprite.texture = texture

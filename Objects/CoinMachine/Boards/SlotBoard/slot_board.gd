@@ -2,12 +2,11 @@ extends Board
 
 @onready var slots := $slots
 @onready var slot_trigger := $slot_trigger
-
-signal add_combo (value:int)
+@export var slot_images : Array[Texture2D]
 
 func _flash_and_reset_all_slots() -> void:
 	for slot in slots.get_children():
-		slot.toggle_light(1)
+		slot.change_texture(slot_images[0])
 
 func _on_slot_hit(_pin: Pin) -> void:
 	_flash_and_reset_all_slots()

@@ -1,13 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://bumbddv4ijh63"]
+[gd_scene load_steps=9 format=3 uid="uid://bumbddv4ijh63"]
 
 [ext_resource type="Script" uid="uid://df5kxo51v73ix" path="res://Objects/CoinMachine/Boards/SlotBoard/slot_board.gd" id="1_u68sd"]
+[ext_resource type="Texture2D" uid="uid://bo6na0ghfardk" path="res://Textures/coin.png" id="2_au8jl"]
 [ext_resource type="Texture2D" uid="uid://wcoc76cxjm2x" path="res://UI/Sprites/ui_board_slots.png" id="2_mbqvi"]
-[ext_resource type="PackedScene" uid="uid://dym4en2ttm838" path="res://Objects/CoinMachine/Components/LED/LED.tscn" id="3_1e44e"]
+[ext_resource type="Texture2D" uid="uid://b1voflqxkqr7k" path="res://Textures/me.jpg" id="3_ppklo"]
 [ext_resource type="PackedScene" uid="uid://bhog32l8epd3n" path="res://Objects/CoinMachine/Components/Pin/pin.tscn" id="3_y5d2k"]
 [ext_resource type="PackedScene" uid="uid://b42c5n0k7yhn8" path="res://Objects/CoinMachine/Boards/BasicBoard/basic_board.tscn" id="4_tyrnw"]
+[ext_resource type="Texture2D" uid="uid://dvomvetcjl65d" path="res://UI/Sprites/ui_window_close.png" id="4_vugjv"]
+[ext_resource type="Texture2D" uid="uid://qjeah87c62nf" path="res://icon.svg" id="5_cqolo"]
 
 [node name="SlotBoard" type="Node3D"]
 script = ExtResource("1_u68sd")
+slot_images = Array[Texture2D]([ExtResource("2_au8jl"), ExtResource("3_ppklo"), ExtResource("4_vugjv"), ExtResource("5_cqolo")])
 board_name = "Slot Board"
 board_icon = ExtResource("2_mbqvi")
 
@@ -47,14 +51,5 @@ transform = Transform3D(0.945, 0, 0, 0, 0.945, 0, 0, 0, 0.945, -0.008, -0.272861
 
 [node name="slots" type="Node3D" parent="."]
 transform = Transform3D(0.945, 0, 0, 0, 0.945, 0, 0, 0, 0.945, -0.008, 0, 0.1024)
-
-[node name="slot1" parent="slots" instance=ExtResource("3_1e44e")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.469008, 0.552726, -0.0268092)
-
-[node name="slot2" parent="slots" instance=ExtResource("3_1e44e")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.552553, -0.027)
-
-[node name="slot3" parent="slots" instance=ExtResource("3_1e44e")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.469, 0.552553, -0.027)
 
 [node name="Board" parent="." instance=ExtResource("4_tyrnw")]
