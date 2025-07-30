@@ -89,6 +89,8 @@ func _remove_board() -> void:
 
 func _on_dice_collected(dice: Dice) -> void:
 	var multiplier := await dice.get_number_and_animate(camera)
+	await get_tree().create_timer(2).timeout
+	dice.queue_free()
 	coins *= multiplier
 
 func _on_item_collected(item: PhysicsBody3D) -> void:
