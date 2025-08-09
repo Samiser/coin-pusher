@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://dukq461rma8w2"]
+
+[ext_resource type="Script" uid="uid://ca6d5qt8h5wue" path="res://recording_scene.gd" id="1_kfxhe"]
+[ext_resource type="PackedScene" uid="uid://dwdc85om4xhvs" path="res://Objects/Coin/coin.tscn" id="1_xfsuo"]
+
+[sub_resource type="Gradient" id="Gradient_kfxhe"]
+offsets = PackedFloat32Array(0, 0.348974, 1)
+colors = PackedColorArray(0.286204, 0.587006, 0.948614, 1, 0.248003, 0.422884, 0.904303, 1, 0.881133, 0.877524, 0.997683, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_iwfv6"]
+noise_type = 2
+seed = 69
+frequency = 0.0136
+fractal_octaves = 10
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kek77"]
+width = 256
+height = 256
+seamless = true
+color_ramp = SubResource("Gradient_kfxhe")
+noise = SubResource("FastNoiseLite_iwfv6")
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_l5cjh"]
+panorama = SubResource("NoiseTexture2D_kek77")
+
+[sub_resource type="Sky" id="Sky_272bh"]
+sky_material = SubResource("PanoramaSkyMaterial_l5cjh")
+
+[sub_resource type="Environment" id="Environment_mjepa"]
+background_mode = 2
+sky = SubResource("Sky_272bh")
+ambient_light_source = 3
+ambient_light_color = Color(0.00392157, 0, 0.0941176, 1)
+ambient_light_sky_contribution = 0.25
+reflected_light_source = 2
+glow_intensity = 1.0
+glow_bloom = 0.1
+fog_mode = 1
+fog_light_color = Color(0.233598, 0.429594, 0.894259, 1)
+fog_density = 0.6705
+fog_aerial_perspective = 0.073
+fog_sky_affect = 0.369
+fog_height = 33.2
+volumetric_fog_density = 0.4136
+
+[node name="RecordingScene" type="Node3D"]
+script = ExtResource("1_kfxhe")
+
+[node name="Coin" parent="." instance=ExtResource("1_xfsuo")]
+transform = Transform3D(0.718017, 0.665027, 0.205403, 0, 0.295108, -0.955464, -0.696026, 0.686039, 0.211892, 0, 0, 0)
+gravity_scale = 0.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.417869)
+projection = 1
+size = 0.2
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.679902, -0.108769, 0.725191, -0.733303, -0.100848, 0.672381, 0, -0.988938, -0.148327, 0, 0, 0.417869)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_mjepa")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(0.964443, 0.203801, 0.168268, 0.137798, -0.931054, 0.33786, 0.225523, -0.30266, -0.926033, -0.0598902, 0.798492, -0.169266)

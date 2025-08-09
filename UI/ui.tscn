@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b028rg20gl7fs"]
+[gd_scene load_steps=56 format=3 uid="uid://b028rg20gl7fs"]
 
 [ext_resource type="Script" uid="uid://ckngrc2qsspsq" path="res://UI/ui.gd" id="1_2fwl4"]
 [ext_resource type="PackedScene" uid="uid://d3ft8lskylgiy" path="res://UI/Shop/shop.tscn" id="2_dajm1"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://c0wc83ghpt73s" path="res://UI/Sprites/ui_board_pusher.png" id="12_ow1yt"]
 [ext_resource type="Theme" uid="uid://btueqn6seahvg" path="res://UI/hud_button_theme.tres" id="13_2qbci"]
 [ext_resource type="Texture2D" uid="uid://cbxdddl2xtxub" path="res://UI/Sprites/ui_hud_button_0.png" id="14_2qbci"]
+[ext_resource type="Texture2D" uid="uid://ce3l2nq2vc3dm" path="res://UI/Sprites/coin_sheet.png" id="14_ow1yt"]
 
 [sub_resource type="Curve" id="Curve_hat8c"]
 _limits = [-1.0, 1.0, 0.0, 1.0]
@@ -37,6 +38,266 @@ scale_max = 0.4
 hue_variation_min = -1.0
 hue_variation_max = 1.0
 hue_variation_curve = SubResource("CurveTexture_3sbvi")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qbci"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ow1yt"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2t6a"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gukh"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gkfd"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tr35"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7j5ik"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1yd8"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5i65"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awqy2"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wcgx"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duqhi"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tjmo3"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_665m6"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k01bw"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bux6"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ebcl4"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqn06"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdkaj"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvpq0"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bp80h"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oejq4"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6sqwf"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hqip"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ld37b"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 384, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oaf0t"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apk2w"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypubg"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1x2l"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxr1c"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qw6r"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 576, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0n11x"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(96, 576, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qwp7"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(192, 576, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f56j"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(288, 576, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb527"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(384, 576, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sfqi8"]
+atlas = ExtResource("14_ow1yt")
+region = Rect2(0, 672, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vefrh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qbci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ow1yt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2t6a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gukh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gkfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tr35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7j5ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1yd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j5i65")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awqy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8wcgx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duqhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tjmo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_665m6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k01bw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bux6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ebcl4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqn06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sdkaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvpq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bp80h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oejq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6sqwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hqip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ld37b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oaf0t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apk2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypubg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1x2l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxr1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qw6r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0n11x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qwp7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f56j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb527")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sfqi8")
+}],
+"loop": true,
+"name": &"coin_spin",
+"speed": 5.0
+}]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_o2jkc"]
 particle_flag_disable_z = true
@@ -66,41 +327,67 @@ randomness = 1.0
 visibility_rect = Rect2(0, -100, 100, 100)
 process_material = SubResource("ParticleProcessMaterial_hat8c")
 
+[node name="animated_coin" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(116, 117)
+scale = Vector2(2.29167, 2.29167)
+sprite_frames = SubResource("SpriteFrames_vefrh")
+animation = &"coin_spin"
+autoplay = "coin_spin"
+frame_progress = 0.13414
+speed_scale = 4.0
+
+[node name="animated_coin2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1779, 117)
+scale = Vector2(2.292, 2.292)
+sprite_frames = SubResource("SpriteFrames_vefrh")
+animation = &"coin_spin"
+autoplay = "coin_spin"
+frame_progress = 0.293952
+speed_scale = -4.0
+
 [node name="CoinBalanceLabel" type="RichTextLabel" parent="."]
 clip_contents = false
-offset_left = 24.0
-offset_top = 24.0
-offset_right = 999.0
-offset_bottom = 135.0
+offset_left = 62.0
+offset_top = 80.0
+offset_right = 169.0
+offset_bottom = 129.0
 mouse_filter = 2
 theme = ExtResource("3_cbfhl")
 bbcode_enabled = true
 text = "0000"
-
-[node name="coins_subtitle" type="RichTextLabel" parent="."]
-clip_contents = false
-offset_left = 24.0
-offset_top = 133.0
-offset_right = 255.0
-offset_bottom = 235.0
-mouse_filter = 2
-theme = ExtResource("3_c7tqi")
-text = "coins"
+scroll_active = false
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="multiplier_subtitle" type="RichTextLabel" parent="."]
 clip_contents = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -302.0
-offset_top = 133.0
-offset_right = -24.0
-offset_bottom = 235.0
+offset_left = -273.0
+offset_top = 152.0
+offset_right = -6.0
+offset_bottom = 254.0
 grow_horizontal = 0
 mouse_filter = 2
 theme = ExtResource("3_c7tqi")
 text = "multiplier"
-horizontal_alignment = 2
+horizontal_alignment = 1
+
+[node name="coin_subtitle" type="RichTextLabel" parent="."]
+clip_contents = false
+offset_left = 43.0
+offset_top = 151.0
+offset_right = 193.0
+offset_bottom = 269.0
+mouse_filter = 2
+theme = ExtResource("3_c7tqi")
+text = "coins
+"
+horizontal_alignment = 1
 
 [node name="board_subtitle" type="RichTextLabel" parent="."]
 clip_contents = false
@@ -144,16 +431,17 @@ clip_contents = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -255.0
-offset_top = 24.0
-offset_right = -24.0
-offset_bottom = 143.0
+offset_left = -264.0
+offset_top = 56.0
+offset_right = -33.0
+offset_bottom = 175.0
 grow_horizontal = 0
 mouse_filter = 2
 theme = ExtResource("3_cbfhl")
 bbcode_enabled = true
 text = "x1"
-horizontal_alignment = 2
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="SwapBoards" type="Button" parent="."]
 offset_left = 1510.0

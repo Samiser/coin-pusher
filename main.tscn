@@ -22,7 +22,7 @@ seed = 69
 frequency = 0.0136
 fractal_octaves = 10
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kek77"]
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dg77c"]
 width = 256
 height = 256
 seamless = true
@@ -30,14 +30,14 @@ color_ramp = SubResource("Gradient_272bh")
 noise = SubResource("FastNoiseLite_5vw27")
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_4c57u"]
-panorama = SubResource("NoiseTexture2D_kek77")
+panorama = SubResource("NoiseTexture2D_dg77c")
 
-[sub_resource type="Sky" id="Sky_272bh"]
+[sub_resource type="Sky" id="Sky_ycdy4"]
 sky_material = SubResource("PanoramaSkyMaterial_4c57u")
 
 [sub_resource type="Environment" id="Environment_5vw27"]
 background_mode = 2
-sky = SubResource("Sky_272bh")
+sky = SubResource("Sky_ycdy4")
 ambient_light_source = 3
 ambient_light_color = Color(0.00392157, 0, 0.0941176, 1)
 ambient_light_sky_contribution = 0.25
